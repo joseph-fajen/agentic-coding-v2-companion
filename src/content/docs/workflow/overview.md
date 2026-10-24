@@ -1,15 +1,122 @@
 ---
 title: Workflow Primitives
-description: Scaling agentic systems with headless execution and orchestration
+description: Check your system, trust the parts that work, and automate what you trust
 ---
 
-Workflow primitives let you run agentic systems at scale.
+Writing code is no longer the hard part. So the engineers who matter are the ones who keep improving the **system** that writes it. That's what Phase 3 of the course is about — and the order that makes it work: **check it, trust it, automate it.**
 
-## Key Topics
+## The Core Insight
 
-1. **Headless / SDK / CI** — Running Claude without the interactive CLI
-2. **Archon** — Orchestrating complex multi-step workflows
+> **You can't trust what you haven't checked. And you should never automate what you don't trust. So we do them in that order.**
 
----
+This rules out automating something because it "felt fine the last few times." Trust here is earned by checking — and then by repetition under that checking. Repetition alone just breeds comfort.
 
-*Content coming soon. This page will provide a comprehensive overview of workflow primitives.*
+## Two Loops
+
+You've been running one loop this whole course: research, plan, implement, validate, review — the **inner loop**. It ships work. It ends with a merged pull request.
+
+There's a second one.
+
+| Loop | What It Does | When It Runs |
+|------|-------------|--------------|
+| **Inner** | Ships the work (R-PIV) | Every task |
+| **Outer** | Improves the thing that ships the work | When something goes wrong, or proactively |
+
+When something in that loop goes wrong — the agent misunderstands, skips your conventions, does the thing you keep telling it not to — you step **out**. Not to fix the code. To fix **the system that produced the code**, so the next run doesn't do it again.
+
+That's the outer loop. And it's the difference between an AI layer that stays the same shape all year, and one that gets harder to break every week.
+
+### Two Ways In
+
+You enter the outer loop two ways, and the difference is smaller than you'd think — it's **what you point it at**:
+
+| Entry | What You Point At | What It Asks |
+|-------|------------------|--------------|
+| **Reactive** | One run's artifacts | "What should change so that doesn't happen again?" |
+| **Proactive** | Weeks of runs | "What keeps costing me?" |
+
+Point it at **one run** (the plan, the report, the diff) and you're asking about a specific problem. Point it at **weeks of logs** and you're looking for patterns — the things you keep doing by hand that should become skills, rules, or hooks.
+
+## The One-Sentence Version
+
+The smallest version of the outer loop is one sentence, typed into your agent:
+
+> **"You just did X. What could we change in the AI layer so that doesn't happen again?"**
+
+That's the whole concept. Everything else — scans, reports, opportunity analysis — is making that question repeatable so you're not relying on remembering to ask.
+
+**The guard:** Your agent will always find something to suggest — that's what it does. Not every mistake is a system gap. Sometimes the answer is "nothing; that was a one-off." If you encode a rule for every bad run, in three months you'll have a rules file nobody can read and an agent that follows none of it. The judgment about what's worth encoding stays yours.
+
+## The Human/Agent Map
+
+Where do you stand in this loop? At the ends.
+
+| Step | Who Owns It |
+|------|-------------|
+| **Plan** | You — judgment about what to build |
+| **Implement** | The agent — mechanical execution |
+| **Validate** | The agent — mechanical verification |
+| **Review** | You — judgment about whether it's right |
+
+The agent owns the middle (mechanical work). You own the ends (judgment calls). Engineering moved upstream — to planning and review. That's where your leverage sits.
+
+## The Road Through Phase 3
+
+Phase 3 has two acts:
+
+### Act 1: Improve
+
+Audit your own system. Not the code — the system. How you actually work, where it keeps slipping, which parts have earned your confidence.
+
+This is the "check" phase. You're finding out what you trust and what you don't.
+
+### Act 2: Scale
+
+Turn the parts you trust into **workflows** — and build them multiple ways, because this is the one piece of the toolkit that hasn't settled on a single shape yet:
+
+| Method | What Says Go |
+|--------|--------------|
+| [Headless scripts](/workflow/headless-sdk-ci/#headless-scripts) | A script |
+| [The SDK](/workflow/headless-sdk-ci/#the-sdk) | Your program |
+| [Hooks](/workflow/headless-sdk-ci/#hooks) | An event |
+| [CI](/workflow/headless-sdk-ci/#ci-pipelines) | A repository trigger |
+| [Orchestrator](/workflow/headless-sdk-ci/#orchestration) | A skill that runs the others |
+| [Archon](/workflow/archon/) | An engine with a graph |
+
+Then you hand the whole thing to a workflow engine.
+
+**Improve it until you trust it; scale it because you do.**
+
+## What's Worth Automating
+
+Before diving into the how: not everything should be automated.
+
+> **You don't automate a task. You automate a class of problems** — a shape that repeats, where you already know what a good answer looks like.
+
+**The test:** Can you describe how you do it, without knowing the specifics of the next one? If you can, it's a class, and it's ready. If you can't, you haven't solved it yet — and automating it just makes the guessing faster.
+
+A class doesn't have to be tidy CRUD work. Bugs are all different — but *investigating* a bug has a shape every time. **The process can be a class even when the problem isn't.**
+
+## It's All Just Instructions
+
+The mental model that makes everything in this section cheaper to understand:
+
+> **A skill, an agent file, your CLAUDE.md, an AGENTS.md — they're all just markdown files full of instructions. What's different is how they get loaded.**
+
+The content is just instructions. The format buys you loading and scoping: which tools this thing is allowed to use, which model it runs on, and the description that lets your agent reach for it on its own without you naming it.
+
+If they're all just instructions, then composing them isn't systems integration. **It's writing.** You're not wiring tools together — you're writing another instruction that mentions the first two. That's the entire act.
+
+## Where This Goes
+
+- **[Headless / SDK / CI](/workflow/headless-sdk-ci/)** — Five ways to run your workflow without you pressing go
+- **[Archon](/workflow/archon/)** — The workflow engine that holds the loop
+
+## Key Takeaways
+
+- **Check, trust, automate** — in that order. You can't trust what you haven't checked
+- Two loops: inner ships the work, outer improves the system that ships it
+- Enter the outer loop reactively (one run) or proactively (weeks of logs)
+- Your leverage is at the ends: planning and review
+- Automate classes of problems, not individual tasks
+- Everything is instructions — composing is writing
