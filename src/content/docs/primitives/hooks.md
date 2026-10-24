@@ -219,3 +219,8 @@ You answered a question and read the result. That's the whole build.
 - Treat hooks like CI scripts — only run what you trust
 - Works across tools — Claude Code, Codex, Cursor, Gemini CLI
 - You can describe guarantees in plain English and let a skill write the code
+
+## See Also
+
+- [Workflow Primitives](/workflow/overview/) — how hooks fit into automated workflows
+- [Headless / SDK / CI](/workflow/headless-sdk-ci/) — hook-driven automation patterns

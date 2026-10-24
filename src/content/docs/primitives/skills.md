@@ -202,3 +202,8 @@ The built-in skill-creator writes a generic skill. A custom meta-skill bakes in 
 - **Take** for tools you don't own; **build** for your own processes
 - Treat others' skills like installing software — audit before trust
 - Skills compose the other primitives — they're the conductor
+
+## See Also
+
+- [Hooks](/primitives/hooks/) — the primitive that provides guarantees your skills can rely on
+- [Archon](/workflow/archon/) — workflow engine for chaining skills at scale

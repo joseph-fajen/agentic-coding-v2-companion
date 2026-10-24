@@ -131,3 +131,8 @@ The same discipline as rules: keep it true, or it's worse than nothing.
 - Name clauses so the agent can cite them: `direction.md §advisor-not-actor`
 - Write them when patterns emerge, not on day one
 - Keep them true — a steering doc that lies is worse than none
+
+## See Also
+
+- [Rules](/primitives/rules/) — the always-on context that references steering docs
+- [What Changed](/v1-delta/what-changed/) — steering documents are new in V2

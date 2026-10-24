@@ -3,7 +3,7 @@ title: Agentic Coding V2
 description: Companion site for Cole Medin's Agentic Coding Course V2
 template: splash
 hero:
-  tagline: A comprehensive guide to the five primitives of agentic coding
+  tagline: Build the system that builds the code
   actions:
     - text: Start with the Primitives
       link: /primitives/overview/
@@ -15,19 +15,48 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## What You'll Learn
+## What This Site Is
+
+A **companion guide** to [Cole Medin's Agentic Coding Course V2](https://www.skool.com/dynamous). Not a replacement for the videos — a reference you come back to.
+
+The course teaches you to build an **AI Layer** around your coding agent. This site gives you deep dives on the pieces that layer is made of, organized for lookup rather than sequential learning.
+
+**If you're taking the course:** Use this alongside the videos. When Cole introduces a primitive, come here for the details.
+
+**If you're just curious:** Start with [The Five Primitives](/primitives/overview/) to understand the framework, then explore what interests you.
+
+## What You'll Find
 
 <CardGrid stagger>
 	<Card title="The Five Primitives" icon="puzzle">
-		Rules, Subagents, MCP/Tools, Skills, and Hooks — the building blocks of agentic systems.
+		Rules, Subagents, MCP/Tools, Skills, and Hooks — the atoms every agentic system is built from. The conceptual heart of V2.
 	</Card>
 	<Card title="The Four Phases" icon="rocket">
-		A structured learning path from first system to advanced workflows.
+		Use → Understand → Evolve → Scale. The course arc mapped out, with what you learn and build at each stage.
 	</Card>
 	<Card title="Steering Documents" icon="document">
-		How to guide your agent with direction.md and engineering.md.
+		direction.md and engineering.md — reference docs that encode your project's scope and quality standards.
 	</Card>
 	<Card title="Workflow Primitives" icon="setting">
-		Headless execution, SDK integration, CI pipelines, and Archon.
+		Headless execution, the SDK, CI pipelines, and Archon. How to trust your system enough to let it run without you.
 	</Card>
 </CardGrid>
+
+## The Core Ideas
+
+Three ideas run through everything here:
+
+1. **Your agent is only as good as the system around it.** The model is the easy part. The hard part is building the context, the constraints, and the workflows that make the model useful *your* way.
+
+2. **It's all just markdown.** Rules, skills, agent files — they're all markdown with some YAML. What's different is how they load and what tools they can access. Composing your system is writing, not wiring.
+
+3. **Build the thing that builds the thing.** Don't just use the primitives. Teach your agent to build them *your* way, so every new skill, every new hook comes out shaped the way you'd shape it.
+
+## Where to Start
+
+| You are... | Start here |
+|------------|------------|
+| New to agentic coding | [Phase 1](/phases/phase-1/) — the mental models and your first system |
+| Taking the V2 course | [The Five Primitives](/primitives/overview/) — deep dives on each primitive |
+| Coming from V1 | [What Changed](/v1-delta/what-changed/) — map your knowledge to V2 |
+| Looking for specifics | Use the sidebar — it's organized by topic |

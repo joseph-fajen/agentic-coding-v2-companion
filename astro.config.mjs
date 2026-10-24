@@ -4,6 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://joseph-fajen.github.io',
+	base: '/agentic-coding-v2-companion',
 	integrations: [
 		starlight({
 			title: 'Agentic Coding V2',

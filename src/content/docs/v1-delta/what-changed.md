@@ -183,4 +183,9 @@ Chain only what you already trust by hand:
 - Rules principles
 - MCP fundamentals
 
+## See Also
+
+- [The Five Primitives](/primitives/overview/) — deep dives on each primitive
+- [Steering Documents](/steering/overview/) — the new direction.md and engineering.md
+
 Next: [What Still Applies](/v1-delta/what-still-applies/) — the V1 concepts that remain central.

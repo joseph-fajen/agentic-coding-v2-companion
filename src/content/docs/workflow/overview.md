@@ -120,3 +120,9 @@ If they're all just instructions, then composing them isn't systems integration.
 - Your leverage is at the ends: planning and review
 - Automate classes of problems, not individual tasks
 - Everything is instructions — composing is writing
+
+## See Also
+
+- [Phase 3: Improve & Scale](/phases/phase-3/) — where the course teaches these concepts
+- [Hooks](/primitives/hooks/) — the guarantees that make automation safe
+- [Skills](/primitives/skills/) — the processes you chain into workflows

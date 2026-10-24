@@ -70,3 +70,8 @@ The review gate never disappears. What changes is how much you need to *do* at t
 ## What's Next
 
 Phase 3 completes the core course. [Phase 4](/phases/phase-4/) is advanced and optional — deep dives on teams, orchestration, AI-native codebases, and more. The system you built in Phases 1–3 is complete; Phase 4 extends it for specific contexts.
+
+## See Also
+
+- [Workflow Primitives](/workflow/overview/) — deep dives on headless, SDK, CI, and Archon
+- [Hooks](/primitives/hooks/) — the guarantees that make automation safe

@@ -157,3 +157,8 @@ A steering principle, a naming convention, a git-workflow note — *you choose w
 - Cut slogans; keep specific conventions
 - Check for drift before every merge
 - AGENTS.md and CLAUDE.md are the same job — the skill transfers
+
+## See Also
+
+- [Steering Documents](/steering/overview/) — direction.md and engineering.md as specialized rules files
+- [Skills](/primitives/skills/) — on-demand processes your rules can point to

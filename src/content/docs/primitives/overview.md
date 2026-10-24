@@ -70,3 +70,8 @@ Start with any primitive that matters for your current work, or go through them 
 - They have a composition order — each can use the ones before it
 - It's all markdown — the placement is what matters
 - Understand first, then build, then build the builder
+
+## See Also
+
+- [Phase 2: The Primitives](/phases/phase-2/) — where the course teaches each primitive
+- [Coming from V1?](/v1-delta/overview/) — how the Five Primitives Framework relates to V1
