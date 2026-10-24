@@ -1,16 +1,124 @@
 ---
 title: MCP / Tools
-description: Model Context Protocol servers and tool integrations
+description: How your agent reaches outside the codebase to operate on real systems
 ---
 
-MCP (Model Context Protocol) provides a standardized way to extend Claude's capabilities.
+Your agent is brilliant inside your codebase — and blind to everything outside it. Your tickets, your analytics, your database, the live browser — it can't touch any of them. **MCP** is the fix.
 
-## Key Concepts
+MCP (Model Context Protocol) is the standard way to **plug your tooling in** — your personal scripts, your team's services, your company's systems — so the agent can actually *operate* on them.
 
-- **MCP servers** — External capability providers
-- **Tool definitions** — How tools are defined and exposed
-- **Integration patterns** — Common ways to use MCP in projects
+## The USB-C Analogy
 
----
+Anthropic calls MCP **"USB-C for AI applications."** One standard port. Before it, every tool needed its own custom integration; with MCP, you plug a **server** in and the agent can use it. One adapter, many tools.
 
-*Content coming soon. This page will cover MCP and tools in depth.*
+Think of it as how you **plug your tooling in**:
+- Your **personal** scripts
+- Your **team's** services
+- Your **company's** internal systems
+
+Whatever your work runs on, MCP is how the agent gets to operate on it instead of just talking about it.
+
+## What a Server Is
+
+Under the hood, it's a **client and a server**:
+
+- Your agent is the **client**
+- It connects to an MCP **server** that exposes **tools** — actions the agent can call
+- Servers can also expose **resources** (data) and **prompts**
+- The server runs locally or over HTTP
+
+### Why Servers Beat Hand-Rolled Integrations
+
+The good ones are **built by the tool owner** — Atlassian's own server, PostHog's own server, Supabase's own. So it **works out of the box** and it's the maintained, blessed way to plug that tool in. You're not writing an integration; you're **connecting** one.
+
+## Where to Find Servers
+
+| Source | Description |
+|--------|-------------|
+| **Official MCP Registry** | The first-party index at registry.modelcontextprotocol.io |
+| **Docker MCP Catalog** | Vetted, containerized servers you can browse and run |
+
+When connecting, you choose a **scope**:
+- **Project** scope → writes `.mcp.json` your whole team shares
+- **Local** scope → just you
+
+That scope choice is about *sharing*, not permissions — permissions come from what the server can do and the OAuth scope you grant.
+
+## The Per-Session Discipline
+
+> **Don't pile on servers you're not using. Plug in the servers you need for *the session you're in* — not all of them, all the time.**
+
+### Tool Search Changed the Game
+
+Claude Code now **defers** tool definitions by default — it doesn't load every tool upfront. Instead, it hands the agent a **search** tool and pulls in only the ones a task needs.
+
+Anthropic's numbers: a big multi-server setup dropping from **tens of thousands of tokens to a few thousand** upfront — roughly an **85% cut** — and the agent got *more* accurate, not less.
+
+So the per-session habit isn't about upfront tokens anymore. It's about **capability and trust** — every server you add is something the agent *can do* and something you have to *trust*.
+
+## Security: Capability *and* Blast Radius
+
+Every server you connect can read or do things on your behalf — and not all servers are friendly. This is a real, documented attack surface.
+
+### The Threats
+
+| Threat | Description |
+|--------|-------------|
+| **Tool Poisoning** | Malicious instructions hidden inside a server's tool descriptions — invisible to you, read by the model |
+| **Shadowing** | A bad server overriding how your trusted servers behave |
+| **Rug Pull** | A server you approved changing its tool definitions later — exfiltrating data weeks after install |
+
+This is serious enough that the **NSA** put out dedicated MCP security guidance, and **six national cyber agencies** issued a joint advisory on adopting agentic AI safely.
+
+### The Mitigations
+
+- **Narrow OAuth scopes** — ask for read-only when you only need to read
+- **Separate read from write** — different servers for reading vs writing
+- **Vet before connect** — look at third-party servers before trusting them
+- **Pin versions** — get alerted if tools change
+- **Prefer first-party** — official servers from the tool owner when they exist
+
+## MCP + Subagent Composition
+
+Here's where two primitives combine. Remember subagents run in their **own isolated context**. So instead of connecting a chatty MCP to your *main* session, you can give it to a **subagent**.
+
+The server's tool definitions *and* its big, noisy outputs live in the **sub's** context — and the main agent just gets the clean summary back.
+
+```yaml
+# posthog-analyst.md
+tools:
+  - Read
+  - Grep
+  - Glob
+  - mcp__posthog__exec  # Only this MCP tool
+```
+
+That's the `mcp__server__tool` convention: you grant an agent a *named* MCP tool right in the YAML. No Write or Edit — it's a read-only analytics expert and nothing more.
+
+## The Honest Alternative: Skill + CLI
+
+A lot of what an MCP gives you, you can get from a **CLI plus a skill** — and often it's **simpler and better**.
+
+Most tools already ship a command-line tool. Your agent can just *run it* — it has a shell. And a **skill** teaches it *how* — which flags, your conventions, the gotchas.
+
+| When to Use | Approach |
+|-------------|----------|
+| **MCP** | Tool owner ships a great server, you want structured/typed access, no good CLI, remote service with managed auth |
+| **Skill + CLI** | Lighter, version-controlled, yours to shape, local tool control |
+
+For a lot of jobs, `gh` plus a skill beats a GitHub server; your database CLI plus a skill beats a database server.
+
+## Building Your Own Server
+
+What if the tool you want has no server? You can **build your own** to expose your company's internal systems to the agent.
+
+It's genuinely valuable — and it's a whole topic of its own. This is about *using* MCP well; building servers is the next step when you're ready.
+
+## Key Takeaways
+
+- MCP is how your agent operates on systems outside the codebase
+- Plug in what you need for the session, not everything
+- Security matters: narrow scopes, vet third-party, prefer first-party
+- Combine MCP with subagents to keep your main context clean
+- A skill + CLI is often simpler than a full server
+- The judgment is yours: add for capability + trust, not for the sake of it
