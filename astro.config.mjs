@@ -6,19 +6,58 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'Agentic Coding V2',
+			description: 'Companion site for Cole Medin\'s Agentic Coding Course V2',
+			social: [
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/coleam00/agentic-coding-course' },
+				{ icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@ColeMedin' },
+			],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'The Five Primitives',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Overview', slug: 'primitives/overview' },
+						{ label: 'Rules', slug: 'primitives/rules' },
+						{ label: 'Subagents', slug: 'primitives/subagents' },
+						{ label: 'MCP / Tools', slug: 'primitives/mcp-tools' },
+						{ label: 'Skills', slug: 'primitives/skills' },
+						{ label: 'Hooks', slug: 'primitives/hooks' },
 					],
 				},
 				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
+					label: 'The Four Phases',
+					items: [
+						{ label: 'Overview', slug: 'phases/overview' },
+						{ label: 'Phase 1: Create Your First System', slug: 'phases/phase-1' },
+						{ label: 'Phase 2: The Primitives', slug: 'phases/phase-2' },
+						{ label: 'Phase 3: Improve & Scale', slug: 'phases/phase-3' },
+						{ label: 'Phase 4: Going Further', slug: 'phases/phase-4' },
+					],
+				},
+				{
+					label: 'Steering Documents',
+					items: [
+						{ label: 'Overview', slug: 'steering/overview' },
+						{ label: 'direction.md', slug: 'steering/direction' },
+						{ label: 'engineering.md', slug: 'steering/engineering' },
+					],
+				},
+				{
+					label: 'Workflow Primitives',
+					items: [
+						{ label: 'Overview', slug: 'workflow/overview' },
+						{ label: 'Headless / SDK / CI', slug: 'workflow/headless-sdk-ci' },
+						{ label: 'Archon', slug: 'workflow/archon' },
+					],
+				},
+				{
+					label: 'Coming from V1?',
+					items: [
+						{ label: 'Overview', slug: 'v1-delta/overview' },
+						{ label: 'What Changed', slug: 'v1-delta/what-changed' },
+						{ label: 'What Still Applies', slug: 'v1-delta/what-still-applies' },
+						{ label: 'Migration Checklist', slug: 'v1-delta/migration-checklist' },
+					],
 				},
 			],
 		}),
