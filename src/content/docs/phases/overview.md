@@ -55,7 +55,7 @@ The "Understand" stage. You go under the hood and learn the five primitives ever
 
 ## Phase 3: Improve & Scale
 
-**Videos V24–V32**
+**Videos V24–V35**
 
 The "Evolve" stage. You sharpen each piece, chain the pieces into workflows you can trust, and scale that trustworthy system wider.
 
