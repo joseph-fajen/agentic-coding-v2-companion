@@ -122,7 +122,7 @@ Open the log: there's every command, every edit the agent made. A complete audit
 
 ## The Event Menu
 
-Hooks fire on lifecycle events:
+Hooks fire on lifecycle events — this is the stable core:
 
 | Event | When It Fires | Can Block? |
 |-------|---------------|------------|
@@ -131,7 +131,10 @@ Hooks fire on lifecycle events:
 | **UserPromptSubmit** | Your prompt, before the model sees it | Yes |
 | **SessionStart** | When a session begins | No |
 | **Stop** | The agent tries to finish | Yes |
+| **SubagentStop** | A subagent tries to finish | Yes |
+| **PreCompact** | Before context compaction | No |
 | **Notification** | The agent needs you | No |
+| **SessionEnd** | When a session ends | No |
 
 You don't memorize these — you reach for the one that matches *when* your thing should happen.
 

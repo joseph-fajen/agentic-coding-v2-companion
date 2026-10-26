@@ -92,7 +92,7 @@ The CLI does the deterministic, repeatable work. The skill is the *reasoning and
 
 ### Teaching the Agent a Tool
 
-`ast-grep` is a structural code-search tool — powerful, but the rule syntax is fiddly. A cold agent guesses it wrong. The skill turns that into a reliable workflow: write a test snippet, build the rule, run `ast-grep scan` to verify, then search the codebase.
+`ast-grep` is a structural code-search tool — it finds code patterns by structure rather than text (e.g., "all functions that call `logger.error`" regardless of formatting). Powerful, but the rule syntax is fiddly. A cold agent guesses it wrong. The skill turns that into a reliable workflow: write a test snippet, build the rule, run `ast-grep scan` to verify, then search the codebase.
 
 The agent runs the real CLI; the skill makes it *good* at it.
 

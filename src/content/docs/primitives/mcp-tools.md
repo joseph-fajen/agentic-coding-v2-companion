@@ -5,6 +5,16 @@ description: How your agent reaches outside the codebase to operate on real syst
 
 Your agent is brilliant inside your codebase — and blind to everything outside it. Your tickets, your analytics, your database, the live browser — it can't touch any of them. **MCP** is the fix.
 
+## Why MCP Exists
+
+Without MCP, your agent can read files and run commands in your repo, but it can't:
+- Check your Jira tickets or GitHub issues
+- Query your database or analytics
+- Browse a live webpage
+- Connect to your company's internal systems
+
+MCP bridges that gap by letting tools expose their capabilities to your agent in a standard way. Instead of every tool needing its own custom integration, MCP provides one common protocol — so you plug a server in and the agent can use it.
+
 MCP (Model Context Protocol) is the standard way to **plug your tooling in** — your personal scripts, your team's services, your company's systems — so the agent can actually *operate* on them.
 
 ## The USB-C Analogy
@@ -20,12 +30,12 @@ Whatever your work runs on, MCP is how the agent gets to operate on it instead o
 
 ## What a Server Is
 
-Under the hood, it's a **client and a server**:
+MCP uses a client-server architecture. Think of it like a web browser (client) connecting to websites (servers):
 
-- Your agent is the **client**
-- It connects to an MCP **server** that exposes **tools** — actions the agent can call
-- Servers can also expose **resources** (data) and **prompts**
-- The server runs locally or over HTTP
+- Your **agent** is the **client** — it makes requests
+- An MCP **server** exposes **tools** — actions the agent can call (like "create a Jira ticket" or "query the database")
+- Servers can also expose **resources** (data the agent can read) and **prompts** (templates for common tasks)
+- The server runs locally on your machine or over HTTP to a remote service
 
 ### Why Servers Beat Hand-Rolled Integrations
 

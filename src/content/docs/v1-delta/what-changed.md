@@ -12,8 +12,32 @@ V2 brings significant changes to both organization and concepts. This page maps 
 | V1 | V2 |
 |----|----|
 | 12 modules, linear sequence | 4 phases: Use → Understand → Evolve → Scale |
-| Modules 1-8 complete, 9-12 incomplete | 35 numbered videos (V01-V35) + Phase 4 async |
+| Modules 1-8 complete, 9-12 incomplete | 35 numbered videos (V01-V35) + V02.5 supplemental + Phase 4 async |
 | Topic-based modules | Primitive-based phases |
+
+*(V02.5 is an optional "Coding Agent Basics" video for first-time agent users.)*
+
+## What's Actually New vs. Renamed (Quick Triage)
+
+**Truly new — you need to learn these:**
+- Hooks (entire primitive)
+- Steering documents (direction.md, engineering.md)
+- Workflow automation patterns (headless, SDK, CI)
+- The harness framing
+- Progressive disclosure mechanism
+
+**Renamed/refined — map your existing knowledge:**
+- Commands → Skills (with structure)
+- `.agents/` → `.claude/`
+- Implicit concepts → Explicit primitives
+
+**Unchanged — your V1 knowledge transfers directly:**
+- PIV loop
+- Validation pyramid
+- Rules principles
+- MCP fundamentals
+
+---
 
 The four phases follow an intentional arc:
 
@@ -162,26 +186,6 @@ Chain only what you already trust by hand:
 | — | Subagents | New primitive, explicitly taught |
 | — | Hooks | Entirely new in V2 |
 | Module | Phase/Video | Restructured organization |
-
-## What's Actually New vs. Renamed
-
-**Truly new:**
-- Hooks (entire primitive)
-- Steering documents (direction.md, engineering.md)
-- Workflow automation patterns (headless, SDK, CI)
-- The harness framing
-- Progressive disclosure mechanism
-
-**Renamed/refined:**
-- Commands → Skills (with structure)
-- `.agents/` → `.claude/`
-- Implicit concepts → Explicit primitives
-
-**Unchanged:**
-- PIV loop
-- Validation pyramid
-- Rules principles
-- MCP fundamentals
 
 ## See Also
 

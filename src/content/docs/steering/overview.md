@@ -7,6 +7,16 @@ Your rules file handles the operational layer — the map, the commands, the gro
 
 That's what steering documents do. They're reference docs your rules file points to, loaded when the agent needs to make judgment calls about scope or quality.
 
+**How they connect to your rules file:**
+```markdown
+# In CLAUDE.md
+## Steering
+For product direction and scope questions, see `references/direction.md`.
+For engineering standards and review criteria, see `references/engineering.md`.
+```
+
+The agent reads the pointer, then fetches the full document when the task calls for it.
+
 ## The Core Insight
 
 > **Steering documents encode the decisions you'd otherwise repeat in every conversation.**
@@ -40,18 +50,7 @@ Your rules file stays lean. Your steering docs can go deep. And the agent loads 
 
 ## How They Load
 
-Steering documents are **on-demand references** — the same pattern from the Rules primitive:
-
-```markdown
-# In CLAUDE.md
-
-## Steering
-
-For product direction and scope questions, see `references/direction.md`.
-For engineering standards and review criteria, see `references/engineering.md`.
-```
-
-The agent reads the pointer in your rules, then fetches the full document when the task calls for it. Progressive disclosure: one line always-on, full context when needed.
+Steering documents are **on-demand references** — the same pattern from the Rules primitive. The agent reads the pointer in your rules, then fetches the full document when the task calls for it. Progressive disclosure: one line always-on, full context when needed.
 
 ## What Goes Where
 

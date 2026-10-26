@@ -9,7 +9,7 @@ Phase 1 is the **"Use"** stage — you install the mental models, stand up an AI
 
 ## What You'll Walk Away With
 
-- **The whole loop held in your head:** strategic doc → Layer 1 / Layer 2 planning → the R-PIV loop (Research → Plan → Implement → Validate) → system evolution.
+- **The whole loop held in your head:** strategic doc → Layer 1 / Layer 2 planning (stable context vs per-feature planning) → the R-PIV loop (Research → Plan → Implement → Validate) → system evolution.
 - **A working AI Layer** customized to your stack. Global rules first; the rest of the primitives come in Phase 2.
 - **One real ticket shipped** through the full R-PIV loop on your own greenfield or brownfield project.
 

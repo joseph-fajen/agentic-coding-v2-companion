@@ -3,6 +3,14 @@ title: Archon
 description: The workflow engine that holds the loop and does nothing else
 ---
 
+## When You Need This
+
+You need Archon when your orchestrator skill is doing too many jobs at once — investigating, gating, digesting, talking to you, AND holding the loop. When the complexity of "what runs when" outgrows a single skill, it's time for a dedicated engine.
+
+**Archon is a workflow engine for agentic coding workflows.** Unlike using a skill or script to orchestrate other skills, Archon provides a graph-based approach where your existing skills become nodes. You don't learn a new system — you express what you've already built in a format an engine can run.
+
+## The Problem It Solves
+
 Your orchestrator holds the loop while doing five other jobs — investigating, gating, digesting, talking to you. Holding the loop is a job, and it's doing five others.
 
 **The thing built to hold loops and nothing else is an engine.** That's Archon.
@@ -14,6 +22,8 @@ Your orchestrator holds the loop while doing five other jobs — investigating, 
 A workflow, in Archon, is your skills and your scripts as nodes on a graph — and the graph is the structure you've been drawing by hand all act: what runs, what it depends on, what checks it, and where you stand.
 
 ## You Already Built the Parts
+
+This is the key insight: **you didn't just learn five ways to automate — you hand-built the parts of a workflow engine.** Archon is those parts, load-bearing.
 
 Everything in Archon maps to something you already know:
 

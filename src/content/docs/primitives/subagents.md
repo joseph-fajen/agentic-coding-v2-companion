@@ -55,7 +55,7 @@ You author your own for the **recurring, specialized** jobs. Two ways: a command
 
 The out-of-the-box agents are **fine** — they're a great starting point. But *fine* is the floor. The moment you have a recurring job — reviewing code *your* way, researching a feature against *your* conventions, checking a plan against *your* standards — you can **outperform** the built-in easily.
 
-**Why you can beat them:** The built-in agents have to be **agnostic** — they work for everyone, on every stack, every convention. That generality is their ceiling. **Yours has no such constraint.** You get to be ruthlessly specific — to your tools, your stack, your conventions.
+**Why you can beat them:** The built-in agents have to be **agnostic** — they work for everyone, on every stack, every convention. That generality is their ceiling. Once you understand how the built-ins work, you can beat them by being ruthlessly specific — to your tools, your stack, your conventions.
 
 A focused, specialized agent beats a general one on *your* work every time. That specialization is the whole advantage.
 

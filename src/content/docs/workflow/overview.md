@@ -32,10 +32,10 @@ You enter the outer loop two ways, and the difference is smaller than you'd thin
 
 | Entry | What You Point At | What It Asks |
 |-------|------------------|--------------|
-| **Reactive** | One run's artifacts | "What should change so that doesn't happen again?" |
+| **Reactive** | One run's artifacts (the plan, the code diff, the test output, the review report) | "What should change so that doesn't happen again?" |
 | **Proactive** | Weeks of runs | "What keeps costing me?" |
 
-Point it at **one run** (the plan, the report, the diff) and you're asking about a specific problem. Point it at **weeks of logs** and you're looking for patterns — the things you keep doing by hand that should become skills, rules, or hooks.
+Point it at **one run's artifacts** — the plan, the diff, the test output — and you're asking about a specific problem. Point it at **weeks of logs** and you're looking for patterns — the things you keep doing by hand that should become skills, rules, or hooks.
 
 ## The One-Sentence Version
 

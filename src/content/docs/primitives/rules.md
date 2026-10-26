@@ -7,7 +7,7 @@ Your rules file is the highest-leverage file in your entire harness. It's the on
 
 ## The Core Insight
 
-**Every rule you add is a tax on the rules you already have.** Research shows that as you pile on simultaneous instructions, the share the model actually follows drops — one study found roughly 44% adherence at just ten instructions at once. Lean isn't tidiness; it's how many of your rules actually get followed.
+**Every rule you add is a tax on the rules you already have.** Research shows that as you pile on simultaneous instructions, the share the model actually follows drops — [one study found roughly 44% adherence at just ten instructions](https://arxiv.org/abs/2307.11088). Lean isn't tidiness; it's how many of your rules actually get followed.
 
 ## AGENTS.md vs CLAUDE.md
 
@@ -15,19 +15,10 @@ Two filenames, one job:
 
 | File | Description |
 |------|-------------|
-| **AGENTS.md** | The open, cross-tool standard — stewarded by the Linux Foundation, read by dozens of agents across tens of thousands of repos |
+| **AGENTS.md** | The open, cross-tool standard — recognized by multiple coding agents across the ecosystem |
 | **CLAUDE.md** | Claude's native file — Claude Code reads this automatically |
 
 They're the **same job** with ~90% identical content. Multi-tool team? Put the shared stuff in AGENTS.md so every agent reads it, and keep a thin CLAUDE.md only for Claude-specific bits like `@`-imports.
-
-### Nesting Behavior
-
-The two formats nest differently (relevant for larger codebases):
-
-- **AGENTS.md** uses **nearest-file-wins**: the agent walks up from the file it's editing and the closest file takes precedence
-- **CLAUDE.md** uses **concatenation**: Claude Code reads every CLAUDE.md from the repo root down to where you're working and merges them
-
-Most projects never need nested rules files — they're for when the codebase gets big enough to need per-area conventions.
 
 ## What Earns an Always-On Slot
 
@@ -132,6 +123,15 @@ The real mechanism — only a one-line description is always on; the body loads 
 | **Small** | One file — everything in one place, easy to scan |
 | **Growing** | Modular — split sections into files the root pulls in via `@`-imports |
 | **Large/Monorepo** | Package-level rules files — each folder carries its own map + conventions |
+
+### Nesting Behavior (Large Codebases)
+
+When you have per-package rules files, the two formats nest differently:
+
+- **AGENTS.md** uses **nearest-file-wins**: the agent walks up from the file it's editing and the closest file takes precedence
+- **CLAUDE.md** uses **concatenation**: Claude Code reads every CLAUDE.md from the repo root down to where you're working and merges them
+
+Most projects never need nested rules files — they're for when the codebase gets big enough to need per-area conventions.
 
 ## Keeping It True: Drift
 
