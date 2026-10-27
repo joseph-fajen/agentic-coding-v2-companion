@@ -12,24 +12,24 @@ V2 brings significant changes to both organization and concepts. This page maps 
 | V1 | V2 |
 |----|----|
 | 12 modules, linear sequence | 4 phases: Use → Understand → Evolve → Scale |
-| Modules 1-8 complete, 9-12 incomplete | 35 numbered videos (V01-V35) + V02.5 supplemental + Phase 4 async |
+| Modules 1-8 complete, 9-12 incomplete | ~32 numbered videos + V02.5 supplemental + Phase 4 async |
 | Topic-based modules | Primitive-based phases |
 
-*(V02.5 is an optional "Coding Agent Basics" video for first-time agent users.)*
+*(V02.5 is an optional "Coding Agent Basics" video for first-time agent users. Video counts updated July 2026 after course restructure.)*
 
 ## What's Actually New vs. Renamed (Quick Triage)
 
 **Truly new — you need to learn these:**
-- Hooks (entire primitive)
-- Steering documents (direction.md, engineering.md)
-- Workflow automation patterns (headless, SDK, CI)
-- The harness framing
-- Progressive disclosure mechanism
+- [Hooks](/primitives/hooks/) (entire primitive)
+- [Steering documents](/steering/overview/) (direction.md, engineering.md)
+- [Workflow automation patterns](/workflow/overview/) (headless, SDK, CI)
+- The harness framing (see [Primitives Overview](/primitives/overview/))
+- Progressive disclosure mechanism (see [Skills](/primitives/skills/))
 
 **Renamed/refined — map your existing knowledge:**
-- Commands → Skills (with structure)
+- Commands → [Skills](/primitives/skills/) (with structure)
 - `.agents/` → `.claude/`
-- Implicit concepts → Explicit primitives
+- Implicit concepts → Explicit primitives (see [Primitives Overview](/primitives/overview/))
 
 **Unchanged — your V1 knowledge transfers directly:**
 - PIV loop
@@ -41,10 +41,10 @@ V2 brings significant changes to both organization and concepts. This page maps 
 
 The four phases follow an intentional arc:
 
-- **Phase 1 (V01-V11):** Create Your First System — brownfield planning, first PIV loop, worktrees
-- **Phase 2 (V12-V23):** The Primitives — each of the five primitives taught explicitly
-- **Phase 3 (V24-V35):** Improve & Scale — workflow automation, headless, SDK, Archon
-- **Phase 4 (async):** Going Further — team standards, AI-native design, context curation
+- **Phase 1 (11 videos + V02.5):** Create Your First System — brownfield planning, first PIV loop, worktrees
+- **Phase 2 (12 videos):** [The Primitives](/primitives/overview/) — each of the five primitives taught explicitly
+- **Phase 3 (9 videos):** Improve & Scale — workflow automation, [headless/SDK](/workflow/headless-sdk-ci/), [Archon](/workflow/archon/)
+- **Phase 4 (async):** Going Further — team standards, AI-native design, AI-in-CI
 
 ### Folder Layout
 
@@ -190,6 +190,6 @@ Chain only what you already trust by hand:
 ## See Also
 
 - [The Five Primitives](/primitives/overview/) — deep dives on each primitive
-- [Steering Documents](/primitives/steering-overview/) — the new direction.md and engineering.md
+- [Steering Documents](/steering/overview/) — the new direction.md and engineering.md
 
 Next: [What Still Applies](/v1-delta/what-still-applies/) — the V1 concepts that remain central.

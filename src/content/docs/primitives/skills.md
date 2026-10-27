@@ -7,6 +7,35 @@ Every workflow you run — priming, planning, reviewing, committing — is a **s
 
 It's also the one that ties the others together: a skill can drive your subagents and call your MCP tools. That's why skills come *after* subagents and MCP in the composition order.
 
+## Quick Start: Create a Skill in 3 Steps
+
+**1. Create the folder and file:**
+```bash
+mkdir -p .claude/skills/my-skill
+touch .claude/skills/my-skill/SKILL.md
+```
+
+**2. Add frontmatter + body:**
+```yaml
+---
+name: my-skill
+description: |
+  Does X when Y. Use after Z to verify the result.
+---
+
+## Steps
+
+1. First, do this
+2. Then, run `command here`
+3. Report the result
+```
+
+**3. Test it:** Type `/my-skill` in your agent session.
+
+That's it. Read on for the details.
+
+---
+
 ## Rules vs Skills
 
 > **Rules are principles. Skills are processes.**
@@ -43,6 +72,12 @@ Two fields are required:
 - **`description`** — what the skill does and **when** to use it (third-person, because that's what the agent reads to decide whether to fire)
 
 Vague description, never triggers. The description is the highest-leverage line in the file.
+
+:::note[Open Standard vs Agent-Specific]
+The `name`, `description`, and `allowed-tools` fields are part of the **Agent Skills open standard** — they work across Claude Code, Codex, and other compatible agents.
+
+Fields like `model` (which model to use) and `argument-hint` (prompt for arguments) are **Claude-Code-specific** frontmatter. They work in Claude Code but aren't portable to other agents.
+:::
 
 ### The Body
 

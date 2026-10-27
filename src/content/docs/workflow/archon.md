@@ -5,15 +5,17 @@ description: The workflow engine that holds the loop and does nothing else
 
 import { Aside } from '@astrojs/starlight/components';
 
+:::tip[TL;DR — What Is Archon?]
+Archon is a **workflow engine** that holds the loop and does nothing else. Use it when your orchestrator skill is doing too many jobs at once — investigating, gating, digesting, talking to you, AND holding the loop. Your existing skills become nodes on a graph; Archon runs the graph.
+:::
+
+:::note[What Archon Is and Isn't]
+Archon is the **course's illustrative engine** — it's open-source and built by the Dynamous community. The concepts (graph-based workflow, gates, bounded loops) transfer to other engines. Learn the shape here; apply it anywhere.
+:::
+
 <Aside type="note" title="Prerequisites">
 This doc assumes you've completed Phase 3 and built workflow automation using skills, scripts, or both. If you haven't automated multi-step workflows yet, start with [Headless / SDK / CI](/workflow/headless-sdk-ci/) first.
 </Aside>
-
-## When You Need This
-
-You need Archon when your orchestrator skill is doing too many jobs at once — investigating, gating, digesting, talking to you, AND holding the loop. When the complexity of "what runs when" outgrows a single skill, it's time for a dedicated engine.
-
-**Archon is a workflow engine for agentic coding workflows.** Unlike using a skill or script to orchestrate other skills, Archon provides a graph-based approach where your existing skills become nodes. You don't learn a new system — you express what you've already built in a format an engine can run.
 
 ## The Problem It Solves
 
@@ -21,11 +23,13 @@ Your orchestrator holds the loop while doing five other jobs — investigating, 
 
 **The thing built to hold loops and nothing else is an engine.** That's Archon.
 
+Unlike using a skill or script to orchestrate other skills, Archon provides a **graph-based approach** where your existing skills become nodes. You don't learn a new system — you express what you've already built in a format an engine can run.
+
 ## The Core Insight
 
 > **You don't learn a new system. Everything you built this phase — the skills, the script, the hooks, the gates, the loops — can be expressed in Archon, and automated by it.**
 
-A workflow, in Archon, is your skills and your scripts as nodes on a graph — and the graph is the structure you've been drawing by hand all act: what runs, what it depends on, what checks it, and where you stand.
+A workflow, in Archon, is your skills and your scripts as nodes on a graph — and the graph is the structure you've been drawing by hand: what runs, what it depends on, what checks it, and where you stand.
 
 ## You Already Built the Parts
 

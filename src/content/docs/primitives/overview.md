@@ -32,7 +32,7 @@ Why this order? Each primitive can use the ones before it:
 - A **subagent** can use MCP tools and read rules
 - **Hooks** are the odd one out — nothing composes them; they fire on their own
 
-Understanding this lets you put each piece of your harness in the right place.
+Understanding this lets you put each piece of your harness in the right place — and tells you which pieces to learn first. If you're not sure where to start, follow the order: master rules before worrying about skills.
 
 ## It's All Composable Markdown
 

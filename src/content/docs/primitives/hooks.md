@@ -7,6 +7,17 @@ Here's a confession about that little "approve?" prompt your agent shows you bef
 
 The real move is the opposite of babysitting: **stop approving everything by hand — and hard-block the handful of things the agent must *never* do.**
 
+Here's what that looks like — a hook that blocks the agent from reading your secrets:
+
+```python
+# .claude/hooks/pre_tool_use.py
+if tool == "Read" and path.endswith(".env"):
+    print("BLOCKED: Cannot read secrets", file=sys.stderr)
+    sys.exit(2)  # Exit 2 = block the tool
+```
+
+That's it. The agent *can't* read `.env`, no matter what. Not "usually won't" — **can't**. Now let's understand why.
+
 ## The Core Distinction
 
 > **A rule *asks* the agent to behave. A hook *guarantees* it.**
@@ -122,16 +133,22 @@ Open the log: there's every command, every edit the agent made. A complete audit
 
 ## The Event Menu
 
-Hooks fire on lifecycle events — this is the stable core:
+Hooks fire on lifecycle events. These are the **stable core** you'll use most often:
 
 | Event | When It Fires | Can Block? |
 |-------|---------------|------------|
 | **PreToolUse** | Before a tool runs | Yes |
 | **PostToolUse** | After a tool runs | No |
 | **SessionStart** | When a session begins | No |
+| **SessionEnd** | When a session ends | No |
 | **Stop** | The agent tries to finish | Yes |
 | **SubagentStop** | A subagent tries to finish | Yes |
+| **PreCompact** | Before context compaction | No |
 | **Notification** | The agent needs you | No |
+
+:::note[More Events Exist]
+The full event surface includes 25+ events (SubagentStart, PostToolUseFailure, PermissionRequest, etc.). The table above covers what you'll use 90% of the time. Check your tool's docs for the complete list.
+:::
 
 You don't memorize these — you reach for the one that matches *when* your thing should happen.
 

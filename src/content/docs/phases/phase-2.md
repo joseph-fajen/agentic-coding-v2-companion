@@ -52,6 +52,8 @@ See the [Five Primitives](/primitives/overview/) section for deep dives on each.
 
 Each primitive gets a **teach** video and a hands-on **exercise** on your own project.
 
+**Next step:** [Watch V12 — The Primitives of Agentic Engineering](https://www.skool.com/dynamous) or dive into the [Rules primitive](/primitives/rules/) reference.
+
 ## The Keystone Insight
 
 Here's the idea the whole phase hinges on:

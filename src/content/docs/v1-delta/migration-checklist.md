@@ -5,6 +5,18 @@ description: Concrete steps to update your V1 system to V2 patterns
 
 Use this checklist to update your V1 agentic system to V2 patterns. Work through it in order — earlier items enable later ones.
 
+:::tip[What's Actually Critical?]
+**You can skip folder migration** if your current structure works. These are the high-value changes:
+
+1. **Learn [Hooks](/primitives/hooks/)** — entirely new primitive for guarantees
+2. **Create [Steering Docs](/steering/overview/)** — direction.md and engineering.md
+3. **Review your [Rules](/primitives/rules/)** — apply the cut test ("would it do this anyway?")
+
+Everything else is polish. Start with those three.
+:::
+
+---
+
 ## Structural Migration
 
 ### 1. Folder Layout

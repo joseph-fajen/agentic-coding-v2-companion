@@ -5,7 +5,11 @@ description: Make your system compound — fix the system instead of the code, t
 
 Phase 3 is the **"Evolve"** stage — the discipline that makes your system compound. You've built the primitives; now you sharpen each piece, chain the pieces into workflows you can trust, and then scale that trustworthy system wider.
 
-**Videos V24–V35**
+:::tip[What Phase 3 Is For]
+**This is where your system compounds.** You've built the pieces in Phases 1–2; now you automate and scale them. Phases 1–3 together form the complete core course.
+:::
+
+**9 videos** covering system evolution, workflow automation, and scaling.
 
 ## The Two Laws
 
@@ -40,7 +44,11 @@ The reliable system from Act 1, run wider. A ladder of *how* you run it:
 |------|-----------------|
 | **Parallel (worktrees)** | Run compositions side by side, isolated — PIV loops on multiple tickets at once |
 | **Headless / Non-interactive** | `claude -p` and peers — workflows that run without you in the window |
-| **Archon** | The DAG abstraction — skill-chaining + scheduling + worktree isolation + parallel orchestration you don't hand-code. Observability lands here (dispatch history + per-run logs) |
+| **Archon** | The DAG abstraction — skill-chaining + scheduling + worktree isolation + parallel orchestration you don't hand-code |
+
+:::note
+**AI-in-CI** (running workflows in CI pipelines) moved to Phase 4 as of July 2026. Phase 3 covers the foundations; Phase 4 extends to team-scale and CI automation.
+:::
 
 **Cost discipline runs underneath the whole act.** Every rung (parallel, headless, autonomous) multiplies tokens; unmanaged, it bites. The controls: per-run/per-agent budgets + caps, model routing (cheap model for mechanical steps, capable for the hard ones), prompt caching. Cost discipline is what makes autonomy affordable.
 

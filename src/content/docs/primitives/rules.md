@@ -7,7 +7,27 @@ Your rules file is the highest-leverage file in your entire harness. It's the on
 
 ## The Core Insight
 
-**Every rule you add is a tax on the rules you already have.** Research shows that as you pile on simultaneous instructions, the share the model actually follows drops — [one study found roughly 44% adherence at just ten instructions](https://arxiv.org/abs/2307.11088). Lean isn't tidiness; it's how many of your rules actually get followed.
+**Every rule you add is a tax on the rules you already have.** Research shows that as you pile on simultaneous instructions, the share the model actually follows drops — [one study found roughly 44% adherence at just ten instructions](https://arxiv.org/abs/2307.11088) (tested on Claude 3.5; varies by model capability). Lean isn't tidiness; it's how many of your rules actually get followed.
+
+## Quick Decision: Where Does This Line Belong?
+
+For every line in a rules file, ask two questions:
+
+1. **Constant, or task-specific?** → Task-specific content isn't a rule at all
+2. **Needed every session?** → Yes means always-on; no means on-demand
+
+These sort every line into **four destinations**:
+
+| Destination | Description |
+|-------------|-------------|
+| **Keep always-on** | The map, ground rules, commands, agent-steering you always want |
+| **Push to on-demand** | Stable but task-type-specific references or skills, loaded only when needed |
+| **Move to a plan** | Content about one specific task or feature |
+| **Delete** | Redundant or slogan content the model already follows |
+
+Read on for what earns each slot.
+
+---
 
 ## AGENTS.md vs CLAUDE.md
 
@@ -72,22 +92,6 @@ Examples to **keep**:
 - "Never touch `.env` or commit secrets"
 
 Negative rules ("never do X") pull as much weight as positive ones, and emphasis markers like **IMPORTANT** or **NEVER** measurably raise adherence — spend them on the few rules that truly matter.
-
-## The Four Destinations
-
-For every line in a rules file, ask two questions:
-
-1. **Constant, or task-specific?** → Task-specific content isn't a rule at all
-2. **Needed every session?** → Yes means always-on; no means on-demand
-
-These sort every line into **four destinations**:
-
-| Destination | Description |
-|-------------|-------------|
-| **Keep always-on** | The map, ground rules, commands, agent-steering you always want |
-| **Push to on-demand** | Stable but task-type-specific references or skills, loaded only when needed |
-| **Move to a plan** | Content about one specific task or feature |
-| **Delete** | Redundant or slogan content the model already follows |
 
 ## On-Demand Context
 
@@ -160,5 +164,5 @@ A steering principle, a naming convention, a git-workflow note — *you choose w
 
 ## See Also
 
-- [Steering Documents](/primitives/steering-overview/) — direction.md and engineering.md as advanced Rules patterns
+- [Steering Documents](/steering/overview/) — direction.md and engineering.md as advanced Rules patterns
 - [Skills](/primitives/skills/) — on-demand processes your rules can point to

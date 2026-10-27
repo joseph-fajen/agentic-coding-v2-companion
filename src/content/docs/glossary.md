@@ -5,6 +5,16 @@ description: Key terms used throughout the Agentic Coding V2 course
 
 Quick reference for terminology used in the V2 course and this companion site.
 
+:::tip[Start Here]
+**If you're new**, learn these terms first in this order:
+1. **Harness / AI Layer** — what you build around the model
+2. **PIV Loop** — the core workflow (Plan → Implement → Validate)
+3. **The Five Primitives** — Rules, Subagents, MCP/Tools, Skills, Hooks
+4. **Layer 1 / Layer 2** — durable vs task-specific context
+
+Everything else builds on these.
+:::
+
 ## Core Concepts
 
 ### Harness (AI Layer)
@@ -104,13 +114,13 @@ See: [Hooks](/primitives/hooks/)
 
 Answers: **What is this project?** Uses the IS / IS NOT pattern with named clauses (e.g., `§single-user`, `§not-financial`). Loaded for planning, triage, and architecture tasks.
 
-See: [direction.md](/primitives/steering-direction/)
+See: [direction.md](/steering/direction/)
 
 ### engineering.md
 
 Answers: **How do we judge code here?** Contains your objective function, code conventions, risk taxonomy, and "ready to merge" checklist. Loaded for implementation and review tasks.
 
-See: [engineering.md](/primitives/steering-engineering/)
+See: [engineering.md](/steering/engineering/)
 
 ## Workflow Concepts
 

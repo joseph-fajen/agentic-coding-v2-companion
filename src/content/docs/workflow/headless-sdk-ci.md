@@ -7,6 +7,10 @@ Every time you run a skill, look at what it gave you, and hand that to the next 
 
 This section is about replacing that last part. Not the steps. Not the hand-off. Just you.
 
+:::note[Not There Yet?]
+If you haven't automated multi-step workflows yet, start smaller: build one end-to-end loop by hand first. Run a skill → check the output → run the next skill → verify. Once you've done that a few times and trust the steps, come back here to automate the "pressing go" part. See [Phase 3](/phases/phase-3/) for the learning path.
+:::
+
 ## The Core Insight
 
 > **The steps don't change. What you hand between them doesn't change. The only thing that changes is what says go.**

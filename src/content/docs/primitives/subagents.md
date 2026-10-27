@@ -7,6 +7,29 @@ A subagent is the cheapest way to make your coding agent smarter — and the eas
 
 But here's the catch that everything hangs on: **you never see what it actually did. You only ever see what it reports back.** So the real skill isn't spawning a subagent — it's **authoring what comes back** so the main agent, and you, can trust it.
 
+:::tip[TL;DR — When to Use Subagents]
+**Use subagents when you need:**
+- **Context isolation** — heavy work (reading 20 files, running 10 tools) without polluting your main context
+- **Parallelization** — multiple independent jobs finishing in the time of the slowest, not the sum
+
+**Don't use subagents to:**
+- Prime your main agent with codebase knowledge (the context doesn't transfer — only the summary does)
+:::
+
+## Why Subagents Exist
+
+Two killer use cases:
+
+### 1. Context Isolation
+
+The subagent's work happens in a separate window. It can read twenty files, run ten tools, make a mess — and **none of that lands in your main context.** The main session only ever sees the clean summary. That's how you do heavy work without rotting the context you actually care about.
+
+### 2. Parallelization
+
+Because each one is isolated, you can run **several at once** — independent jobs finishing in the time of the slowest one, not the sum of all of them.
+
+---
+
 ## The Four-Hop Flow
 
 Here's the whole thing in one picture:
@@ -28,18 +51,6 @@ Look at those two handoffs — main-to-sub, and sub-back-to-main. Context can be
 - The sub only passes back what *it* chooses to
 
 Those two seams are exactly the things you learn to control.
-
-## Why Subagents Exist
-
-Two killer use cases:
-
-### 1. Context Isolation
-
-The subagent's work happens in a separate window. It can read twenty files, run ten tools, make a mess — and **none of that lands in your main context.** The main session only ever sees the clean summary. That's how you do heavy work without rotting the context you actually care about.
-
-### 2. Parallelization
-
-Because each one is isolated, you can run **several at once** — independent jobs finishing in the time of the slowest one, not the sum of all of them.
 
 ## The Artifact: A Subagent Is Just Markdown
 

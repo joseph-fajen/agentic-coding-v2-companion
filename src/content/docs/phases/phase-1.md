@@ -42,6 +42,8 @@ Using AI to code is table stakes. The edge is running a *system*: you own the pl
 
 Start with V1 and work through in order. Everything later in the course builds on the system you install here.
 
+**Next step:** [Watch V1 — Course Vision + The System Gap](https://www.skool.com/dynamous)
+
 ## Key Concepts
 
 ### Layer 1 / Layer 2
