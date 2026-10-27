@@ -5,13 +5,13 @@ description: What this project is, and what it isn't — the scope boundary your
 
 direction.md answers one question: **What is this project?** Not how to build it — that's engineering.md. But what it *is*, what it *isn't*, and where the boundaries lie.
 
-## Why Direction Matters
+## Why direction matters
 
 Without direction, every feature request is a judgment call. "Should I add multi-user support?" "Should I handle this edge case?" The agent guesses, and half the time you correct it.
 
 With direction, those questions have answers. The agent reads your product thinking once and applies it consistently. When it declines to add something, it can cite the clause: "This would violate `direction.md §single-user`."
 
-## The IS / IS NOT Pattern
+## The IS / IS NOT pattern
 
 The clearest direction documents use a simple structure: what this project IS, and what it IS NOT.
 
@@ -35,7 +35,7 @@ The clearest direction documents use a simple structure: what this project IS, a
 
 Each clause has a name so the agent can cite it. Each clause is one or two lines — enough to be clear, not enough to be a manifesto.
 
-## Case Study: A Personal Agent
+## Case study: a personal agent
 
 Here's a real direction.md from a personal AI agent project:
 
@@ -58,7 +58,7 @@ Here's a real direction.md from a personal AI agent project:
 
 This creates clear boundaries. When the agent considers a feature, it has a lookup table: is this in scope or out?
 
-## Aspirational Architecture
+## Aspirational architecture
 
 Some direction documents include a third section: where the engineering is *going*. Not a requirement for today, but a constraint on new code.
 
@@ -81,7 +81,7 @@ that makes it materially harder.
 
 The key instruction: "reject new coupling that makes it materially harder." You're not demanding the architecture exist today — you're protecting the path to it.
 
-## Open Questions
+## Open questions
 
 Some decisions aren't made yet. A direction document can track those too:
 
@@ -97,7 +97,7 @@ Some decisions aren't made yet. A direction document can track those too:
 
 When a PR touches one of these areas, the agent knows: this is contested territory, surface the tradeoff rather than assume.
 
-## How Agents Use It
+## How agents use it
 
 The direction document serves different roles depending on the task:
 
@@ -110,7 +110,7 @@ The direction document serves different roles depending on the task:
 
 The pattern: the agent reads your product thinking and applies it without you re-explaining every time.
 
-## The Clause Naming Convention
+## The clause naming convention
 
 Every clause gets a name prefixed with `§`. This isn't decoration — it's infrastructure.
 
@@ -123,7 +123,7 @@ Every clause gets a name prefixed with `§`. This isn't decoration — it's infr
 
 The `§` prefix lets the agent cite precisely: "Declined per `direction.md §not-financial`." You can search for it, audit it, and trace exactly which decision drove the behavior.
 
-## Writing Your First direction.md
+## Writing your first direction.md
 
 Start small. You probably have 3–5 clear boundaries already — write those down:
 
@@ -135,7 +135,7 @@ Start small. You probably have 3–5 clear boundaries already — write those do
 
 Then evolve it: every time you explain a scope boundary to the agent, check if it should be a clause. Every time you make a direction decision, add it.
 
-## How to Evolve direction.md
+## How to evolve direction.md
 
 | Trigger | Action |
 |---------|--------|
@@ -147,7 +147,7 @@ Then evolve it: every time you explain a scope boundary to the agent, check if i
 
 Keep entries to one or two lines. This is for fast lookup during planning and triage, not documentation.
 
-## Key Takeaways
+## Key takeaways
 
 - direction.md answers "what is this project?" — scope and boundaries
 - Use the IS / IS NOT pattern with named clauses (`§single-user`)

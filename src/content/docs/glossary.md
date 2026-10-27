@@ -15,9 +15,9 @@ Quick reference for terminology used in the V2 course and this companion site.
 Everything else builds on these.
 :::
 
-## Core Concepts
+## Core concepts
 
-### Harness (AI Layer)
+### Harness (AI layer)
 
 Everything you wrap around a coding agent to make it work your way: your rules, specialized workers, tools, processes, and guarantees. The formula is **Agent = Model + Harness**. The model is the easy part; the hard part is building the harness that makes the model useful on your codebase.
 
@@ -34,15 +34,15 @@ Two levels of context in agentic coding:
 
 Layer 1 is the system. Layer 2 is what the system operates on.
 
-### PIV Loop
+### PIV loop
 
 The core workflow: **Plan → Implement → Validate**. The base loop for shipping work.
 
-### R-PIV Loop
+### R-PIV loop
 
 Extended workflow: **Research → Plan → Implement → Validate**. Use R-PIV when the task requires exploration or understanding before you can plan. PIV is the base; Research is the optional extension for complex tasks.
 
-### Inner Loop / Outer Loop
+### Inner loop / outer loop
 
 | Loop | Purpose | What It Does |
 |------|---------|--------------|
@@ -51,7 +51,7 @@ Extended workflow: **Research → Plan → Implement → Validate**. Use R-PIV w
 
 The inner loop ends with a merged PR. The outer loop ends with a better harness.
 
-### Progressive Disclosure
+### Progressive disclosure
 
 Three-tier loading model that keeps token usage low:
 
@@ -70,7 +70,7 @@ Loading context into an agent before it starts work. In V2, priming happens thro
 
 Don't use subagents to prime your main agent — they have fresh context by design.
 
-## The Five Primitives
+## The five primitives
 
 ### Rules
 
@@ -108,7 +108,7 @@ Events: PreToolUse, PostToolUse, SessionStart, Stop, SubagentStop, Notification.
 
 See: [Hooks](/primitives/hooks/)
 
-## Steering Documents
+## Steering documents
 
 ### direction.md
 
@@ -122,13 +122,13 @@ Answers: **How do we judge code here?** Contains your objective function, code c
 
 See: [engineering.md](/steering/engineering/)
 
-## Workflow Concepts
+## Workflow concepts
 
-### Check → Trust → Automate
+### Check → trust → automate
 
 The Phase 3 discipline: you can't trust what you haven't checked, and you shouldn't automate what you don't trust. Run steps manually first, gain confidence, then compose into workflows.
 
-### Fresh Context vs. Persistent Context
+### Fresh context vs. persistent context
 
 | Type | When To Use |
 |------|-------------|
@@ -137,7 +137,7 @@ The Phase 3 discipline: you can't trust what you haven't checked, and you should
 
 The `--resume` flag controls this in headless workflows.
 
-### Skill + CLI Pattern
+### Skill + CLI pattern
 
 Skills don't replace CLIs — they orchestrate them:
 - The CLI does deterministic work
@@ -146,7 +146,7 @@ Skills don't replace CLIs — they orchestrate them:
 
 Custom checkers and helpers are the power move.
 
-## File Conventions
+## File conventions
 
 | File | Purpose |
 |------|---------|
@@ -159,7 +159,7 @@ Custom checkers and helpers are the power move.
 | `settings.json` | Hook configuration |
 | `.mcp.json` | MCP server configuration |
 
-## See Also
+## See also
 
 - [The Five Primitives](/primitives/overview/) — detailed coverage of each primitive
 - [What Changed](/v1-delta/what-changed/) — V1 to V2 term mapping

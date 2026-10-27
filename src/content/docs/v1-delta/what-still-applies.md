@@ -5,7 +5,7 @@ description: Core V1 concepts that remain central in V2
 
 Not everything changed. These V1 concepts remain valid and central — V2 refines where they live and how they're taught, but the fundamentals persist.
 
-## The PIV Loop
+## The PIV loop
 
 **Plan → Implement → Validate** remains the execution model.
 
@@ -21,7 +21,7 @@ V2 adds the **R-PIV** extension for complex tasks:
 
 The research phase handles exploration, gathering context, and understanding unknowns before committing to a plan. Use it when the task requires understanding before acting.
 
-## The Validation Pyramid
+## The validation pyramid
 
 The five-layer validation stack remains your quality framework:
 
@@ -41,17 +41,17 @@ In V2, validation often lives in skills and hooks:
 - PostToolUse hooks guarantee checks run after code changes
 - CI pipelines run the full pyramid on every push
 
-## Rules Principles
+## Rules principles
 
 These guidelines for your rules file remain valid:
 
-### Day 1 Onboarding
+### Day 1 onboarding
 
 > Your rules file should be what a new developer needs on day 1 — not everything they'll ever need.
 
 The test: if someone joined your team today, what would they need to know to start contributing? That's your rules file. Everything else is on-demand context.
 
-### Principles Over Processes
+### Principles over processes
 
 Rules state *what* and *why*, not step-by-step *how*. The agent figures out the implementation.
 
@@ -59,13 +59,13 @@ Rules state *what* and *why*, not step-by-step *how*. The agent figures out the 
 
 **Avoid:** "First run pytest, then check the output, then if it fails fix the tests, then run again..."
 
-### Concise Beats Comprehensive
+### Concise beats comprehensive
 
 Every rule competes for attention. Research shows adherence drops as instructions pile up. Keep the always-on content lean.
 
 **The cut test:** Would the agent do this anyway without you saying it? If yes, cut it.
 
-### On-Demand Loading
+### On-demand loading
 
 Detail doesn't vanish — it loads when needed:
 
@@ -73,7 +73,7 @@ Detail doesn't vanish — it loads when needed:
 - **Reference guides** load via tools or MCP
 - **Skills** load only when triggered
 
-## Layer 1 / Layer 2 Mental Model
+## Layer 1 / Layer 2 mental model
 
 The two-layer framing from V1 persists:
 
@@ -86,7 +86,7 @@ V2 adds the "harness" terminology but the concept is identical: you're engineeri
 
 The mantra: **"The harness matters more than the model."**
 
-## MCP Fundamentals
+## MCP fundamentals
 
 Model Context Protocol remains the same:
 
@@ -96,7 +96,7 @@ Model Context Protocol remains the same:
 
 V2 adds the **skill + CLI pattern** as a lighter alternative, but MCP servers remain valid for complex integrations.
 
-## Code Review Patterns
+## Code review patterns
 
 Your V1 code review habits transfer directly:
 
@@ -106,7 +106,7 @@ Your V1 code review habits transfer directly:
 
 In V2, these patterns often live in review skills and CI workflows.
 
-## System Review Patterns
+## System review patterns
 
 Periodic system reviews — stepping back to assess your harness itself — remain important. Questions to ask:
 
@@ -114,11 +114,11 @@ Periodic system reviews — stepping back to assess your harness itself — rema
 - Are skills earning their place?
 - Are hooks providing the guarantees they should?
 
-## Your V1 Companion Site Content
+## Your V1 companion site content
 
 If you built a V1 companion site or reference, the conceptual content transfers. The six workflow stages, the PIV diagrams, the validation pyramid — these remain valid foundations organized differently in V2.
 
-## What Transfers Without Change
+## What transfers without change
 
 | Concept | Status in V2 |
 |---------|--------------|

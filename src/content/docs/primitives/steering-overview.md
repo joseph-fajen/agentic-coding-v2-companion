@@ -11,7 +11,7 @@ The Steering Documents content now lives in its own section.
 **Go to: [Steering Documents](/steering/overview/)**
 </Aside>
 
-## Quick Links
+## Quick links
 
 - [Steering Overview](/steering/overview/) — what steering documents are and how they work
 - [direction.md](/steering/direction/) — defining what your project IS and IS NOT

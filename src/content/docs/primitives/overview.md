@@ -7,7 +7,7 @@ The five primitives are the **atoms** of agentic coding — the smallest meaning
 
 > **What's a harness?** It's everything you wrap around a coding agent to make it work *your* way: your rules, your specialized workers, your tools, your processes, and your guarantees. Also called your **AI Layer**. The formula is simple: **Agent = Model + Harness.** The model is the easy part. The hard part is building the harness that makes the model useful on *your* codebase.
 
-## The Primitives at a Glance
+## The primitives at a glance
 
 | Primitive | What It Is | Key Insight |
 |-----------|------------|-------------|
@@ -17,7 +17,7 @@ The five primitives are the **atoms** of agentic coding — the smallest meaning
 | **Skills** | On-demand processes loaded when triggered | Bank a process once; the agent runs it your way every time |
 | **Hooks** | Guards that fire automatically | A rule asks; a hook guarantees — the agent can't talk its way past it |
 
-## The Order Matters
+## The order matters
 
 The primitives have a **composition order**:
 
@@ -34,7 +34,7 @@ Why this order? Each primitive can use the ones before it:
 
 Understanding this lets you put each piece of your harness in the right place — and tells you which pieces to learn first. If you're not sure where to start, follow the order: master rules before worrying about skills.
 
-## It's All Composable Markdown
+## It's all composable markdown
 
 One thread runs through everything: **it's all markdown**. Rules, subagents, skills — they're all markdown files with some YAML frontmatter. You compose your harness by choosing where each piece of knowledge lives:
 
@@ -44,7 +44,7 @@ One thread runs through everything: **it's all markdown**. Rules, subagents, ski
 
 The format is the same; the *placement* is the lever.
 
-## The Universal Arc
+## The universal arc
 
 For every primitive, you follow the same three-step arc:
 
@@ -56,7 +56,7 @@ This is why going deep matters. A generic creator makes generic outputs. A custo
 
 You can only instill patterns you actually understand.
 
-## What You'll Learn
+## What you'll learn
 
 Each primitive page covers:
 - **What it is** and why it exists
@@ -66,14 +66,14 @@ Each primitive page covers:
 
 Start with any primitive that matters for your current work, or go through them in order to build a complete mental model.
 
-## Key Takeaways
+## Key takeaways
 
 - Five primitives compose into your harness (your AI Layer)
 - They have a composition order — each can use the ones before it
 - It's all markdown — the placement is what matters
 - Understand first, then build, then build the builder
 
-## See Also
+## See also
 
 - [Phase 2: The Primitives](/phases/phase-2/) — where the course teaches each primitive
 - [Coming from V1?](/v1-delta/overview/) — how the Five Primitives Framework relates to V1

@@ -5,7 +5,7 @@ description: The course arc — Use to Understand to Evolve to Scale
 
 The Agentic Coding V2 course is organized into four phases that follow a deliberate arc: **Use → Understand → Evolve → Scale**.
 
-## The Arc
+## The arc
 
 | Phase | Stage | What You Do |
 |-------|-------|-------------|
@@ -18,7 +18,7 @@ The Agentic Coding V2 course is organized into four phases that follow a deliber
 
 **Phase 4 is advanced and optional.** Independent deep dives for teams, complex orchestration, and production patterns — take what applies to your context.
 
-## The Through-Line
+## The through-line
 
 The course has one central idea that runs through every phase:
 
@@ -29,7 +29,7 @@ The course has one central idea that runs through every phase:
 - **Phase 3** teaches how to make the system *compound* — every deviation improves it
 - **Phase 4** extends the system for teams, scale, and advanced patterns
 
-## Phase 1: Create Your First System
+## Phase 1: create your first system
 
 **Weeks 1–3 · Videos V1–V11**
 
@@ -41,7 +41,7 @@ The "Use" stage. You install the mental models, stand up an AI Layer on a projec
 
 [Go to Phase 1 →](/phases/phase-1/)
 
-## Phase 2: The Primitives
+## Phase 2: the primitives
 
 **Weeks 4–5 · Videos V12–V23**
 
@@ -53,7 +53,7 @@ The "Understand" stage. You go under the hood and learn the five primitives ever
 
 [Go to Phase 2 →](/phases/phase-2/)
 
-## Phase 3: Improve & Scale
+## Phase 3: improve & scale
 
 **Videos V24–V35**
 
@@ -65,7 +65,7 @@ The "Evolve" stage. You sharpen each piece, chain the pieces into workflows you 
 
 [Go to Phase 3 →](/phases/phase-3/)
 
-## Phase 4: Going Further
+## Phase 4: going further
 
 **Act-based, non-ending**
 
@@ -77,7 +77,7 @@ The "Scale" stage for specific contexts. Independent acts on teams, advanced orc
 
 [Go to Phase 4 →](/phases/phase-4/)
 
-## Where to Start
+## Where to start
 
 **New to agentic coding?** Start with Phase 1, V1.
 

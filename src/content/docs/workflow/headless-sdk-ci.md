@@ -11,7 +11,7 @@ This section is about replacing that last part. Not the steps. Not the hand-off.
 If you haven't automated multi-step workflows yet, start smaller: build one end-to-end loop by hand first. Run a skill → check the output → run the next skill → verify. Once you've done that a few times and trust the steps, come back here to automate the "pressing go" part. See [Phase 3](/phases/phase-3/) for the learning path.
 :::
 
-## The Core Insight
+## The core insight
 
 > **The steps don't change. What you hand between them doesn't change. The only thing that changes is what says go.**
 
@@ -29,11 +29,11 @@ Same workflow, different drivers. Pick per job, not per ideology.
 
 ---
 
-## Headless Scripts
+## Headless scripts
 
 A script does what a skill can't: **guarantee that a check actually ran.**
 
-### The Reliability Argument
+### The reliability argument
 
 > **An agent telling you the tests passed is a claim. A script that runs them is evidence.**
 
@@ -41,7 +41,7 @@ Ask an agent to run your tests and report back, and it will report back. Sometim
 
 In a headless script, your checks are commands in the pipeline — lint, types, tests — not prompts. The agent doesn't get to decide whether this step happened. It isn't asked.
 
-### The Control Argument
+### The control argument
 
 Write a workflow as a skill, and you hand the agent your context engineering. It decides what to read, when to search, which tool to reach for, what to keep in its head. That's not a bad deal — that **optionality** is exactly why skills are good.
 
@@ -56,7 +56,7 @@ Write it as a script, and you keep those decisions:
 
 **A skill hands the agent your context engineering. A script keeps it.**
 
-### Fresh vs Persistent Context
+### Fresh vs persistent context
 
 The single most important decision per hand-off:
 
@@ -67,7 +67,7 @@ The single most important decision per hand-off:
 
 **Fresh where you need independence. Persistent where you need memory.**
 
-### Bound the Loop
+### Bound the loop
 
 Every fix loop needs a bound:
 
@@ -87,7 +87,7 @@ done
 
 > **An unbounded fix loop is a way to spend money on a wall.** If it can't get to green in three goes, something is wrong that a human should look at.
 
-### Hand-offs: Variable or File
+### Hand-offs: variable or file
 
 Every hand-off makes a choice:
 
@@ -104,11 +104,11 @@ The checks output goes straight into the next prompt — a variable, never touch
 
 The SDK is the same harness that powers Claude Code, as a library. Unlike a raw API call, you don't rebuild anything you own — **your `.claude/` layer comes with it.**
 
-### What It Is
+### What it is
 
 The SDK runs the same loop you've been using: **gather context → take action → verify work → repeat.** That's the loop you've *been* for two phases. The SDK just hands it to you as something your code can call.
 
-### What Only a Program Can Do
+### What only a program can do
 
 The differentiator: **in-process control**.
 
@@ -125,7 +125,7 @@ The agent wants to edit a migration file? Denied, mid-run, before it happens. Yo
 
 > **Around the run, you inspect what happened. Inside the run, you decide what's allowed to happen.**
 
-### The Auto-Load
+### The auto-load
 
 Notice what you don't do: you never tell it where your skills are. Your `.claude/` directory comes with it — same as your interactive agent, same as headless `-p`. A raw API call gives you a model and nothing else. **The harness and your layer come with you.**
 
@@ -146,7 +146,7 @@ Neither tool gets demoted. They're different jobs.
 
 Everything you've automated so far ran because something **called** it — you, a script, a program. A hook runs because something **happened.** Same steps, same artifacts, same checks: the only new thing is that **the event is the invoker.**
 
-### Guard vs Trigger
+### Guard vs trigger
 
 In Phase 2 you built hooks as **guards** — they stood in front of something bad and said no. Here, hooks are **triggers** — they stand behind something finished and say *next*.
 
@@ -157,7 +157,7 @@ In Phase 2 you built hooks as **guards** — they stood in front of something ba
 
 Same primitive. Opposite role.
 
-### The Stop Gate
+### The stop gate
 
 Your checkers — lint, types, tests — firing the moment the agent *thinks* it's done:
 
@@ -182,7 +182,7 @@ fi
 
 > **A script automates a run. A hook automates the habit.**
 
-### The Baton
+### The baton
 
 An artifact hand-off between two context windows, triggered by an event:
 
@@ -211,7 +211,7 @@ When investigate's artifact lands, the hook starts fix in a **fresh context**. T
 
 A hook has no memory — it fires every time. So the guard reads the state of the world and decides. **Every good hook starts with a guard like this.**
 
-### The Wake
+### The wake
 
 A hook cannot start. It can't wake up at nine, it can't poll, it can't decide it's time. Something has to knock over the first domino — and that something is you, invoking a skill.
 
@@ -221,11 +221,11 @@ And the first domino doesn't have to be a finger — the headless script can be 
 
 ---
 
-## CI Pipelines
+## CI pipelines
 
 The first domino doesn't have to be a person. A pull request opens, an issue lands, a clock strikes nine — and your workflow runs.
 
-### Three Reasons
+### Three reasons
 
 1. **Nobody present** — CI runs on GitHub's machines, off repository events. That's the whole act's promise, finished.
 
@@ -233,7 +233,7 @@ The first domino doesn't have to be a person. A pull request opens, an issue lan
 
 3. **Your layer runs there** — The GitHub Action is built on the Agent SDK. It reads your `CLAUDE.md`. It takes the same CLI flags your script passed. And the prompt input accepts a skill. **The thing that runs on GitHub's machines is the skill you wrote.**
 
-### Interactive vs Automation Mode
+### Interactive vs automation mode
 
 | Mode | Trigger | Use Case |
 |------|---------|----------|
@@ -257,7 +257,7 @@ When the trigger might be a stranger, every layer matters:
 
 > **Restrict where nobody will look.** Up here, nobody's watching the run. So the permissions block stays minimal, the tools stay minimal, and anything you wouldn't want a stranger to trigger doesn't get a workflow at all.
 
-### Bounds and Costs
+### Bounds and costs
 
 An unbounded loop is a way to spend money on a wall — and up here the wall bills twice: tokens, plus GitHub's minutes.
 
@@ -273,13 +273,13 @@ Count what you have now: a script can press go, a program can, an event can, a t
 
 An orchestrator is a skill whose subject is your other automations.
 
-### Two Rules
+### Two rules
 
 1. **Orchestrate, don't implement.** The orchestrator never writes feature code. It launches work, steers it, reads what comes back, and decides. The moment it starts editing files itself, you've lost the thing you built it for — a clear head that isn't elbow-deep in any one task.
 
 2. **Compose by name.** It tells an agent "run the investigate skill on issue twelve" — never "read this file and follow steps three through nine." Your skills stay whole, and the orchestrator stays small.
 
-### The Simple Version
+### The simple version
 
 ```markdown
 Send an agent this prompt exactly, where X is the input: run the investigate skill on X.
@@ -294,7 +294,7 @@ Eight lines of prose. That's the orchestrator.
 
 Notice: new agent for the implementation (fresh context), same agent for the PR (it needs to remember), new agent for the review (an author can't review its own work). **Fresh where you need independence. Persistent where you need memory.**
 
-### The Vessel
+### The vessel
 
 The orchestrator can run:
 - Your skills
@@ -304,7 +304,7 @@ The orchestrator can run:
 
 **The methods were never competitors. The orchestrator is the thing that stacks them.**
 
-### The Upgrade Pass
+### The upgrade pass
 
 Five additions that make it trustworthy:
 
@@ -314,7 +314,7 @@ Five additions that make it trustworthy:
 4. **Gate** — At every merge: if a standing decision covers it, act and record it; if not, wait and ask
 5. **Cap** — At most three workstreams in parallel; a stage that stalls twice gets stopped, not restarted forever
 
-### The Honest Limit
+### The honest limit
 
 Agent A hands to B, B to C, C back to A — and each one replans, because nobody owns the task. Context loss compounds with every transfer.
 
@@ -326,7 +326,7 @@ But be honest about what's holding the loop: a model. A brilliant, steerable par
 
 ---
 
-## Key Takeaways
+## Key takeaways
 
 - **A claim isn't evidence** — deterministic checks in the pipeline, not in a prompt
 - **Fresh or persistent** — choose per hand-off based on what the stage needs

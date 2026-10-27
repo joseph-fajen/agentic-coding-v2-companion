@@ -5,13 +5,13 @@ description: Check your system, trust the parts that work, and automate what you
 
 Writing code is no longer the hard part. So the engineers who matter are the ones who keep improving the **system** that writes it. That's what Phase 3 of the course is about — and the order that makes it work: **check it, trust it, automate it.**
 
-## The Core Insight
+## The core insight
 
 > **You can't trust what you haven't checked. And you should never automate what you don't trust. So we do them in that order.**
 
 This rules out automating something because it "felt fine the last few times." Trust here is earned by checking — and then by repetition under that checking. Repetition alone just breeds comfort.
 
-## Two Loops
+## Two loops
 
 There are two loops in agentic coding:
 
@@ -26,7 +26,7 @@ The **outer loop** fires when something in the inner loop goes wrong — the age
 
 That's the outer loop. And it's the difference between an AI layer that stays the same shape all year, and one that gets harder to break every week.
 
-### Two Ways In
+### Two ways in
 
 You enter the outer loop two ways, and the difference is smaller than you'd think — it's **what you point it at**:
 
@@ -37,7 +37,7 @@ You enter the outer loop two ways, and the difference is smaller than you'd thin
 
 Point it at **one run's artifacts** — the plan, the diff, the test output — and you're asking about a specific problem. Point it at **weeks of logs** and you're looking for patterns — the things you keep doing by hand that should become skills, rules, or hooks.
 
-## The One-Sentence Version
+## The one-sentence version
 
 The smallest version of the outer loop is one sentence, typed into your agent:
 
@@ -47,7 +47,7 @@ That's the whole concept. Everything else — scans, reports, opportunity analys
 
 **The guard:** Your agent will always find something to suggest — that's what it does. Not every mistake is a system gap. Sometimes the answer is "nothing; that was a one-off." If you encode a rule for every bad run, in three months you'll have a rules file nobody can read and an agent that follows none of it. The judgment about what's worth encoding stays yours.
 
-## The Human/Agent Map
+## The human/agent map
 
 Where do you stand in this loop? At the ends.
 
@@ -60,17 +60,17 @@ Where do you stand in this loop? At the ends.
 
 The agent owns the middle (mechanical work). You own the ends (judgment calls). Engineering moved upstream — to planning and review. That's where your leverage sits.
 
-## The Road Through Phase 3
+## The road through Phase 3
 
 Phase 3 has two acts:
 
-### Act 1: Improve
+### Act 1: improve
 
 Audit your own system. Not the code — the system. How you actually work, where it keeps slipping, which parts have earned your confidence.
 
 This is the "check" phase. You're finding out what you trust and what you don't.
 
-### Act 2: Scale
+### Act 2: scale
 
 Turn the parts you trust into **workflows** — and build them multiple ways, because this is the one piece of the toolkit that hasn't settled on a single shape yet:
 
@@ -87,7 +87,7 @@ Then you hand the whole thing to a workflow engine.
 
 **Improve it until you trust it; scale it because you do.**
 
-## What's Worth Automating
+## What's worth automating
 
 Before diving into the how: not everything should be automated.
 
@@ -97,7 +97,7 @@ Before diving into the how: not everything should be automated.
 
 A class doesn't have to be tidy CRUD work. Bugs are all different — but *investigating* a bug has a shape every time. **The process can be a class even when the problem isn't.**
 
-## It's All Just Instructions
+## It's all just instructions
 
 The mental model that makes everything in this section cheaper to understand:
 
@@ -107,12 +107,12 @@ The content is just instructions. The format buys you loading and scoping: which
 
 If they're all just instructions, then composing them isn't systems integration. **It's writing.** You're not wiring tools together — you're writing another instruction that mentions the first two. That's the entire act.
 
-## Where This Goes
+## Where this goes
 
 - **[Headless / SDK / CI](/workflow/headless-sdk-ci/)** — Five ways to run your workflow without you pressing go
 - **[Archon](/workflow/archon/)** — The workflow engine that holds the loop
 
-## Key Takeaways
+## Key takeaways
 
 - **Check, trust, automate** — in that order. You can't trust what you haven't checked
 - Two loops: inner ships the work, outer improves the system that ships it
@@ -121,7 +121,7 @@ If they're all just instructions, then composing them isn't systems integration.
 - Automate classes of problems, not individual tasks
 - Everything is instructions — composing is writing
 
-## See Also
+## See also
 
 - [Phase 3: Improve & Scale](/phases/phase-3/) — where the course teaches these concepts
 - [Hooks](/primitives/hooks/) — the guarantees that make automation safe

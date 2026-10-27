@@ -17,13 +17,13 @@ For engineering standards and review criteria, see `references/engineering.md`.
 
 The agent reads the pointer, then fetches the full document when the task calls for it.
 
-## The Core Insight
+## The core insight
 
 > **Steering documents encode the decisions you'd otherwise repeat in every conversation.**
 
 "Should I add this feature?" "Is this code good enough?" Without steering docs, you re-explain your standards every time. With them, the agent reads your thinking once and applies it consistently.
 
-## Two Documents, Two Jobs
+## Two documents, two jobs
 
 | Document | Question It Answers |
 |----------|---------------------|
@@ -34,7 +34,7 @@ Direction handles product scope — what you're building, what's out of bounds, 
 
 Together they give your agent the judgment layer it needs to make good decisions without asking you every time.
 
-## Why Separate Files?
+## Why separate files?
 
 The course teaches "agent steering" as one of four things in your rules file. That's the right starting point. But as your project grows, steering content gets substantial — and it serves a different purpose than your always-on rules.
 
@@ -48,11 +48,11 @@ The move: **extract steering into reference documents**.
 
 Your rules file stays lean. Your steering docs can go deep. And the agent loads them when it actually needs to make a judgment call.
 
-## How They Load
+## How they load
 
 Steering documents are **on-demand references** — the same pattern from the Rules primitive. The agent reads the pointer in your rules, then fetches the full document when the task calls for it. Progressive disclosure: one line always-on, full context when needed.
 
-## What Goes Where
+## What goes where
 
 | Content Type | Where It Lives |
 |--------------|----------------|
@@ -67,7 +67,7 @@ Steering documents are **on-demand references** — the same pattern from the Ru
 
 If it's about *what to build*, it's direction. If it's about *how to build*, it's engineering. If it's operational and needed every task, it stays in the rules.
 
-## The Clause Pattern
+## The clause pattern
 
 A steering document isn't a manifesto — it's a **lookup table** for decisions. The most effective pattern: name every clause so the agent can cite it.
 
@@ -87,7 +87,7 @@ Now when the agent declines to add a feature or flags a concern, it can say: "Th
 
 Citable clauses make steering *auditable*. You can see exactly which decision drove the behavior.
 
-## When to Write Them
+## When to write them
 
 **Not on day one.** Steering documents emerge from real decisions — the same way ground rules emerge from real mistakes.
 
@@ -100,7 +100,7 @@ Citable clauses make steering *auditable*. You can see exactly which decision dr
 
 Start with a few clauses that encode decisions you've already made. Add more as patterns emerge. Delete when they no longer apply.
 
-## The Relationship to Plans
+## The relationship to plans
 
 Steering documents are **Layer 1** — stable context that applies across many tasks. They're different from plans, which are Layer 2 — task-specific context about what to build right now.
 
@@ -112,7 +112,7 @@ Steering documents are **Layer 1** — stable context that applies across many t
 
 A good plan *references* the steering docs: "Implement per direction.md §platform-integrations" — so the agent knows the constraints before it starts.
 
-## How to Evolve Them
+## How to evolve them
 
 Steering documents aren't write-once. They evolve as your project does:
 
@@ -123,7 +123,7 @@ Steering documents aren't write-once. They evolve as your project does:
 
 The same discipline as rules: keep it true, or it's worse than nothing.
 
-## Key Takeaways
+## Key takeaways
 
 - Steering documents encode judgment: direction.md for scope, engineering.md for quality
 - They're on-demand references your rules file points to — not always-on bloat
@@ -131,7 +131,7 @@ The same discipline as rules: keep it true, or it's worse than nothing.
 - Write them when patterns emerge, not on day one
 - Keep them true — a steering doc that lies is worse than none
 
-## See Also
+## See also
 
 - [Rules](/primitives/rules/) — the always-on context that references steering docs
 - [What Changed](/v1-delta/what-changed/) — steering documents are new in V2

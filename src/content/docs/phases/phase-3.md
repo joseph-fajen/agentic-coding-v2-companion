@@ -11,7 +11,7 @@ Phase 3 is the **"Evolve"** stage — the discipline that makes your system comp
 
 **9 videos** covering system evolution, workflow automation, and scaling.
 
-## The Two Laws
+## The two laws
 
 Two principles organize everything in Phase 3:
 
@@ -19,11 +19,11 @@ Two principles organize everything in Phase 3:
 
 2. **Reliability earns autonomy.** You only automate and scale what you've made trustworthy. The review gate stays the whole way through. Autonomy is earned per-piece, where you've watched it work enough times to trust it.
 
-## Two Acts
+## Two acts
 
 Phase 3 delivers these laws in two acts:
 
-### Act 1: Improve Your System
+### Act 1: improve your system
 
 Sharpen each piece, chain them, measure them. Every video = improve a real piece of *your own* system.
 
@@ -36,7 +36,7 @@ Sharpen each piece, chain them, measure them. Every video = improve a real piece
 
 The key mechanism: **conventions written down once, enforced by three layers.** The skill stays general and portable; what's specific to the project lives in the doc, travels with the repo, and is inherited by anyone who clones it.
 
-### Act 2: Scale Your System
+### Act 2: scale your system
 
 The reliable system from Act 1, run wider. A ladder of *how* you run it:
 
@@ -52,7 +52,7 @@ The reliable system from Act 1, run wider. A ladder of *how* you run it:
 
 **Cost discipline runs underneath the whole act.** Every rung (parallel, headless, autonomous) multiplies tokens; unmanaged, it bites. The controls: per-run/per-agent budgets + caps, model routing (cheap model for mechanical steps, capable for the hard ones), prompt caching. Cost discipline is what makes autonomy affordable.
 
-## The Human/Agent Division
+## The human/agent division
 
 The spine is "improve the system"; this map says *which pieces* to sharpen first. The engineer's leverage concentrates at the **ends** (judgment); the agent owns the **middle** (mechanical).
 
@@ -65,7 +65,7 @@ The spine is "improve the system"; this map says *which pieces* to sharpen first
 
 Engineering moved upstream — and to review. Act 1 sharpens the ends first (the plan and the review), then automates the middle.
 
-## The Compounding Payoff
+## The compounding payoff
 
 Here's what Phase 3 delivers:
 
@@ -75,11 +75,11 @@ Here's what Phase 3 delivers:
 
 The review gate never disappears. What changes is how much you need to *do* at that gate — the system does more of the work, and the work it hands you is smaller and better-supported.
 
-## What's Next
+## What's next
 
 Phase 3 completes the core course. [Phase 4](/phases/phase-4/) is advanced and optional — deep dives on teams, orchestration, AI-native codebases, and more. The system you built in Phases 1–3 is complete; Phase 4 extends it for specific contexts.
 
-## See Also
+## See also
 
 - [Workflow Primitives](/workflow/overview/) — deep dives on headless, SDK, CI, and Archon
 - [Hooks](/primitives/hooks/) — the guarantees that make automation safe

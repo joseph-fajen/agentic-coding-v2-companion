@@ -17,9 +17,9 @@ Everything else is polish. Start with those three.
 
 ---
 
-## Structural Migration
+## Structural migration
 
-### 1. Folder Layout
+### 1. Folder layout
 
 - [ ] Rename `.agents/` to `.claude/` (or create if new)
 - [ ] Move commands to `.claude/skills/`
@@ -38,7 +38,7 @@ Everything else is polish. Start with those three.
 └── settings.json # Hook configuration
 ```
 
-### 2. Rules File Cleanup
+### 2. Rules file cleanup
 
 - [ ] Review CLAUDE.md for bloat — apply the cut test ("would it do this anyway?")
 - [ ] Extract situational content to `.claude/references/`
@@ -47,9 +47,9 @@ Everything else is polish. Start with those three.
 
 **Result:** Lean rules file focused on what the agent needs every session.
 
-## New Primitives
+## New primitives
 
-### 3. Add Steering Documents
+### 3. Add steering documents
 
 Create two new files in `.claude/references/`:
 
@@ -67,7 +67,7 @@ Create two new files in `.claude/references/`:
 
 **Result:** Planning skills load direction.md; implementation skills load engineering.md.
 
-### 4. Convert Commands to Skills
+### 4. Convert commands to skills
 
 For each command in your V1 system:
 
@@ -87,7 +87,7 @@ allowed-tools: [Read, Grep, Glob]
 
 **Result:** Skills with progressive disclosure — metadata always loaded, body on trigger.
 
-### 5. Define Subagents
+### 5. Define subagents
 
 For isolated tasks that benefit from fresh context:
 
@@ -97,7 +97,7 @@ For isolated tasks that benefit from fresh context:
 
 **Result:** Subagents run with fresh context, no bleeding from main conversation.
 
-### 6. Implement Hooks
+### 6. Implement hooks
 
 Add guarantees that can't be forgotten:
 
@@ -118,14 +118,14 @@ Add guarantees that can't be forgotten:
 
 ## Validation
 
-### 7. Audit Skill Coverage
+### 7. Audit skill coverage
 
 - [ ] Map your workflows to skills
 - [ ] Ensure each skill has: name, description, allowed-tools
 - [ ] Remove skills that aren't earning their place
 - [ ] Add skills for repeated workflows you run manually
 
-### 8. Test Hook Guarantees
+### 8. Test hook guarantees
 
 For each hook:
 
@@ -133,15 +133,15 @@ For each hook:
 - [ ] Verify it blocks/runs as expected
 - [ ] Check logs for hook execution
 
-### 9. Verify Context Loading
+### 9. Verify context loading
 
 - [ ] Confirm steering docs load when expected
 - [ ] Check that references load on demand (not always)
 - [ ] Validate progressive disclosure is working
 
-## Advanced (Optional)
+## Advanced (optional)
 
-### 10. Workflow Automation
+### 10. Workflow automation
 
 If you have repeatable multi-step workflows:
 
@@ -150,7 +150,7 @@ If you have repeatable multi-step workflows:
 - [ ] Set up CI pipelines for validation
 - [ ] Evaluate Archon for complex orchestration
 
-### 11. Meta-Skills
+### 11. Meta-skills
 
 Build skills that build skills:
 
@@ -158,7 +158,7 @@ Build skills that build skills:
 - [ ] `review-skill` — reviews skill quality
 - [ ] `rules-check-drift` — validates rules file accuracy
 
-## Quick Reference
+## Quick reference
 
 | V1 Pattern | V2 Equivalent |
 |------------|---------------|
@@ -168,7 +168,7 @@ Build skills that build skills:
 | Global context | Steering documents (direction.md, engineering.md) |
 | Commands | Skills with frontmatter |
 
-## Migration Complete
+## Migration complete
 
 When you've worked through this checklist:
 

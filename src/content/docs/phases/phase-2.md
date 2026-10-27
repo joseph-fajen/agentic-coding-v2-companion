@@ -7,19 +7,19 @@ Phase 2 is the **"Understand"** stage — you go under the hood of the system yo
 
 **Weeks 4–5 · Videos V12–V23**
 
-## What You'll Walk Away With
+## What you'll walk away with
 
 - **The harness framework in your head:** Agent = Model + Harness. The harness is everything you wrap around the model — and in 2026, it matters more than the model itself.
 - **Deep understanding of all five primitives:** Rules, Subagents, MCP/Tools, Skills, Hooks — what each is, how to build it, and how to make it *yours*.
 - **The compounding insight:** once you understand a primitive and form your own opinions about it, you can teach your agent to *author that primitive for you*. A skill that writes skills. A harness that improves itself.
 
-## The Phase 2 Thesis
+## The Phase 2 thesis
 
 Your coding agent is only as good as the **harness** around it. That harness is built from five primitives: rules, subagents, MCP/tools, skills, hooks. Phase 2 teaches each one deeply — not just so you can use it, but so you can **encode your preferences** and teach your agent to build more harness for you.
 
 Understanding the primitives is the prerequisite to *engineering* — and eventually *automating* — the system around them. You can't compose what you don't understand.
 
-## The Five Primitives
+## The five primitives
 
 The primitives follow a **composition order** — each one builds on the ones before it:
 
@@ -33,7 +33,7 @@ The primitives follow a **composition order** — each one builds on the ones be
 
 See the [Five Primitives](/primitives/overview/) section for deep dives on each.
 
-## The Videos
+## The videos
 
 | # | Title | Focus |
 |---|-------|-------|
@@ -54,7 +54,7 @@ Each primitive gets a **teach** video and a hands-on **exercise** on your own pr
 
 **Next step:** [Watch V12 — The Primitives of Agentic Engineering](https://www.skool.com/dynamous) or dive into the [Rules primitive](/primitives/rules/) reference.
 
-## The Keystone Insight
+## The keystone insight
 
 Here's the idea the whole phase hinges on:
 
@@ -64,13 +64,13 @@ Once your preferences are codified, you can write a **skill that writes skills**
 
 This is what **"build the thing that builds the thing"** means. Your harness stops being something you hand-write and becomes something that helps build itself. Every primitive you add makes the next one cheaper. The system compounds.
 
-## The Honest Frame
+## The honest frame
 
 By the end of Phase 2, you have the **building blocks** — not a finished system that's "yours and done." This is the *beginning*, not the end. Ownership grows through use: you build, you update, you try things, you keep what works and cut what doesn't.
 
 A system nobody improves is a system that quietly rots.
 
-## What's Next
+## What's next
 
 [Phase 3](/phases/phase-3/) is where you make it compound. The spine: **fix the system, not the code**. When the agent gets something wrong, don't just patch the code and move on — fix the rule, the skill, the hook, so the *next* run catches it for you.
 

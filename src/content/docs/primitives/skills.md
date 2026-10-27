@@ -7,7 +7,7 @@ Every workflow you run — priming, planning, reviewing, committing — is a **s
 
 It's also the one that ties the others together: a skill can drive your subagents and call your MCP tools. That's why skills come *after* subagents and MCP in the composition order.
 
-## Quick Start: Create a Skill in 3 Steps
+## Quick start: create a skill in 3 steps
 
 **1. Create the folder and file:**
 ```bash
@@ -36,13 +36,13 @@ That's it. Read on for the details.
 
 ---
 
-## Rules vs Skills
+## Rules vs skills
 
 > **Rules are principles. Skills are processes.**
 
 Your rules file says *how we do things here, always*. A skill is a packaged *procedure* — a sequence the agent runs when a particular job comes up. Both are composable markdown; you choose where each piece lives.
 
-## Two Flavors, One File
+## Two flavors, one file
 
 | Type | How It Fires |
 |------|--------------|
@@ -55,7 +55,7 @@ Same SKILL.md file; only the trigger differs. One you summon, one summons itself
 
 A skill is a **folder** with a `SKILL.md` inside. Two parts:
 
-### The Frontmatter
+### The frontmatter
 
 ```yaml
 ---
@@ -79,7 +79,7 @@ The `name`, `description`, and `allowed-tools` fields are part of the **Agent Sk
 Fields like `model` (which model to use) and `argument-hint` (prompt for arguments) are **Claude-Code-specific** frontmatter. They work in Claude Code but aren't portable to other agents.
 :::
 
-### The Body
+### The body
 
 Below the frontmatter is the **process** — the actual procedure:
 
@@ -99,13 +99,13 @@ Below the frontmatter is the **process** — the actual procedure:
 
 That's it — the procedure, written down once.
 
-### Bundled References and Scripts
+### Bundled references and scripts
 
 A skill is a *folder*, not just one file. It can bundle:
 - Extra reference docs the agent can read on demand
 - Scripts the agent runs via bash
 
-## Progressive Disclosure: Why Skills Scale
+## Progressive disclosure: why skills scale
 
 The clever part: the agent only loads a skill's *detail* when it actually needs it. That's **progressive disclosure** in three tiers:
 
@@ -119,19 +119,19 @@ And the killer detail: when a skill runs a **script**, the script's *code never 
 
 This is the same context move MCP Tool Search makes — defer the detail, load on demand. You can install a *hundred* skills and pay only the metadata until one fires.
 
-## The Marquee: Skill + CLI
+## The marquee: skill + CLI
 
 > **Skills don't replace command-line tools — they orchestrate them.**
 
 The CLI does the deterministic, repeatable work. The skill is the *reasoning and project-context layer* on top — and the agent runs the CLI itself, through **bash**.
 
-### Teaching the Agent a Tool
+### Teaching the agent a tool
 
 `ast-grep` is a structural code-search tool — it finds code patterns by structure rather than text (e.g., "all functions that call `logger.error`" regardless of formatting). Powerful, but the rule syntax is fiddly. A cold agent guesses it wrong. The skill turns that into a reliable workflow: write a test snippet, build the rule, run `ast-grep scan` to verify, then search the codebase.
 
 The agent runs the real CLI; the skill makes it *good* at it.
 
-### Custom Checkers — The Power Move
+### Custom checkers — the power move
 
 A **custom checker** is a skill whose whole job is to run *your* tools:
 
@@ -150,13 +150,13 @@ Want a security scan, a schema check, a "did we break the API" probe? Same shape
 
 **That's** where skills get genuinely powerful — your own checkers and helpers the agent runs every time, the same way.
 
-## The Rule of Three
+## The rule of three
 
 > The first time you prompt a process, just prompt it. The third time you've typed the same thing — stop, and bank it as a skill.
 
 Under three, it's not worth the file. At three, it pays for itself.
 
-## Take vs Build
+## Take vs build
 
 | Situation | Approach |
 |-----------|----------|
@@ -167,13 +167,13 @@ The axis is **"do you own the process?"**:
 - Don't reinvent the Stripe skill
 - Do build your own review/validate/plan/commit skills
 
-### Why Build Wins
+### Why build wins
 
 A generic skill can't know your process, so you'll outperform it easily — same lesson as subagents. And the real payoff is **ownership**: because it's yours, you **sharpen it over time**. Every time the agent gets something wrong, you tighten the skill, and it compounds.
 
 A skill you own gets better; a skill you rented stays put.
 
-## Where to Find Skills
+## Where to find skills
 
 | Source | Description |
 |--------|-------------|
@@ -181,13 +181,13 @@ A skill you own gets better; a skill you rented stays put.
 | **SkillsMP** | Another marketplace for community skills |
 | **SKILL.md Standard** | Open standard designed to work across coding agents like Claude Code, Codex, and others |
 
-### Be Careful with Others' Skills
+### Be careful with others' skills
 
 A skill is **instructions and scripts the agent will obey and run**. A malicious one can quietly tell the agent to exfiltrate data or misuse a tool — hidden right in the file.
 
 Researchers found prompt injection in a significant share of public skills. Anthropic's rule is the right one: **treat a skill like installing software** — prefer first-party, read it before you run it, don't hand an unaudited skill access to your secrets.
 
-## Composition + Chaining
+## Composition + chaining
 
 A skill **composes** the earlier primitives. Inside a skill you can:
 - Dispatch a subagent
@@ -196,7 +196,7 @@ A skill **composes** the earlier primitives. Inside a skill you can:
 
 A skill is the *conductor* — the other primitives are the instruments.
 
-### Chaining Skills
+### Chaining skills
 
 Skills can chain — one skill running other skills:
 
@@ -211,13 +211,13 @@ Skills can chain — one skill running other skills:
 
 One command, the whole loop. That's a **meta-skill**: a skill built out of skills.
 
-### Trust Before Automate
+### Trust before automate
 
 You've got separate skills — implement, commit, open-a-PR, review — and you run them **by hand**, one at a time. Then, *once you trust their quality*, you **compose them into one skill that orchestrates the whole sequence autonomously**.
 
 Chain only what you already trust by hand, or you've automated a process you don't yet believe in.
 
-## The Universal Arc
+## The universal arc
 
 For every primitive, you do three things:
 
@@ -229,7 +229,7 @@ The built-in skill-creator writes a generic skill. A custom meta-skill bakes in 
 
 **That's why we go understand-first:** you can only instill patterns you actually understand.
 
-## Key Takeaways
+## Key takeaways
 
 - A skill is a process you bank so the agent runs it your way
 - Progressive disclosure keeps skills cheap until triggered
@@ -238,7 +238,7 @@ The built-in skill-creator writes a generic skill. A custom meta-skill bakes in 
 - Treat others' skills like installing software — audit before trust
 - Skills compose the other primitives — they're the conductor
 
-## See Also
+## See also
 
 - [Hooks](/primitives/hooks/) — the primitive that provides guarantees your skills can rely on
 - [Archon](/workflow/archon/) — workflow engine for chaining skills at scale

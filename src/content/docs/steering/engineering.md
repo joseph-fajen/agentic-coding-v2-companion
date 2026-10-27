@@ -5,13 +5,13 @@ description: How code gets judged here — conventions, review criteria, and wha
 
 engineering.md answers one question: **How do we judge code here?** Not what to build — that's direction.md. But how to build it, what standards apply, and what "ready to merge" actually means.
 
-## Why Engineering Standards Matter
+## Why engineering standards matter
 
 Without explicit standards, every code review is a negotiation. "Is this error handling good enough?" "Should I add types here?" The agent applies its defaults, and half the time those aren't your defaults.
 
 With engineering.md, the agent knows *your* bar. It writes code to your standards the first time, and it reviews code against your criteria rather than generic best practices.
 
-## The Objective Function
+## The objective function
 
 Start with what you actually optimize for. Most teams have an implicit priority — make it explicit:
 
@@ -27,7 +27,7 @@ development is never a reason to skip verification.
 
 This resolves ambiguity. When the agent has to choose between shipping fast and being thorough, it knows your priority.
 
-## Technical Stack
+## Technical stack
 
 State the stack facts the agent needs to operate:
 
@@ -45,23 +45,23 @@ State the stack facts the agent needs to operate:
 
 This isn't documentation — it's operational facts. The agent needs to know exactly how to lint, test, and format in *this* project.
 
-## Taste: Encoding Your Principles
+## Taste: encoding your principles
 
 The hardest thing to teach an agent is *taste* — the judgment calls that experienced engineers make automatically. Encode yours:
 
-### Think Before Coding
+### Think before coding
 
 ```markdown
-### Think Before Coding
+### Think before coding
 - State assumptions explicitly before implementing. If uncertain, ask.
 - If multiple interpretations exist, present them — don't pick silently.
 - If a simpler approach exists, say so. Push back when warranted.
 ```
 
-### Simplicity First
+### Simplicity first
 
 ```markdown
-### Simplicity First
+### Simplicity first
 - Minimum code that solves the problem. Nothing speculative.
 - No features beyond what was asked.
 - No abstractions for single-use code.
@@ -70,10 +70,10 @@ The hardest thing to teach an agent is *taste* — the judgment calls that exper
 **The test:** Would a senior engineer say this is overcomplicated? If yes, simplify.
 ```
 
-### Surgical Changes
+### Surgical changes
 
 ```markdown
-### Surgical Changes
+### Surgical changes
 - Touch only what you must. Clean up only your own mess.
 - Don't "improve" adjacent code, comments, or formatting.
 - Match existing style, even if you'd do it differently.
@@ -85,7 +85,7 @@ The hardest thing to teach an agent is *taste* — the judgment calls that exper
 
 These aren't slogans — they're specific enough to apply. "Don't remove pre-existing dead code unless asked" is a concrete instruction the agent can follow.
 
-## Code Conventions
+## Code conventions
 
 State the conventions that aren't obvious from the codebase:
 
@@ -106,7 +106,7 @@ State the conventions that aren't obvious from the codebase:
 
 Each convention earned its place through a real failure or explicit decision. Don't include generic best practices the model already knows.
 
-## Risk Taxonomy
+## Risk taxonomy
 
 What raises the stakes of a change? Name it explicitly:
 
@@ -129,7 +129,7 @@ What raises the stakes of a change:
 
 Now the agent knows when to slow down. A docs change gets minimum review; a hook change gets adversarial scrutiny.
 
-## Review Posture
+## Review posture
 
 How should the agent review code (yours or its own)?
 
@@ -148,7 +148,7 @@ How should the agent review code (yours or its own)?
 
 This shapes how code review skills operate. The agent knows to cite sources, to flag ambiguity rather than pass, and to scale effort to risk.
 
-## What "Ready to Merge" Means
+## What "ready to merge" means
 
 The most valuable section: an explicit checklist for "done."
 
@@ -164,7 +164,7 @@ The most valuable section: an explicit checklist for "done."
 
 Now the agent has a concrete checklist. Before calling something done, it can verify each item.
 
-## Case Study: A Personal Agent's Engineering Standards
+## Case study: a personal agent's engineering standards
 
 Here's the structure of a real engineering.md:
 
@@ -182,7 +182,7 @@ Here's the structure of a real engineering.md:
 
 Each section serves a clear purpose. The whole document is under 100 lines.
 
-## The Document Meta-Rules
+## The document meta-rules
 
 Include instructions for how the document itself evolves:
 
@@ -204,7 +204,7 @@ Include instructions for how the document itself evolves:
 
 This prevents bloat. Conventions that can be automated should be automated. Conventions that no longer apply should be deleted.
 
-## Writing Your First engineering.md
+## Writing your first engineering.md
 
 Start with what you already enforce:
 
@@ -216,7 +216,7 @@ Start with what you already enforce:
 
 Then evolve it: every time you correct the agent's code style, check if it should be a convention. Every time a bug teaches a lesson, consider adding a rule.
 
-## How Engineering.md Differs from Rules
+## How engineering.md differs from rules
 
 | Rules File | engineering.md |
 |------------|----------------|
@@ -227,7 +227,7 @@ Then evolve it: every time you correct the agent's code style, check if it shoul
 
 Both shape agent behavior, but they serve different purposes. The rules file is operational. Engineering.md is evaluative.
 
-## Key Takeaways
+## Key takeaways
 
 - engineering.md answers "how do we judge code here?"
 - Start with your objective function — what matters most

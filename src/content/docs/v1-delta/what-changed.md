@@ -5,9 +5,9 @@ description: New concepts and structural reorganization in V2
 
 V2 brings significant changes to both organization and concepts. This page maps everything that's different.
 
-## Course Structure
+## Course structure
 
-### From Modules to Phases
+### From modules to phases
 
 | V1 | V2 |
 |----|----|
@@ -17,7 +17,7 @@ V2 brings significant changes to both organization and concepts. This page maps 
 
 *(V02.5 is an optional "Coding Agent Basics" video for first-time agent users. Video counts updated July 2026 after course restructure.)*
 
-## What's Actually New vs. Renamed (Quick Triage)
+## What's actually new vs. renamed (quick triage)
 
 **Truly new — you need to learn these:**
 - [Hooks](/primitives/hooks/) (entire primitive)
@@ -46,7 +46,7 @@ The four phases follow an intentional arc:
 - **Phase 3 (9 videos):** Improve & Scale — workflow automation, [headless/SDK](/workflow/headless-sdk-ci/), [Archon](/workflow/archon/)
 - **Phase 4 (async):** Going Further — team standards, AI-native design, AI-in-CI
 
-### Folder Layout
+### Folder layout
 
 | V1 | V2 |
 |----|----|
@@ -58,7 +58,7 @@ The four phases follow an intentional arc:
 
 The `.claude/` layout is now the standard Claude Code structure, recognized by the tool.
 
-## The Five Primitives Framework
+## The five primitives framework
 
 V2 explicitly names five **tool-agnostic building blocks** that compose into any agentic system. This is the conceptual heart of the course.
 
@@ -97,9 +97,9 @@ The key distinction: *"A rule asks the agent to behave; a hook guarantees it."*
 
 Events: PreToolUse, PostToolUse, SessionStart, Stop, etc. Exit code 2 blocks the action.
 
-## New Concepts
+## New concepts
 
-### Steering Documents
+### Steering documents
 
 Two specialized rules files that live in `.claude/references/`:
 
@@ -114,7 +114,7 @@ Two specialized rules files that live in `.claude/references/`:
 - Loaded by implement, review, and fix skills
 - Same file read by CI review workflows
 
-### The Harness Concept
+### The harness concept
 
 V2 adopts the framing: **Agent = Model + Harness**
 
@@ -123,7 +123,7 @@ V2 adopts the framing: **Agent = Model + Harness**
 - Your AI Layer / Layer 1 = your harness
 - Built from the five primitives
 
-### Progressive Disclosure
+### Progressive disclosure
 
 Three-tier loading model for skills:
 
@@ -133,7 +133,7 @@ Three-tier loading model for skills:
 
 Scripts run via bash; code never enters context, only output.
 
-### Skill + CLI Pattern
+### Skill + CLI pattern
 
 Skills don't replace CLIs — they **orchestrate** them:
 
@@ -142,13 +142,13 @@ Skills don't replace CLIs — they **orchestrate** them:
 - Agent runs the CLI via bash
 - Custom checkers/helpers = the power move
 
-### The Universal Arc
+### The universal arc
 
 For every primitive: **Understand → Build → Build the thing that builds them**
 
 Example: understand skills → build skills → build a skill that writes skills (meta-skill)
 
-### Workflow Automation
+### Workflow automation
 
 Multiple ways to automate the same workflow:
 
@@ -162,7 +162,7 @@ Multiple ways to automate the same workflow:
 
 **Key insight:** *"The steps don't change. What you hand between them doesn't change. The only thing that changes is what says go."*
 
-### Trust Before Automate
+### Trust before automate
 
 Chain only what you already trust by hand:
 
@@ -170,13 +170,13 @@ Chain only what you already trust by hand:
 2. Gain confidence in their quality
 3. Then compose into autonomous workflow
 
-### Fresh vs. Persistent Context
+### Fresh vs. persistent context
 
 - **Fresh:** Where you need independence (reviewers get clean context)
 - **Persistent:** Where you need memory (implementer keeps context)
 - `--resume` flag controls this in headless workflows
 
-## Term Mapping
+## Term mapping
 
 | V1 Term | V2 Term | Notes |
 |---------|---------|-------|
@@ -187,7 +187,7 @@ Chain only what you already trust by hand:
 | — | Hooks | Entirely new in V2 |
 | Module | Phase/Video | Restructured organization |
 
-## See Also
+## See also
 
 - [The Five Primitives](/primitives/overview/) — deep dives on each primitive
 - [Steering Documents](/steering/overview/) — the new direction.md and engineering.md

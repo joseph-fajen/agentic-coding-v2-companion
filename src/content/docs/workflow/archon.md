@@ -17,7 +17,7 @@ Archon is the **course's illustrative engine** — it's open-source and built by
 This doc assumes you've completed Phase 3 and built workflow automation using skills, scripts, or both. If you haven't automated multi-step workflows yet, start with [Headless / SDK / CI](/workflow/headless-sdk-ci/) first.
 </Aside>
 
-## The Problem It Solves
+## The problem it solves
 
 Your orchestrator holds the loop while doing five other jobs — investigating, gating, digesting, talking to you. Holding the loop is a job, and it's doing five others.
 
@@ -25,13 +25,13 @@ Your orchestrator holds the loop while doing five other jobs — investigating, 
 
 Unlike using a skill or script to orchestrate other skills, Archon provides a **graph-based approach** where your existing skills become nodes. You don't learn a new system — you express what you've already built in a format an engine can run.
 
-## The Core Insight
+## The core insight
 
 > **You don't learn a new system. Everything you built this phase — the skills, the script, the hooks, the gates, the loops — can be expressed in Archon, and automated by it.**
 
 A workflow, in Archon, is your skills and your scripts as nodes on a graph — and the graph is the structure you've been drawing by hand: what runs, what it depends on, what checks it, and where you stand.
 
-## You Already Built the Parts
+## You already built the parts
 
 This is the key insight: **you didn't just learn five ways to automate — you hand-built the parts of a workflow engine.** Archon is those parts, load-bearing.
 
@@ -50,29 +50,29 @@ Everything in Archon maps to something you already know:
 
 **You didn't just learn five ways to automate — you hand-built the parts of a workflow engine.** Archon is those parts, load-bearing.
 
-## Why an Engine
+## Why an engine
 
 Three properties, each one a limit you've already felt:
 
-### 1. It Holds the Loop and Nothing Else
+### 1. It holds the loop and nothing else
 
 Your orchestrator holds the loop while investigating, gating, digesting, and talking to you. An engine holds the loop and does nothing else. That's not a bigger model or a better prompt — it's a different job description.
 
-### 2. The Run Doesn't Live in a Chat Window
+### 2. The run doesn't live in a chat window
 
 A run in a chat window dies with the window. An engine run lives in a database. It's persisted, it's resumable, and you can watch it. Every node, live, and still there tomorrow.
 
-### 3. The Graph Owns the Task
+### 3. The graph owns the task
 
 Agent A hands to B, B to C, C back to A — and each one replans, because nobody owns the task. On a graph, ownership isn't a vibe — every step's inputs, outputs, and dependencies are written down. Nobody replans mid-hand-off, by construction.
 
 ---
 
-## Gate Design: The Creative Act
+## Gate design: the creative act
 
 The value here is **not determinism.** The creative act is designing checks against an outcome.
 
-### What a Gate Really Is
+### What a gate really is
 
 > **A run finishing is not the work being right.** Those are two separate facts.
 
@@ -80,7 +80,7 @@ A gate stands between "the node completed" and anything public. It never asks th
 
 The principle from V27 — a claim isn't evidence — except now it's not your discipline. It's the graph's.
 
-### Three Kinds of Gate
+### Three kinds of gate
 
 | Gate Type | When to Use |
 |-----------|-------------|
@@ -90,13 +90,13 @@ The principle from V27 — a claim isn't evidence — except now it's not your d
 
 A gate doesn't have to be a script. Sometimes the right check is **an agent, judging against an evidence bar you wrote.** The engine doesn't care which. It needs one thing: the verdict lands in a declared field it can act on.
 
-### The Correction Loop
+### The correction loop
 
 When the review says "not ready", the workflow loops back: fix the findings, prove it's green, and then — this is the part that matters — a **fresh review** checks the fix.
 
 Every correction gets independently re-reviewed. The loop is bounded; meeting the gate stops it immediately; and if the bound runs out, the run **fails honestly.** Never an unreviewed final fix, and never a quiet failure.
 
-### The Human Gate
+### The human gate
 
 > **Unattended is not a switch you flip. It's a position on a dial, and you move it one node at a time.**
 
@@ -106,7 +106,7 @@ Where to put a human gate: on the step that is public, or hard to undo. Everythi
 
 ---
 
-## Workflow Shapes
+## Workflow shapes
 
 Four shapes cover most of what you'll write:
 
@@ -126,7 +126,7 @@ Ready-to-merge — **never merged.** Merging stays yours.
 
 The same graphs with a human gate in the loop. The workflow iterates, you answer at the seam.
 
-### Entry Compositions
+### Entry compositions
 
 What happens once you have a few: a front door that grounds the work, a gate that authorizes the spend, and then one shared delivery tail behind it. Different doors — a bug, a dependency bump, a flaky test — same trusted tail.
 
@@ -134,9 +134,9 @@ Workflows compose out of workflows, when you have workflows to compose.
 
 ---
 
-## Writing Workflows
+## Writing workflows
 
-### The Placement Test
+### The placement test
 
 Read every sentence of your prompt and ask:
 
@@ -147,7 +147,7 @@ Read every sentence of your prompt and ask:
 
 If your prompt is sequencing steps, that's the smell: there's a node boundary you haven't drawn yet.
 
-### Five Authoring Decisions
+### Five authoring decisions
 
 1. **Placement** — Coordination in the YAML, judgment in the prompt
 2. **One job per node** — And say what's NOT the job (negative scope keeps boundaries real)
@@ -157,13 +157,13 @@ If your prompt is sequencing steps, that's the smell: there's a node boundary yo
 
 ---
 
-## The Iterate Habit
+## The iterate habit
 
 > **Build it loose. Run it. Fix what actually broke.**
 
 Your first version should be simpler than feels safe, because every check you add before you've run it is a guess about how it'll fail. Run it once and you stop guessing — now you're looking at a real failure, and you add one check right where it happened.
 
-### The Gate Ladder
+### The gate ladder
 
 When you need to add a check, ask:
 
@@ -171,14 +171,14 @@ When you need to add a check, ask:
 2. **Can't check mechanically?** Have an agent check it — fresh eyes, a standard you wrote
 3. **Is it public, expensive, or hard to undo?** That's where **you** go
 
-### The Two Callbacks
+### The two callbacks
 
 - **The gate is a teacher** — Take it out when it stops teaching you
 - **Before you trust a gate's yes** — Make it say no once
 
 ---
 
-## Workflows You Could Write
+## Workflows you could write
 
 Some shapes worth stealing — every one of them a class of problem, plus the checks you already trust:
 
@@ -195,7 +195,7 @@ Notice what each of those really is: a class of problem you already solve, plus 
 
 ---
 
-## The Same Rule
+## The same rule
 
 > **A workflow moves into the engine the same way anything in this phase earned anything — when you've run it enough that its decisions stop surprising you.**
 
@@ -203,7 +203,7 @@ The engine is where trusted workflows graduate. It is not a shortcut past the tr
 
 ---
 
-## Key Takeaways
+## Key takeaways
 
 - **You already built the parts** — the engine maps to primitives you know
 - **Three reasons for an engine:** holds only the loop, persists outside chat, graph owns the task

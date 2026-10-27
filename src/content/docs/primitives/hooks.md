@@ -18,7 +18,7 @@ if tool == "Read" and path.endswith(".env"):
 
 That's it. The agent *can't* read `.env`, no matter what. Not "usually won't" — **can't**. Now let's understand why.
 
-## The Core Distinction
+## The core distinction
 
 > **A rule *asks* the agent to behave. A hook *guarantees* it.**
 
@@ -28,13 +28,13 @@ The decision rule is dead simple:
 - When "usually" is fine, write a **rule**
 - When it **must** happen every single time, write a **hook**
 
-## Why Hooks Are the Odd One Out
+## Why hooks are the odd one out
 
 Every other primitive is something the agent *picks up*. It decides to load a rule, dispatch a subagent, call a tool, run a skill.
 
 A hook is different: **the agent never chooses it.** It fires on its own, on an event. That's why it comes last in the primitive order, and why "nothing composes a hook."
 
-## What a Hook Is
+## What a hook is
 
 A hook is a small piece of code that runs **automatically** at a specific moment:
 - Before a tool runs
@@ -45,11 +45,11 @@ A hook is a small piece of code that runs **automatically** at a specific moment
 
 You don't invoke it. It fires on the *event*.
 
-## The Marquee: Blocking What Must Never Happen
+## The marquee: blocking what must never happen
 
 The most valuable hook you'll write isn't fancy. It's the one that stops the agent from doing the thing you can **never** let it do.
 
-### Example: The .env Block
+### Example: the .env block
 
 Top of the list: reading your `.env` — your secrets. A rule that says "don't read .env" is guidance; a clever prompt, a confused agent, a poisoned instruction can blow right past it.
 
@@ -72,7 +72,7 @@ if tool == "Read" and path.endswith(".env") and not path.endswith(".env.example"
 sys.exit(0)  # Exit 0 = allow
 ```
 
-### How It Works
+### How it works
 
 1. This is a **PreToolUse** hook — it runs *before* every tool call
 2. Claude Code hands it the tool and its input as JSON
@@ -82,11 +82,11 @@ sys.exit(0)  # Exit 0 = allow
 
 The model **can't** talk its way past this, because it's not asking the model — it's a gate in front of the tool.
 
-### The Relief
+### The relief
 
 That's the move. You didn't approve anything. You didn't babysit. You hard-blocked the thing that must never happen — and now you can let the agent run free on everything else.
 
-## Visibility: The Audit Trail
+## Visibility: the audit trail
 
 The flip side of blocking is **seeing**. A **PostToolUse** hook runs *after* every tool call:
 
@@ -114,7 +114,7 @@ sys.exit(0)
 
 Open the log: there's every command, every edit the agent made. A complete audit trail — for free, automatically.
 
-## The Mental Model: Pre vs Post
+## The mental model: pre vs post
 
 | Type | When It Fires | Can Block? | Use For |
 |------|---------------|------------|---------|
@@ -123,7 +123,7 @@ Open the log: there's every command, every edit the agent made. A complete audit
 
 **Pre is the gate. Post is the log.**
 
-## Exit Codes
+## Exit codes
 
 | Code | Meaning |
 |------|---------|
@@ -131,7 +131,7 @@ Open the log: there's every command, every edit the agent made. A complete audit
 | **2** | Block the tool — stderr goes back to the agent |
 | **Other** | Non-blocking error |
 
-## The Event Menu
+## The event menu
 
 Hooks fire on lifecycle events. These are the **stable core** you'll use most often:
 
@@ -152,7 +152,7 @@ The full event surface includes 25+ events (SubagentStart, PostToolUseFailure, P
 
 You don't memorize these — you reach for the one that matches *when* your thing should happen.
 
-## Common Hook Patterns
+## Common hook patterns
 
 | Pattern | Event | What It Does |
 |---------|-------|--------------|
@@ -189,19 +189,19 @@ Hooks are wired in `.claude/settings.json`:
 
 The **matcher** filters which tools the hook runs on. `*` means all.
 
-## The Honest Catch: Hooks Run Real Code
+## The honest catch: hooks run real code
 
 A hook runs **arbitrary code, automatically, with your credentials**, every time its event fires. There's no sandbox.
 
 So treat a hook like a piece of your CI pipeline: only run hooks you've read and trust. A hook you copy from a stranger's repo can do anything your shell can.
 
-### What the Guarantee Actually Is
+### What the guarantee actually is
 
 The hook *always runs* — that part's certain. But what it *catches* is only as good as the check you wrote. Your `.env` block matches the obvious paths; a determined agent could find an edge it doesn't match.
 
 The hook is the *enforcement point* — you still own the coverage.
 
-## Cross-Tool Reality
+## Cross-tool reality
 
 Hooks aren't a Claude Code party trick. They're everywhere now — and the big coding tools have converged on the same shape:
 
@@ -211,7 +211,7 @@ Hooks aren't a Claude Code party trick. They're everywhere now — and the big c
 
 Learn it once, it transfers — same as AGENTS.md.
 
-## Building Without Coding
+## Building without coding
 
 You don't have to write hooks by hand. A `hooks-create` skill can write them for you:
 
@@ -228,7 +228,7 @@ Describe the guarantee you want. The skill:
 
 You answered a question and read the result. That's the whole build.
 
-## Key Takeaways
+## Key takeaways
 
 - A rule asks; a hook guarantees — use hooks for non-negotiables
 - **Exit 2 blocks** the tool; the reason goes back to the agent
@@ -237,7 +237,7 @@ You answered a question and read the result. That's the whole build.
 - Works across tools — Claude Code, Codex, Cursor, Gemini CLI
 - You can describe guarantees in plain English and let a skill write the code
 
-## See Also
+## See also
 
 - [Workflow Primitives](/workflow/overview/) — how hooks fit into automated workflows
 - [Headless / SDK / CI](/workflow/headless-sdk-ci/) — hook-driven automation patterns
