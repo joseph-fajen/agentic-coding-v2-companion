@@ -2,7 +2,7 @@
 
 **Created:** 2026-10-26
 **Updated:** 2026-10-27
-**Status:** Content gaps identified — 3 stub pages added, pending video script extraction
+**Status:** Complete — all content gaps filled, site ready for use
 **Purpose:** Two independent agents review all docs with skeptical, adversarial perspectives
 
 ---
@@ -60,27 +60,33 @@ Compared docs site structure against full course curriculum (3 phases, 39 lesson
 **Gaps found:**
 | Topic | Course Lessons | Status |
 |-------|----------------|--------|
-| Greenfield planning / PRD | 1.8 | Mentioned, not explained |
-| Epic → Tickets workflow | 1.10, 1.11, 1.12 | Video table only |
-| Parallel coding with worktrees | 1.14 | Referenced 5x, never explained |
+| Greenfield planning / PRD | V02 | ✅ Complete |
+| Epic → Tickets workflow | V06, V07, V08 | ✅ Complete |
+| Parallel coding with worktrees | V10 | ✅ Complete |
 
-**Action taken:**
-- Created 3 stub pages in `workflow/`:
-  - `greenfield-planning.md` — PRD and architecture before code
-  - `epic-to-tickets.md` — Research, ground, and slice work
-  - `parallel-worktrees.md` — Git worktrees for parallel AI coding
-- Each stub has `:::caution[Draft]` banner and `<!-- TODO -->` markers
+**Action taken (Phase 1 — stubs):**
+- Created 3 stub pages in `workflow/`
+- Each stub had `:::caution[Draft]` banner and `<!-- TODO -->` markers
 - Added to sidebar under "Workflow primitives"
 
-**Next steps:**
-- [ ] Extract content from video scripts (1.8, 1.10-1.12, 1.14)
-- [ ] Fill in stub pages with course material
-- [ ] Remove draft banners when complete
+**Action taken (Phase 2 — content):**
+- Extracted content from video scripts in `~/git/agentic-coding-course/phase_1/`
+- Filled all 3 stub pages with course material:
+  - `greenfield-planning.md` — from V02 (three on-ramps, strategic doc, Research beat)
+  - `epic-to-tickets.md` — from V06/V07/V08 (epic as hypothesis, confirm/reshape/veto, grounding, slicing)
+  - `parallel-worktrees.md` — from V10 (worktrees, throughput not cost, human bottleneck)
+- Removed draft banners, added TL;DR callouts matching archon.md style
+- Commit: `55fc4ef`
+
+**Completed:**
+- [x] Extract content from video scripts (V02, V06-V08, V10)
+- [x] Fill in stub pages with course material
+- [x] Remove draft banners when complete
 
 ### Current State
-- **25 docs total** (22 original + 3 stubs)
-- **3 draft pages** pending content extraction
-- Core concepts well covered; workflow gaps being addressed
+- **25 docs total** — all complete
+- **0 draft pages** — all content gaps filled
+- Site ready for use
 
 ---
 
@@ -118,9 +124,9 @@ src/content/docs/
 │   └── phase-4.md
 ├── workflow/
 │   ├── overview.md
-│   ├── greenfield-planning.md   # DRAFT - course 1.8
-│   ├── epic-to-tickets.md       # DRAFT - course 1.10-1.12
-│   ├── parallel-worktrees.md    # DRAFT - course 1.14
+│   ├── greenfield-planning.md   # from V02
+│   ├── epic-to-tickets.md       # from V06-V08
+│   ├── parallel-worktrees.md    # from V10
 │   ├── headless-sdk-ci.md
 │   └── archon.md
 ├── steering/
