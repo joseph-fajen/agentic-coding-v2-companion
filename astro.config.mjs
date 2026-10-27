@@ -50,6 +50,9 @@ export default defineConfig({
 					label: 'Workflow primitives',
 					items: [
 						{ label: 'Overview', slug: 'workflow/overview' },
+						{ label: 'Greenfield planning', slug: 'workflow/greenfield-planning' },
+						{ label: 'Epic to tickets', slug: 'workflow/epic-to-tickets' },
+						{ label: 'Parallel worktrees', slug: 'workflow/parallel-worktrees' },
 						{ label: 'Headless / SDK / CI', slug: 'workflow/headless-sdk-ci' },
 						{ label: 'Archon', slug: 'workflow/archon' },
 					],
