@@ -24,6 +24,14 @@ export default defineConfig({
 						{ label: 'MCP / Tools', slug: 'primitives/mcp-tools' },
 						{ label: 'Skills', slug: 'primitives/skills' },
 						{ label: 'Hooks', slug: 'primitives/hooks' },
+						{
+							label: 'Steering (Advanced Rules)',
+							items: [
+								{ label: 'Overview', slug: 'primitives/steering-overview' },
+								{ label: 'direction.md', slug: 'primitives/steering-direction' },
+								{ label: 'engineering.md', slug: 'primitives/steering-engineering' },
+							],
+						},
 					],
 				},
 				{
@@ -33,15 +41,7 @@ export default defineConfig({
 						{ label: 'Phase 1: Create Your First System', slug: 'phases/phase-1' },
 						{ label: 'Phase 2: The Primitives', slug: 'phases/phase-2' },
 						{ label: 'Phase 3: Improve & Scale', slug: 'phases/phase-3' },
-						{ label: 'Phase 4: Going Further', slug: 'phases/phase-4' },
-					],
-				},
-				{
-					label: 'Steering Documents',
-					items: [
-						{ label: 'Overview', slug: 'steering/overview' },
-						{ label: 'direction.md', slug: 'steering/direction' },
-						{ label: 'engineering.md', slug: 'steering/engineering' },
+						{ label: 'Phase 4: Going Further (Optional)', slug: 'phases/phase-4' },
 					],
 				},
 				{
@@ -59,6 +59,12 @@ export default defineConfig({
 						{ label: 'What Changed', slug: 'v1-delta/what-changed' },
 						{ label: 'What Still Applies', slug: 'v1-delta/what-still-applies' },
 						{ label: 'Migration Checklist', slug: 'v1-delta/migration-checklist' },
+					],
+				},
+				{
+					label: 'Reference',
+					items: [
+						{ label: 'Glossary', slug: 'glossary' },
 					],
 				},
 			],

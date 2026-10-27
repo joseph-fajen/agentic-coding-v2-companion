@@ -144,7 +144,7 @@ A skill you own gets better; a skill you rented stays put.
 |--------|-------------|
 | **skills.sh** | Vercel Labs marketplace with install-count leaderboards |
 | **SkillsMP** | Another marketplace for community skills |
-| **SKILL.md Standard** | Open standard published by Anthropic, adopted by OpenAI — works across tools |
+| **SKILL.md Standard** | Open standard designed to work across coding agents like Claude Code, Codex, and others |
 
 ### Be Careful with Others' Skills
 

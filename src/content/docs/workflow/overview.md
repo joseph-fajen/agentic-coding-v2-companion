@@ -13,16 +13,16 @@ This rules out automating something because it "felt fine the last few times." T
 
 ## Two Loops
 
-You've been running one loop this whole course: research, plan, implement, validate, review — the **inner loop**. It ships work. It ends with a merged pull request.
+There are two loops in agentic coding:
 
-There's a second one.
-
-| Loop | What It Does | When It Runs |
+| Loop | What It Does | The Workflow |
 |------|-------------|--------------|
-| **Inner** | Ships the work (R-PIV) | Every task |
-| **Outer** | Improves the thing that ships the work | When something goes wrong, or proactively |
+| **Inner loop** | Ships the work | Plan → Implement → Validate (PIV) — or Research → PIV for complex tasks |
+| **Outer loop** | Improves the system that ships the work | Fix rules, skills, hooks — not the code |
 
-When something in that loop goes wrong — the agent misunderstands, skips your conventions, does the thing you keep telling it not to — you step **out**. Not to fix the code. To fix **the system that produced the code**, so the next run doesn't do it again.
+The **inner loop** is your day-to-day workflow: **Plan → Implement → Validate** (PIV). For complex tasks that need exploration first, you extend it to **Research → Plan → Implement → Validate** (R-PIV). Either way, the loop ends with a merged pull request.
+
+The **outer loop** fires when something in the inner loop goes wrong — the agent misunderstands, skips your conventions, does the thing you keep telling it not to. You step **out**. Not to fix the code. To fix **the system that produced the code**, so the next run doesn't do it again.
 
 That's the outer loop. And it's the difference between an AI layer that stays the same shape all year, and one that gets harder to break every week.
 

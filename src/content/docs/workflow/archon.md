@@ -3,6 +3,12 @@ title: Archon
 description: The workflow engine that holds the loop and does nothing else
 ---
 
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note" title="Prerequisites">
+This doc assumes you've completed Phase 3 and built workflow automation using skills, scripts, or both. If you haven't automated multi-step workflows yet, start with [Headless / SDK / CI](/workflow/headless-sdk-ci/) first.
+</Aside>
+
 ## When You Need This
 
 You need Archon when your orchestrator skill is doing too many jobs at once — investigating, gating, digesting, talking to you, AND holding the loop. When the complexity of "what runs when" outgrows a single skill, it's time for a dedicated engine.
@@ -68,7 +74,7 @@ The value here is **not determinism.** The creative act is designing checks agai
 
 A gate stands between "the node completed" and anything public. It never asks the agent "did you succeed?" — because an agent that gives up still exits cleanly. **A gate checks the thing itself:** the report exists and validates, the tests really ran, the PR is really there.
 
-V27's law — a claim isn't evidence — except now it's not your discipline. It's the graph's.
+The principle from V27 — a claim isn't evidence — except now it's not your discipline. It's the graph's.
 
 ### Three Kinds of Gate
 

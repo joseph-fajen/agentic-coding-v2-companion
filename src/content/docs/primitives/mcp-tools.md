@@ -13,15 +13,9 @@ Without MCP, your agent can read files and run commands in your repo, but it can
 - Browse a live webpage
 - Connect to your company's internal systems
 
-MCP bridges that gap by letting tools expose their capabilities to your agent in a standard way. Instead of every tool needing its own custom integration, MCP provides one common protocol — so you plug a server in and the agent can use it.
+MCP (Model Context Protocol) is **"USB-C for AI"** — one standard port that works with many tools. Before MCP, every tool needed its own custom integration. With MCP, you plug a **server** in and the agent can use it immediately.
 
-MCP (Model Context Protocol) is the standard way to **plug your tooling in** — your personal scripts, your team's services, your company's systems — so the agent can actually *operate* on them.
-
-## The USB-C Analogy
-
-Anthropic calls MCP **"USB-C for AI applications."** One standard port. Before it, every tool needed its own custom integration; with MCP, you plug a **server** in and the agent can use it. One adapter, many tools.
-
-Think of it as how you **plug your tooling in**:
+Think of it as how you connect your tooling:
 - Your **personal** scripts
 - Your **team's** services
 - Your **company's** internal systems
@@ -132,3 +126,8 @@ It's genuinely valuable — and it's a whole topic of its own. This is about *us
 - Combine MCP with subagents to keep your main context clean
 - A skill + CLI is often simpler than a full server
 - The judgment is yours: add for capability + trust, not for the sake of it
+
+## See Also
+
+- [Skills](/primitives/skills/) — the skill + CLI pattern as an alternative to MCP servers
+- [Subagents](/primitives/subagents/) — isolate MCP tools in a subagent to keep main context clean

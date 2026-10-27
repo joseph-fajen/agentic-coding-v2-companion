@@ -116,7 +116,7 @@ Two specialized rules files that live in `.claude/references/`:
 
 ### The Harness Concept
 
-V2 adopts the 2026 framing: **Agent = Model + Harness**
+V2 adopts the framing: **Agent = Model + Harness**
 
 - The harness is everything you wrap around the model
 - "The harness matters more than the model"
@@ -190,6 +190,6 @@ Chain only what you already trust by hand:
 ## See Also
 
 - [The Five Primitives](/primitives/overview/) — deep dives on each primitive
-- [Steering Documents](/steering/overview/) — the new direction.md and engineering.md
+- [Steering Documents](/primitives/steering-overview/) — the new direction.md and engineering.md
 
 Next: [What Still Applies](/v1-delta/what-still-applies/) — the V1 concepts that remain central.

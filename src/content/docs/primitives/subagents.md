@@ -193,3 +193,9 @@ These build on top of the primitive and require understanding single-agent dynam
 - **Output is the king lever** — it's the only part you and the main agent ever see
 - It's all composable markdown — built-ins are starting points you can beat
 - Don't use subagents to prime context — use them to delegate and get results back
+
+## See Also
+
+- [Skills](/primitives/skills/) — compose subagents into larger workflows
+- [MCP / Tools](/primitives/mcp-tools/) — give subagents scoped access to external systems
+- [Archon](/workflow/archon/) — agent teams and graph-based orchestration at scale

@@ -3,9 +3,9 @@ title: The Five Primitives
 description: The building blocks you compose to make your coding agent work your way
 ---
 
-The five primitives are the **atoms** of agentic coding — the smallest meaningful pieces you compose into everything larger. Each one does a distinct job; together they let you build your **harness** — also called your **AI Layer** — the system you wrap around your coding agent to make it work *your* way, on *your* codebase.
+The five primitives are the **atoms** of agentic coding — the smallest meaningful pieces you compose into everything larger. Each one does a distinct job; together they let you build your **harness**.
 
-> **Agent = Model + Harness.** The model is the easy part. The hard part is building the harness that makes the model useful your way.
+> **What's a harness?** It's everything you wrap around a coding agent to make it work *your* way: your rules, your specialized workers, your tools, your processes, and your guarantees. Also called your **AI Layer**. The formula is simple: **Agent = Model + Harness.** The model is the easy part. The hard part is building the harness that makes the model useful on *your* codebase.
 
 ## The Primitives at a Glance
 

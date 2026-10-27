@@ -160,5 +160,5 @@ A steering principle, a naming convention, a git-workflow note — *you choose w
 
 ## See Also
 
-- [Steering Documents](/steering/overview/) — direction.md and engineering.md as specialized rules files
+- [Steering Documents](/primitives/steering-overview/) — direction.md and engineering.md as advanced Rules patterns
 - [Skills](/primitives/skills/) — on-demand processes your rules can point to
