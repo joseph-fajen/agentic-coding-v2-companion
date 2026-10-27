@@ -18,16 +18,16 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
-					label: 'The Five Primitives',
+					label: 'The five primitives',
 					items: [
 						{ label: 'Overview', slug: 'primitives/overview' },
 						{ label: 'Rules', slug: 'primitives/rules' },
 						{ label: 'Subagents', slug: 'primitives/subagents' },
-						{ label: 'MCP / Tools', slug: 'primitives/mcp-tools' },
+						{ label: 'MCP / tools', slug: 'primitives/mcp-tools' },
 						{ label: 'Skills', slug: 'primitives/skills' },
 						{ label: 'Hooks', slug: 'primitives/hooks' },
 						{
-							label: 'Steering (Advanced Rules)',
+							label: 'Steering (advanced rules)',
 							items: [
 								{ label: 'Overview', slug: 'primitives/steering-overview' },
 								{ label: 'direction.md', slug: 'primitives/steering-direction' },
@@ -37,17 +37,17 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'The Four Phases',
+					label: 'The four phases',
 					items: [
 						{ label: 'Overview', slug: 'phases/overview' },
-						{ label: 'Phase 1: Create Your First System', slug: 'phases/phase-1' },
-						{ label: 'Phase 2: The Primitives', slug: 'phases/phase-2' },
-						{ label: 'Phase 3: Improve & Scale', slug: 'phases/phase-3' },
-						{ label: 'Phase 4: Going Further (Optional)', slug: 'phases/phase-4' },
+						{ label: 'Phase 1: Create your first system', slug: 'phases/phase-1' },
+						{ label: 'Phase 2: The primitives', slug: 'phases/phase-2' },
+						{ label: 'Phase 3: Improve & scale', slug: 'phases/phase-3' },
+						{ label: 'Phase 4: Going further (optional)', slug: 'phases/phase-4' },
 					],
 				},
 				{
-					label: 'Workflow Primitives',
+					label: 'Workflow primitives',
 					items: [
 						{ label: 'Overview', slug: 'workflow/overview' },
 						{ label: 'Headless / SDK / CI', slug: 'workflow/headless-sdk-ci' },
@@ -58,9 +58,9 @@ export default defineConfig({
 					label: 'Coming from V1?',
 					items: [
 						{ label: 'Overview', slug: 'v1-delta/overview' },
-						{ label: 'What Changed', slug: 'v1-delta/what-changed' },
-						{ label: 'What Still Applies', slug: 'v1-delta/what-still-applies' },
-						{ label: 'Migration Checklist', slug: 'v1-delta/migration-checklist' },
+						{ label: 'What changed', slug: 'v1-delta/what-changed' },
+						{ label: 'What still applies', slug: 'v1-delta/what-still-applies' },
+						{ label: 'Migration checklist', slug: 'v1-delta/migration-checklist' },
 					],
 				},
 				{
