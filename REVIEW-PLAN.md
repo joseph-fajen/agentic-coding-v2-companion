@@ -1,8 +1,9 @@
 # Agentic Coding v2 Companion Site: Adversarial Review Plan
 
 **Created:** 2026-10-26
-**Status:** Complete — 3 review passes executed, all findings addressed
-**Purpose:** Two independent agents review all 22 docs with skeptical, adversarial perspectives
+**Updated:** 2026-10-27
+**Status:** Content gaps identified — 3 stub pages added, pending video script extraction
+**Purpose:** Two independent agents review all docs with skeptical, adversarial perspectives
 
 ---
 
@@ -44,11 +45,42 @@ Addressed all issues. Key fixes:
 - Added Archon disclaimer (illustrative, not industry standard)
 - Converted primitives/steering-* to redirect stubs
 
-### Final State
+### Final State (Pass 1-3)
 - **17 docs modified** across 3 passes
 - **All RED items resolved**
 - **Most YELLOW items resolved** (some deferred as stylistic preference)
 - Site ready for announcement
+
+### Pass 4: Course Coverage Audit
+**Date:** 2026-10-27
+**Commit:** `41205bf`
+
+Compared docs site structure against full course curriculum (3 phases, 39 lessons). Identified content gaps in Phase 1 workflow topics.
+
+**Gaps found:**
+| Topic | Course Lessons | Status |
+|-------|----------------|--------|
+| Greenfield planning / PRD | 1.8 | Mentioned, not explained |
+| Epic → Tickets workflow | 1.10, 1.11, 1.12 | Video table only |
+| Parallel coding with worktrees | 1.14 | Referenced 5x, never explained |
+
+**Action taken:**
+- Created 3 stub pages in `workflow/`:
+  - `greenfield-planning.md` — PRD and architecture before code
+  - `epic-to-tickets.md` — Research, ground, and slice work
+  - `parallel-worktrees.md` — Git worktrees for parallel AI coding
+- Each stub has `:::caution[Draft]` banner and `<!-- TODO -->` markers
+- Added to sidebar under "Workflow primitives"
+
+**Next steps:**
+- [ ] Extract content from video scripts (1.8, 1.10-1.12, 1.14)
+- [ ] Fill in stub pages with course material
+- [ ] Remove draft banners when complete
+
+### Current State
+- **25 docs total** (22 original + 3 stubs)
+- **3 draft pages** pending content extraction
+- Core concepts well covered; workflow gaps being addressed
 
 ---
 
@@ -62,18 +94,22 @@ Run as parallel Task agents with fresh context. Each produces a findings report.
 
 ---
 
-## Site Structure (22 docs)
+## Site Structure (25 docs)
 
 ```
 src/content/docs/
 ├── index.mdx                    # Home
+├── glossary.md                  # Terminology reference
 ├── primitives/
 │   ├── overview.md
 │   ├── rules.md
 │   ├── subagents.md
 │   ├── mcp-tools.md
 │   ├── skills.md
-│   └── hooks.md
+│   ├── hooks.md
+│   ├── steering-overview.md
+│   ├── steering-direction.md
+│   └── steering-engineering.md
 ├── phases/
 │   ├── overview.md
 │   ├── phase-1.md
@@ -82,6 +118,9 @@ src/content/docs/
 │   └── phase-4.md
 ├── workflow/
 │   ├── overview.md
+│   ├── greenfield-planning.md   # DRAFT - course 1.8
+│   ├── epic-to-tickets.md       # DRAFT - course 1.10-1.12
+│   ├── parallel-worktrees.md    # DRAFT - course 1.14
 │   ├── headless-sdk-ci.md
 │   └── archon.md
 ├── steering/
