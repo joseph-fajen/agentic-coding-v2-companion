@@ -1,5 +1,5 @@
 ---
-title: MCP / Tools
+title: MCP / tools
 description: How your agent reaches outside the codebase to operate on real systems
 ---
 

@@ -13,7 +13,7 @@ export default defineConfig({
 			title: 'Agentic Coding V2',
 			description: 'Companion site for Cole Medin\'s Agentic Coding Course V2',
 			social: [
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/coleam00/agentic-coding-course' },
+				{ icon: 'external', label: 'Dynamous', href: 'https://dynamous.ai/' },
 				{ icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@ColeMedin' },
 			],
 			sidebar: [
