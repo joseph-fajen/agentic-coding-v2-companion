@@ -3,130 +3,169 @@ title: Epic to tickets
 description: Research, ground, and slice work before you build
 ---
 
-:::caution[Draft]
-This page is a stub. Content to be extracted from course videos 1.10, 1.11, and 1.12.
+:::tip[TL;DR — The brownfield daily driver]
+An epic is a bet. Before you build it: **research** it against reality (confirm, reshape, or veto), **ground** it in your codebase (architecture decisions), then **slice** it into PIV-sized tickets. Each ticket runs one loop, produces one PR.
 :::
 
 ## Overview
 
-<!--
-Course lessons:
-- 1.10 Epic Research: Make Sure What You're Building is Worth Building! (21:31)
-- 1.11 Grounding Your Epic in the Codebase (21:46)
-- 1.12 From Epic to Tickets: Scope the Work Before You Build (15:16)
-
-Key questions this page should answer:
-- What's an "epic" in agentic coding?
-- How do you research before building?
-- How do you ground an epic in an existing codebase?
-- How do you slice an epic into PIV-sized tickets?
-- What makes a ticket "PIV-sized"?
--->
-
 An epic is a chunk of work too big for one R-PIV loop. The workflow here is: **research it, ground it in the codebase, slice it into tickets** — then run PIV on each ticket.
 
-## Epic research (1.10)
+This is the **brownfield daily driver** — most of your real work is epics on an existing codebase.
 
-<!-- TODO: Extract from video script -->
+## Epic research
 
 Before you build anything, answer: **Is this worth building?**
 
-Research isn't optional — it's the first defense against wasted work:
+An epic is a **hypothesis**, not a fact. The Research beat is where you test it against reality *before* a line of the plan exists.
 
-- What problem does this solve?
-- Who has this problem?
-- What's the evidence?
-- What already exists?
+> In 2019 Pendo found that ~80% of shipped features are rarely or never used. Agents let us ship faster, which means we can ship *unused* features faster. DORA's 2025 research is blunt: "user-centricity is a prerequisite for AI success."
 
-### The research beat
+### The confirm / reshape / veto triad
 
-<!-- TODO: Extract from video script -->
+Research is allowed to do three things to your epic:
 
-The "research beat" is the habit of validating before building:
+| Action | What it means |
+|--------|---------------|
+| **Confirm** | The bet is solid — plan with conviction |
+| **Reshape** | Scope, priorities, or acceptance criteria need adjustment |
+| **Veto** | You were about to extend a feature nobody uses |
 
-1. **User behavior first** — real usage, not assumptions
-2. **Existing solutions** — what's already out there?
-3. **Scope check** — is this actually one epic or three?
+### Research is broader than analytics
 
-## Grounding in the codebase (1.11)
+Usage behavior is the sharpest signal, but research includes:
 
-<!-- TODO: Extract from video script -->
+- **Usage data** — what are users actually doing?
+- **Competitive teardowns** — what already exists?
+- **User interviews** — what do they say they need?
+- **Support tickets** — where are the pain points?
+- **Your own warehouse** — whatever holds your real signal
 
-Once you know *what* you're building, you need to know *how* it fits:
+The skill is *connecting the agent to reality*, not any one tool. Use `plan-create-prd` to create a testable hypothesis, then point the agent at your analytics (PostHog, Amplitude, Mixpanel, or a SQL warehouse) to check it.
 
-- Where does this live in the architecture?
-- What existing code does it touch?
-- What patterns does the codebase already use?
-- What constraints does the existing system impose?
+### What a good research pass produces
 
-### Architecture decisions
+- **Evidence** folded into the epic — the data confirms (or denies) the problem
+- **Scope decisions** — which parts of the idea are worth building
+- **A success metric** — how you'll prove it worked later
+- **Separate concerns flagged** — problems that belong in their own epic, not bolted onto this one
 
-<!-- TODO: Extract from video script -->
+## Grounding in the codebase
 
-Grounding produces architecture decisions:
+Once you know *what* you're building, you need to know *how* to approach it. This is the eng-lead-level seat — the architecture calls the epic deliberately left open.
 
-- Integration points with existing code
-- New abstractions needed
-- Migration or compatibility concerns
-- Test strategy
+> The epic says **what** and **why**. Before you slice it or build it, someone has to decide **how to approach it**. Skip this seat and the agent makes these calls silently while coding, and the wrong ones get expensive.
 
-These decisions become Layer 2 context for the implementation tickets.
+### What grounding covers
 
-## Slicing into tickets (1.12)
+The `plan-architecture` skill explores with you — it puts options on the table, tells you what it'd recommend and why, asks what it can't figure out, and you decide:
 
-<!-- TODO: Extract from video script -->
+- **Approach** — the overall strategy (e.g., adapter pattern vs. bespoke per-case)
+- **Stack & libraries** — what to use, what to reuse
+- **Data model** — entities and relationships (the shape, not the columns)
+- **Boundaries** — what's out of scope for v1
+- **Integration points** — where this plugs into existing code
 
-An epic becomes tickets. Each ticket should be:
+### Two-way vs one-way doors
 
-- **PIV-sized** — completable in one R-PIV loop
-- **Independent** — can be worked in parallel (where possible)
-- **Testable** — has clear success criteria
-- **Ordered** — dependencies are explicit
+Most calls are **two-way doors** — reversible, so decide and move on. The one or two that are **one-way** (expensive to undo) get extra care — and maybe a spike.
 
-### What's "PIV-sized"?
+### Spikes for uncertain calls
 
-<!-- TODO: Extract from video script -->
+When a call is uncertain *and* expensive to reverse, don't guess — **spike it.** Smallest thing you can build to learn, a timebox, and a rule for deciding.
 
-A ticket is PIV-sized when:
+The cheap, decisive questions — close them on the spot while the context is loaded, so what's left is real work, not unknowns.
 
-- The agent can hold the full context
-- The change is reviewable in one pass
-- Tests can verify it works
-- It results in one mergeable PR
+### The architecture decision doc
 
-### Parallelization
+The output is a **separate document linked to the epic** — the epic stays pure intent; the *how* lives in its own decision doc:
 
-<!-- TODO: Extract from video script -->
+1. **Problem & goals** — one line from the epic
+2. **Approaches considered** — what you evaluated and why one won
+3. **Recommended approach** — the shape, not a task list
+4. **Key decisions** — stack, data model, boundaries
+5. **Missing pieces** — building blocks that don't exist yet
+6. **Spikes** — what to test, with decision rules
+7. **Open questions** — deferred, not hidden
 
-Good slicing enables parallel work:
+## Slicing into tickets
 
-- Independent tickets can run in separate worktrees
-- Dependencies are explicit in ticket ordering
-- Merge conflicts are minimized by clean boundaries
+An epic becomes tickets. But forget what "a ticket" means in traditional engineering — a tiny task, a couple of hours.
+
+### Traditional tickets vs AI-scoped tickets
+
+| Traditional | AI-scoped |
+|-------------|-----------|
+| Tiny task | Small-medium implementation *phase* |
+| ~2 hours of work | ~10 subtasks, 500–1500 lines of change |
+| Minimal tests | 20–50% of the change is tests |
+
+**What doesn't shrink is the planning detail** — the plan still has to be context-rich and precise. It's the *scope* that grows, not the rigor.
+
+### The real sizing unit: one testable concern
+
+A ticket is sized right when it's **one testable concern** — easy to test, review, and prove on its own:
+
+- **Test it** — clear success criteria, verifiable in one pass
+- **Review it** — agents help review now, so the diff can run large, but not out of hand
+- **Prove it** — results in one mergeable PR
+
+### Why focused beats large
+
+Just because an epic *fits* in the context window doesn't mean you should build it all in one go:
+
+> Holding context and *using it well* are different things. A giant implementation in one window **rots**: partway through, the agent loses the thread, quality drops, returns diminish. A focused slice stays sharp start to finish.
+
+### How to slice
+
+Slice by:
+- **Dependency** — what must be built before what
+- **Concern** — separate features or modules
+- **Slim e2e slice** — a thin cut all the way through that proves the whole flow, so the next loop can fatten it up
+
+Whatever makes each ticket easiest to *prove*. Optimize for one-shot success.
+
+### Plan just-in-time
+
+Don't plan all the tickets up front. **Plan a ticket right before you build it.**
+
+A dependent ticket waits for its dependency to be *implemented*, not just sliced. Building the first one teaches you things — the real shape of a seam, a name that changed — that should land in the next one's plan.
+
+- **Independent tickets** can be planned now
+- **Dependent tickets** wait their turn
+
+### Per-ticket context
+
+Each ticket names the doc sections, guides, and seams it needs:
+
+> "source-adapter guide; seams: adapter interface; AC #2 and #4 from the epic doc"
+
+Slicing time is when you know this — don't make execution time rediscover it.
 
 ## The full flow
 
 ```
-Epic
-  ↓ Research (is it worth it?)
-  ↓ Ground (how does it fit?)
-  ↓ Slice (what are the tickets?)
+Epic (the hypothesis)
+  ↓ Research (confirm, reshape, or veto)
+  ↓ Ground (architecture decisions)
+  ↓ Slice (PIV-sized tickets with dependencies)
   ↓
 Tickets → PIV Loop → Shipped PRs
 ```
 
 ## Key takeaways
 
-<!-- TODO: Extract from video script -->
-
-- Research before you build — validate the epic
-- Ground the epic in your codebase — architecture decisions first
-- Slice into PIV-sized tickets — one loop, one PR
-- Good slicing enables parallelization
+- **An epic is a bet** — test it against reality before you plan
+- **Research can confirm, reshape, or veto** — let real signal shape the scope
+- **Grounding decides how to approach it** — architecture calls before any ticket exists
+- **AI-scoped tickets are ~10x larger** than traditional tickets (same rigor, bigger scope)
+- **One testable concern** is the sizing unit — easy to test, review, and prove
+- **Plan just-in-time** — dependent tickets wait until their dependency is built
+- **Small batches still matter** — DORA has a decade of evidence that they predict delivery performance
 
 ---
 
 **Video references:**
-- Course 1.10 — Epic Research: Make Sure What You're Building is Worth Building!
-- Course 1.11 — Grounding Your Epic in the Codebase
-- Course 1.12 — From Epic to Tickets: Scope the Work Before You Build
+- Course V6 — The Research Beat: Create Your Epic, Then Validate It with Real Usage
+- Course V7 — Grounding the Epic in Your Codebase: the Architecture Decisions
+- Course V8 — From Epic to Tickets: Slicing for PIV-Sized Work
