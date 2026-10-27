@@ -239,5 +239,5 @@ You answered a question and read the result. That's the whole build.
 
 ## See also
 
-- [Workflow Primitives](/workflow/overview/) — how hooks fit into automated workflows
+- [Workflow primitives](/workflow/overview/) — how hooks fit into automated workflows
 - [Headless / SDK / CI](/workflow/headless-sdk-ci/) — hook-driven automation patterns

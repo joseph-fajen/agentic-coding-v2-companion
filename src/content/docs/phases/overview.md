@@ -1,5 +1,5 @@
 ---
-title: The Four Phases
+title: The four phases
 description: The course arc — Use to Understand to Evolve to Scale
 ---
 

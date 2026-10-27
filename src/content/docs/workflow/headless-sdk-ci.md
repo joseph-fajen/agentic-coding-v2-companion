@@ -17,7 +17,7 @@ If you haven't automated multi-step workflows yet, start smaller: build one end-
 
 Five different ways to run the same workflow:
 
-| Method | What Says Go | Best For |
+| Method | What says go | Best for |
 |--------|--------------|----------|
 | **Headless script** | A bash script | Full control over the feed |
 | **SDK** | Your program | Reacting mid-run |
@@ -91,7 +91,7 @@ done
 
 Every hand-off makes a choice:
 
-| Form | When to Use |
+| Form | When to use |
 |------|-------------|
 | **Variable** | Doesn't need to survive the run, internal to the script |
 | **File** | Needs to cross a process boundary, or you want to read it later |
@@ -131,7 +131,7 @@ Notice what you don't do: you never tell it where your skills are. Your `.claude
 
 ### Script vs SDK
 
-| Need | Reach For |
+| Need | Reach for |
 |------|-----------|
 | Around the run (start, check result, decide next) | Script (`claude -p`) |
 | Inside the run (intercept, decide mid-flight) | SDK |
@@ -235,7 +235,7 @@ The first domino doesn't have to be a person. A pull request opens, an issue lan
 
 ### Interactive vs automation mode
 
-| Mode | Trigger | Use Case |
+| Mode | Trigger | Use case |
 |------|---------|----------|
 | **Interactive** | `@claude` mention | Team conversations in PRs |
 | **Automation** | `prompt:` input in workflow | Unattended runs |
@@ -246,7 +246,7 @@ A workflow with no prompt input waits for a person to mention it. A workflow wit
 
 When the trigger might be a stranger, every layer matters:
 
-| Defense | What It Does |
+| Defense | What it does |
 |---------|-------------|
 | **Write access required** | Triggering takes repo write access |
 | **Bots rejected by default** | No bot-triggers-agent-triggers-bot loops |

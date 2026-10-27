@@ -1,5 +1,5 @@
 ---
-title: The Five Primitives
+title: The five primitives
 description: The building blocks you compose to make your coding agent work your way
 ---
 
@@ -9,7 +9,7 @@ The five primitives are the **atoms** of agentic coding — the smallest meaning
 
 ## The primitives at a glance
 
-| Primitive | What It Is | Key Insight |
+| Primitive | What it is | Key insight |
 |-----------|------------|-------------|
 | **Rules** | CLAUDE.md and steering documents | The highest-leverage file — read on every task, so keep it lean and true |
 | **Subagents** | Isolated agents that do work and report back | Workers in separate contexts; you only see their final summary |

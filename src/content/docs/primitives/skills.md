@@ -44,7 +44,7 @@ Your rules file says *how we do things here, always*. A skill is a packaged *pro
 
 ## Two flavors, one file
 
-| Type | How It Fires |
+| Type | How it fires |
 |------|--------------|
 | **User-invoked** | You call it, like `/piv-validate` |
 | **Agent-invoked** | The agent reaches for it when your request matches the skill's description |
@@ -73,7 +73,7 @@ Two fields are required:
 
 Vague description, never triggers. The description is the highest-leverage line in the file.
 
-:::note[Open Standard vs Agent-Specific]
+:::note[Open standard vs agent-specific]
 The `name`, `description`, and `allowed-tools` fields are part of the **Agent Skills open standard** — they work across Claude Code, Codex, and other compatible agents.
 
 Fields like `model` (which model to use) and `argument-hint` (prompt for arguments) are **Claude-Code-specific** frontmatter. They work in Claude Code but aren't portable to other agents.
@@ -84,14 +84,14 @@ Fields like `model` (which model to use) and `argument-hint` (prompt for argumen
 Below the frontmatter is the **process** — the actual procedure:
 
 ```markdown
-## Validation Steps
+## Validation steps
 
 1. Run pytest: `cd app/backend && uv run pytest tests -q`
 2. Run type-check: `cd app/backend && uv run mypy src/`
 3. Run linter: `cd app/backend && uv run ruff check`
 4. Smoke test the server
 
-## Report Format
+## Report format
 - Pass/fail for each step
 - Any errors with file:line references
 - Overall verdict: PASS / FAIL

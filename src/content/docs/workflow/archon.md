@@ -5,11 +5,11 @@ description: The workflow engine that holds the loop and does nothing else
 
 import { Aside } from '@astrojs/starlight/components';
 
-:::tip[TL;DR — What Is Archon?]
+:::tip[TL;DR — What is Archon?]
 Archon is a **workflow engine** that holds the loop and does nothing else. Use it when your orchestrator skill is doing too many jobs at once — investigating, gating, digesting, talking to you, AND holding the loop. Your existing skills become nodes on a graph; Archon runs the graph.
 :::
 
-:::note[What Archon Is and Isn't]
+:::note[What Archon is and isn't]
 Archon is the **course's illustrative engine** — it's open-source and built by the Dynamous community. The concepts (graph-based workflow, gates, bounded loops) transfer to other engines. Learn the shape here; apply it anywhere.
 :::
 
@@ -37,7 +37,7 @@ This is the key insight: **you didn't just learn five ways to automate — you h
 
 Everything in Archon maps to something you already know:
 
-| What You Built | What It Becomes in Archon |
+| What you built | What it becomes in Archon |
 |----------------|---------------------------|
 | Your fix script (deterministic checks, bounded loop) | A bash node |
 | Your skills | Agent nodes with prompts |
@@ -82,7 +82,7 @@ The principle from V27 — a claim isn't evidence — except now it's not your d
 
 ### Three kinds of gate
 
-| Gate Type | When to Use |
+| Gate type | When to use |
 |-----------|-------------|
 | **Script** | Tests pass, file exists, totals match — anything a command can check |
 | **Agent** | Judgment call: is this review finding real? Does this plan decide the open questions? |
@@ -182,7 +182,7 @@ When you need to add a check, ask:
 
 Some shapes worth stealing — every one of them a class of problem, plus the checks you already trust:
 
-| Workflow | What It Does |
+| Workflow | What it does |
 |----------|-------------|
 | **Repo steward** | Triages incoming PRs against a direction doc |
 | **CI first-responder** | Tells flake from real before you're awake |

@@ -1,5 +1,5 @@
 ---
-title: "Phase 2: The Primitives"
+title: "Phase 2: The primitives"
 description: The five building blocks every agentic system is made of — and how to shape each one to your work
 ---
 
@@ -23,7 +23,7 @@ Understanding the primitives is the prerequisite to *engineering* — and eventu
 
 The primitives follow a **composition order** — each one builds on the ones before it:
 
-| Primitive | What It Is | Why This Order |
+| Primitive | What it is | Why this order |
 |-----------|------------|----------------|
 | **Rules** | The durable context that teaches the agent your project | Everything reads them — they come first |
 | **Subagents** | Specialists you hand work to, in their own clean context | Skills can drive subagents, so learn them first |
@@ -31,28 +31,28 @@ The primitives follow a **composition order** — each one builds on the ones be
 | **Skills** | Reusable, packaged procedures — your repeatable processes captured | Skills compose the above; hooks don't compose skills |
 | **Hooks** | Deterministic guarantees wired into the loop | They fire on their own, enforcing what must always (or never) happen |
 
-See the [Five Primitives](/primitives/overview/) section for deep dives on each.
+See the [Five primitives](/primitives/overview/) section for deep dives on each.
 
 ## The videos
 
 | # | Title | Focus |
 |---|-------|-------|
-| **V12** | The Primitives of Agentic Engineering | The map: what a harness is, the five primitives, the composition order |
-| **V13** | The Rules Primitive | Rules deep dive — what earns always-on, what gets pushed to on-demand |
-| **V14** | Global Rules Exercise | Hands-on: shape your rules file to your project |
-| **V15** | The Subagent Primitive | Delegation + isolated context — when and how to use specialists |
-| **V16** | Subagents Exercise | Hands-on: configure subagents for your work |
-| **V17** | The MCP Primitive | Tools and MCP servers — extending what the agent can do |
-| **V18** | MCP Exercise | Hands-on: connect tools to your workflow |
-| **V19** | The Skills Primitive | Packaged procedures — make your planner yours |
-| **V20** | Skills Exercise | Hands-on: build and customize skills |
-| **V21** | The Hooks Primitive | Deterministic guarantees — what must always, or never, happen |
-| **V22** | Hooks Exercise | Hands-on: wire in your guarantees |
-| **V23** | Outro: From Primitives to Composing Your System | Bridge to Phase 3 — the honest frame and what's next |
+| **V12** | The primitives of agentic engineering | The map: what a harness is, the five primitives, the composition order |
+| **V13** | The rules primitive | Rules deep dive — what earns always-on, what gets pushed to on-demand |
+| **V14** | Global rules exercise | Hands-on: shape your rules file to your project |
+| **V15** | The subagent primitive | Delegation + isolated context — when and how to use specialists |
+| **V16** | Subagents exercise | Hands-on: configure subagents for your work |
+| **V17** | The MCP primitive | Tools and MCP servers — extending what the agent can do |
+| **V18** | MCP exercise | Hands-on: connect tools to your workflow |
+| **V19** | The skills primitive | Packaged procedures — make your planner yours |
+| **V20** | Skills exercise | Hands-on: build and customize skills |
+| **V21** | The hooks primitive | Deterministic guarantees — what must always, or never, happen |
+| **V22** | Hooks exercise | Hands-on: wire in your guarantees |
+| **V23** | Outro: from primitives to composing your system | Bridge to Phase 3 — the honest frame and what's next |
 
 Each primitive gets a **teach** video and a hands-on **exercise** on your own project.
 
-**Next step:** [Watch V12 — The Primitives of Agentic Engineering](https://www.skool.com/dynamous) or dive into the [Rules primitive](/primitives/rules/) reference.
+**Next step:** [Watch V12 — The primitives of agentic engineering](https://www.skool.com/dynamous) or dive into the [Rules primitive](/primitives/rules/) reference.
 
 ## The keystone insight
 

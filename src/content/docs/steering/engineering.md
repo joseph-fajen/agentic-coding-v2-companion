@@ -218,7 +218,7 @@ Then evolve it: every time you correct the agent's code style, check if it shoul
 
 ## How engineering.md differs from rules
 
-| Rules File | engineering.md |
+| Rules file | engineering.md |
 |------------|----------------|
 | Operational: map, commands, workflow | Quality: conventions, review, taste |
 | Always-on, every task | On-demand, when writing/reviewing code |

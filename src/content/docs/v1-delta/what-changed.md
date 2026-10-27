@@ -1,5 +1,5 @@
 ---
-title: What Changed
+title: What changed
 description: New concepts and structural reorganization in V2
 ---
 
@@ -42,9 +42,9 @@ V2 brings significant changes to both organization and concepts. This page maps 
 The four phases follow an intentional arc:
 
 - **Phase 1 (11 videos + V02.5):** Create Your First System — brownfield planning, first PIV loop, worktrees
-- **Phase 2 (12 videos):** [The Primitives](/primitives/overview/) — each of the five primitives taught explicitly
+- **Phase 2 (12 videos):** [The primitives](/primitives/overview/) — each of the five primitives taught explicitly
 - **Phase 3 (9 videos):** Improve & Scale — workflow automation, [headless/SDK](/workflow/headless-sdk-ci/), [Archon](/workflow/archon/)
-- **Phase 4 (async):** Going Further — team standards, AI-native design, AI-in-CI
+- **Phase 4 (async):** Going further — team standards, AI-native design, AI-in-CI
 
 ### Folder layout
 
@@ -182,14 +182,14 @@ Chain only what you already trust by hand:
 |---------|---------|-------|
 | Commands | Skills | Now with frontmatter + structured format |
 | `.agents/` | `.claude/` | Standard Claude Code layout |
-| Global Rules | Rules primitive | Plus steering documents |
+| Global rules | Rules primitive | Plus steering documents |
 | — | Subagents | New primitive, explicitly taught |
 | — | Hooks | Entirely new in V2 |
-| Module | Phase/Video | Restructured organization |
+| Module | Phase/video | Restructured organization |
 
 ## See also
 
-- [The Five Primitives](/primitives/overview/) — deep dives on each primitive
-- [Steering Documents](/steering/overview/) — the new direction.md and engineering.md
+- [The five primitives](/primitives/overview/) — deep dives on each primitive
+- [Steering documents](/steering/overview/) — the new direction.md and engineering.md
 
-Next: [What Still Applies](/v1-delta/what-still-applies/) — the V1 concepts that remain central.
+Next: [What still applies](/v1-delta/what-still-applies/) — the V1 concepts that remain central.

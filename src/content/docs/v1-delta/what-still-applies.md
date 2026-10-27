@@ -1,5 +1,5 @@
 ---
-title: What Still Applies
+title: What still applies
 description: Core V1 concepts that remain central in V2
 ---
 
@@ -17,7 +17,7 @@ The loop is the same:
 
 V2 adds the **R-PIV** extension for complex tasks:
 
-**Research/Reflect → Plan → Implement → Validate**
+**Research/reflect → Plan → Implement → Validate**
 
 The research phase handles exploration, gathering context, and understanding unknowns before committing to a plan. Use it when the task requires understanding before acting.
 
@@ -25,13 +25,13 @@ The research phase handles exploration, gathering context, and understanding unk
 
 The five-layer validation stack remains your quality framework:
 
-| Layer | What It Catches |
+| Layer | What it catches |
 |-------|-----------------|
-| **5. Human Review** | Logic errors, UX issues, edge cases |
-| **4. Integration Tests** | Cross-component failures, API contracts |
-| **3. Unit Tests** | Function-level bugs, regressions |
-| **2. Type Checking** | Type mismatches, interface violations |
-| **1. Syntax/Lint** | Syntax errors, style violations |
+| **5. Human review** | Logic errors, UX issues, edge cases |
+| **4. Integration tests** | Cross-component failures, API contracts |
+| **3. Unit tests** | Function-level bugs, regressions |
+| **2. Type checking** | Type mismatches, interface violations |
+| **1. Syntax/lint** | Syntax errors, style violations |
 
 **The insight:** Each layer catches different things. Run them in order — cheaper layers first, expensive layers last. Don't skip layers.
 
@@ -77,7 +77,7 @@ Detail doesn't vanish — it loads when needed:
 
 The two-layer framing from V1 persists:
 
-| Layer | What It Is |
+| Layer | What it is |
 |-------|------------|
 | **Layer 1** | Your agentic system — the harness you've built |
 | **Layer 2** | The code your system produces |
@@ -88,7 +88,7 @@ The mantra: **"The harness matters more than the model."**
 
 ## MCP fundamentals
 
-Model Context Protocol remains the same:
+Model context protocol remains the same:
 
 - Servers expose tools to the agent
 - Configured in `.mcp.json`
@@ -122,12 +122,12 @@ If you built a V1 companion site or reference, the conceptual content transfers.
 
 | Concept | Status in V2 |
 |---------|--------------|
-| PIV Loop | Unchanged |
+| PIV loop | Unchanged |
 | R-PIV extension | Unchanged |
-| Validation Pyramid | Unchanged |
+| Validation pyramid | Unchanged |
 | Rules principles | Unchanged (refined location) |
 | Layer 1/Layer 2 framing | Unchanged (+ "harness" term) |
 | MCP fundamentals | Unchanged (+ skill+CLI alternative) |
 | Code review patterns | Unchanged (+ skill/CI encoding) |
 
-Next: [Migration Checklist](/v1-delta/migration-checklist/) — concrete steps to update your system.
+Next: [Migration checklist](/v1-delta/migration-checklist/) — concrete steps to update your system.

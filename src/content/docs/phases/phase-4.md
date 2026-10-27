@@ -1,5 +1,5 @@
 ---
-title: "Phase 4: Going Further"
+title: "Phase 4: Going further"
 description: Advanced and optional — deep dives for teams, orchestration, and AI-native codebases
 ---
 
@@ -19,11 +19,11 @@ Phase 4 is the **advanced and optional** stage — a set of deep-dive acts for s
 
 **AI coding agents as a team standard.** The same building blocks a person owns, a team can own.
 
-| Topic | What You Learn |
+| Topic | What you learn |
 |-------|----------------|
-| **Shared Scopes** | The three levels of the shared layer — org, repo, personal |
-| **The Team-Standard Mechanism** | Conventions written once in a repo doc, inherited on clone, enforced by skills and hooks |
-| **Ownership and Adoption** | How teams evolve their shared layer over time |
+| **Shared scopes** | The three levels of the shared layer — org, repo, personal |
+| **The team-standard mechanism** | Conventions written once in a repo doc, inherited on clone, enforced by skills and hooks |
+| **Ownership and adoption** | How teams evolve their shared layer over time |
 
 The mechanism from Phase 3 (conventions doc → skills read it → regex guards it → rubric grades it) scales to teams. What's specific to the team lives in the doc; anyone who clones the repo inherits the standards.
 
@@ -31,23 +31,23 @@ The mechanism from Phase 3 (conventions doc → skills read it → regex guards 
 
 **Advanced patterns for running complex workflows.** When to deepen the orchestrator vs when to hand the loop to Archon.
 
-| Topic | What You Learn |
+| Topic | What you learn |
 |-------|----------------|
-| **Worktree-Isolated Workstreams** | Multiple independent loops, merge queues ordered by conflict risk |
-| **Run Files and Resume** | Durable execution — resume after a dead session |
-| **Agent Teams** | Multiple agents coordinating on larger work |
-| **Spike Workstreams** | Exploratory work that might get thrown away |
+| **Worktree-isolated workstreams** | Multiple independent loops, merge queues ordered by conflict risk |
+| **Run files and resume** | Durable execution — resume after a dead session |
+| **Agent teams** | Multiple agents coordinating on larger work |
+| **Spike workstreams** | Exploratory work that might get thrown away |
 
 ### Act: AI-native codebases
 
 **Designing and migrating codebases for AI-first development.**
 
-| Topic | What You Learn |
+| Topic | What you learn |
 |-------|----------------|
-| **AI-Native Design** | Codebase patterns that make agent work more reliable |
-| **Migration Paths** | How to evolve an existing codebase toward AI-native patterns |
-| **Context Curation at Scale** | Managing what the agent sees in large codebases |
-| **Per-Feature AI Layers** | Decomposition strategies for complex projects |
+| **AI-native design** | Codebase patterns that make agent work more reliable |
+| **Migration paths** | How to evolve an existing codebase toward AI-native patterns |
+| **Context curation at scale** | Managing what the agent sees in large codebases |
+| **Per-feature AI layers** | Decomposition strategies for complex projects |
 
 ## Future acts
 
@@ -61,7 +61,7 @@ Workshops often arrive first; an act can double as a recorded workshop. The stru
 
 ## What makes Phase 4 different
 
-| Core Course (P1–P3) | Phase 4 |
+| Core course (P1–P3) | Phase 4 |
 |---------------------|---------|
 | Everyone needs it | Context-dependent |
 | Sequential — each phase builds on the last | Independent acts — take what applies |

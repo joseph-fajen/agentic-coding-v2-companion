@@ -1,5 +1,5 @@
 ---
-title: "Phase 1: Create Your First System"
+title: "Phase 1: create your first system"
 description: Install the mental models, stand up your AI Layer, and ship one real ticket end to end
 ---
 
@@ -25,24 +25,24 @@ Using AI to code is table stakes. The edge is running a *system*: you own the pl
 
 ## The videos
 
-| # | Title | The One Thing It Lands |
+| # | Title | The one thing it lands |
 |---|-------|------------------------|
-| **V1** | Course Vision + The System Gap | The gap is a *systems* gap — name your honest baseline |
-| **V2** | The Whole Loop | The entire system on one diagram |
-| **V2.5** | Coding Agent Basics *(optional)* | The mechanical cockpit for first-time agent users |
-| **V3** | Setting Up the AI Layer Foundation | Install and customize the AI Layer on your own project |
-| **V4** | Layer 1 vs Layer 2 + the Two Arcs | Stable context vs per-feature plan; the three starting points |
-| **V5** | Setting Up Your Global Rules | Derive your global rules from your codebase (or greenfield decisions) |
-| **V6** | Planning from Real User Behavior | The Research beat: real usage before the plan |
-| **V7** | Grounding the Epic in Your Codebase | The architecture decisions; *how* to approach the epic |
-| **V8** | From Epic to Tickets | Slice an epic into PIV-sized, parallelizable work |
-| **V9** | Executing a Ticket with PIV | The full loop to a reviewed PR — trust the self-correction and the gates |
-| **V10** | Parallel PIV Loops with Worktrees | Run independent tickets in parallel |
-| **V11** | Exercise: Your First Full PIV Loop | Ship one on your own project — **Phase 1 graduation** |
+| **V1** | Course vision + The system gap | The gap is a *systems* gap — name your honest baseline |
+| **V2** | The whole loop | The entire system on one diagram |
+| **V2.5** | Coding agent basics *(optional)* | The mechanical cockpit for first-time agent users |
+| **V3** | Setting up the AI layer foundation | Install and customize the AI Layer on your own project |
+| **V4** | Layer 1 vs Layer 2 + the two arcs | Stable context vs per-feature plan; the three starting points |
+| **V5** | Setting up your global rules | Derive your global rules from your codebase (or greenfield decisions) |
+| **V6** | Planning from real user behavior | The research beat: real usage before the plan |
+| **V7** | Grounding the epic in your codebase | The architecture decisions; *how* to approach the epic |
+| **V8** | From epic to tickets | Slice an epic into PIV-sized, parallelizable work |
+| **V9** | Executing a ticket with PIV | The full loop to a reviewed PR — trust the self-correction and the gates |
+| **V10** | Parallel PIV loops with worktrees | Run independent tickets in parallel |
+| **V11** | Exercise: your first full PIV loop | Ship one on your own project — **Phase 1 graduation** |
 
 Start with V1 and work through in order. Everything later in the course builds on the system you install here.
 
-**Next step:** [Watch V1 — Course Vision + The System Gap](https://www.skool.com/dynamous)
+**Next step:** [Watch v1 — course vision + The system gap](https://www.skool.com/dynamous)
 
 ## Key concepts
 
@@ -52,7 +52,7 @@ Start with V1 and work through in order. Everything later in the course builds o
 
 ### The R-PIV loop
 
-Research → Plan → Implement → Validate. You own Research and Plan (the judgment). The agent owns Implement. You return for Validate. This division is what makes the system trustworthy — and sharpening it is what Phase 3 is about.
+Research → Plan → Implement → Validate. You own research and plan (the judgment). The agent owns Implement. You return for Validate. This division is what makes the system trustworthy — and sharpening it is what Phase 3 is about.
 
 ### System evolution
 

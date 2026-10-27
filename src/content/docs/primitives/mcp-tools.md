@@ -39,8 +39,8 @@ The good ones are **built by the tool owner** — Atlassian's own server, PostHo
 
 | Source | Description |
 |--------|-------------|
-| **Official MCP Registry** | The first-party index at registry.modelcontextprotocol.io |
-| **Docker MCP Catalog** | Vetted, containerized servers you can browse and run |
+| **Official MCP registry** | The first-party index at registry.modelcontextprotocol.io |
+| **Docker MCP catalog** | Vetted, containerized servers you can browse and run |
 
 When connecting, you choose a **scope**:
 - **Project** scope → writes `.mcp.json` your whole team shares
@@ -68,9 +68,9 @@ Every server you connect can read or do things on your behalf — and not all se
 
 | Threat | Description |
 |--------|-------------|
-| **Tool Poisoning** | Malicious instructions hidden inside a server's tool descriptions — invisible to you, read by the model |
+| **Tool poisoning** | Malicious instructions hidden inside a server's tool descriptions — invisible to you, read by the model |
 | **Shadowing** | A bad server overriding how your trusted servers behave |
-| **Rug Pull** | A server you approved changing its tool definitions later — exfiltrating data weeks after install |
+| **Rug pull** | A server you approved changing its tool definitions later — exfiltrating data weeks after install |
 
 This is serious enough that the **NSA** put out dedicated MCP security guidance, and **six national cyber agencies** issued a joint advisory on adopting agentic AI safely.
 
@@ -105,7 +105,7 @@ A lot of what an MCP gives you, you can get from a **CLI plus a skill** — and 
 
 Most tools already ship a command-line tool. Your agent can just *run it* — it has a shell. And a **skill** teaches it *how* — which flags, your conventions, the gotchas.
 
-| When to Use | Approach |
+| When to use | Approach |
 |-------------|----------|
 | **MCP** | Tool owner ships a great server, you want structured/typed access, no good CLI, remote service with managed auth |
 | **Skill + CLI** | Lighter, version-controlled, yours to shape, local tool control |

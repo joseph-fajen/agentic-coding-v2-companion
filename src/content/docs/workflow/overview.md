@@ -1,5 +1,5 @@
 ---
-title: Workflow Primitives
+title: Workflow primitives
 description: Check your system, trust the parts that work, and automate what you trust
 ---
 
@@ -15,7 +15,7 @@ This rules out automating something because it "felt fine the last few times." T
 
 There are two loops in agentic coding:
 
-| Loop | What It Does | The Workflow |
+| Loop | What it does | The workflow |
 |------|-------------|--------------|
 | **Inner loop** | Ships the work | Plan → Implement → Validate (PIV) — or Research → PIV for complex tasks |
 | **Outer loop** | Improves the system that ships the work | Fix rules, skills, hooks — not the code |
@@ -30,7 +30,7 @@ That's the outer loop. And it's the difference between an AI layer that stays th
 
 You enter the outer loop two ways, and the difference is smaller than you'd think — it's **what you point it at**:
 
-| Entry | What You Point At | What It Asks |
+| Entry | What you point at | What it asks |
 |-------|------------------|--------------|
 | **Reactive** | One run's artifacts (the plan, the code diff, the test output, the review report) | "What should change so that doesn't happen again?" |
 | **Proactive** | Weeks of runs | "What keeps costing me?" |
@@ -51,7 +51,7 @@ That's the whole concept. Everything else — scans, reports, opportunity analys
 
 Where do you stand in this loop? At the ends.
 
-| Step | Who Owns It |
+| Step | Who owns it |
 |------|-------------|
 | **Plan** | You — judgment about what to build |
 | **Implement** | The agent — mechanical execution |
@@ -74,7 +74,7 @@ This is the "check" phase. You're finding out what you trust and what you don't.
 
 Turn the parts you trust into **workflows** — and build them multiple ways, because this is the one piece of the toolkit that hasn't settled on a single shape yet:
 
-| Method | What Says Go |
+| Method | What says go |
 |--------|--------------|
 | [Headless scripts](/workflow/headless-sdk-ci/#headless-scripts) | A script |
 | [The SDK](/workflow/headless-sdk-ci/#the-sdk) | Your program |
@@ -123,6 +123,6 @@ If they're all just instructions, then composing them isn't systems integration.
 
 ## See also
 
-- [Phase 3: Improve & Scale](/phases/phase-3/) — where the course teaches these concepts
+- [Phase 3: improve & scale](/phases/phase-3/) — where the course teaches these concepts
 - [Hooks](/primitives/hooks/) — the guarantees that make automation safe
 - [Skills](/primitives/skills/) — the processes you chain into workflows

@@ -5,11 +5,11 @@ description: Key terms used throughout the Agentic Coding V2 course
 
 Quick reference for terminology used in the V2 course and this companion site.
 
-:::tip[Start Here]
+:::tip[Start here]
 **If you're new**, learn these terms first in this order:
-1. **Harness / AI Layer** — what you build around the model
-2. **PIV Loop** — the core workflow (Plan → Implement → Validate)
-3. **The Five Primitives** — Rules, Subagents, MCP/Tools, Skills, Hooks
+1. **Harness / AI layer** — what you build around the model
+2. **PIV loop** — the core workflow (Plan → Implement → Validate)
+3. **The five primitives** — Rules, Subagents, MCP/Tools, Skills, Hooks
 4. **Layer 1 / Layer 2** — durable vs task-specific context
 
 Everything else builds on these.
@@ -27,7 +27,7 @@ Also called your **AI Layer** or **Layer 1**.
 
 Two levels of context in agentic coding:
 
-| Layer | What It Is | Lifetime |
+| Layer | What it is | Lifetime |
 |-------|-----------|----------|
 | **Layer 1** | Your harness — rules, skills, hooks, steering docs | Durable across tasks |
 | **Layer 2** | Task-specific context — plans, feature specs, current work | Temporary per task |
@@ -44,7 +44,7 @@ Extended workflow: **Research → Plan → Implement → Validate**. Use R-PIV w
 
 ### Inner loop / outer loop
 
-| Loop | Purpose | What It Does |
+| Loop | Purpose | What it does |
 |------|---------|--------------|
 | **Inner loop** | Ships work | Run PIV or R-PIV to complete a task |
 | **Outer loop** | Improves the system | Fix rules, skills, hooks when the inner loop fails |
@@ -88,11 +88,11 @@ Isolated agents dispatched for specific tasks. Fresh context per invocation — 
 
 See: [Subagents](/primitives/subagents/)
 
-### MCP / Tools
+### MCP / tools
 
 External capabilities via Model Context Protocol. The "USB-C for AI" — a standard interface for connecting tools. The **skill + CLI pattern** is a lighter alternative: skills orchestrate CLIs via bash.
 
-See: [MCP / Tools](/primitives/mcp-tools/)
+See: [MCP / tools](/primitives/mcp-tools/)
 
 ### Skills
 
@@ -130,7 +130,7 @@ The Phase 3 discipline: you can't trust what you haven't checked, and you should
 
 ### Fresh context vs. persistent context
 
-| Type | When To Use |
+| Type | When to use |
 |------|-------------|
 | **Fresh** | When you need independence — reviewers get clean context |
 | **Persistent** | When you need memory — implementer keeps context across steps |
@@ -161,5 +161,5 @@ Custom checkers and helpers are the power move.
 
 ## See also
 
-- [The Five Primitives](/primitives/overview/) — detailed coverage of each primitive
-- [What Changed](/v1-delta/what-changed/) — V1 to V2 term mapping
+- [The five primitives](/primitives/overview/) — detailed coverage of each primitive
+- [What changed](/v1-delta/what-changed/) — V1 to V2 term mapping

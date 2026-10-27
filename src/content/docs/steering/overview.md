@@ -1,5 +1,5 @@
 ---
-title: Steering Documents
+title: Steering documents
 description: direction.md and engineering.md — the reference docs that shape how your agent thinks
 ---
 
@@ -54,7 +54,7 @@ Steering documents are **on-demand references** — the same pattern from the Ru
 
 ## What goes where
 
-| Content Type | Where It Lives |
+| Content type | Where it lives |
 |--------------|----------------|
 | "What this project IS and IS NOT" | direction.md |
 | Product boundaries, scope guards | direction.md |

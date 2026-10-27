@@ -79,7 +79,7 @@ When you author a subagent, you control **four things**:
 What the agent *is* and what it's good at. A sharp, narrow purpose beats a vague broad one every time — a subagent that does one job well is worth more than one that sort-of does five.
 
 ```markdown
-# Code Reviewer
+# Code reviewer
 
 You are an expert code reviewer specializing in Python FastAPI
 applications with vertical slice architecture.
@@ -116,14 +116,14 @@ The sub doesn't inherit your main conversation — the only channel is that brie
 What should the subagent actually do? What should it **look at**, **read**, **focus on**, in what order? Plus **scoped tools** — a read-only reviewer simply *can't* edit your files if you never handed it the tools.
 
 ```markdown
-## Review Process
+## Review process
 
 1. Initial scan: understand the scope of changes
 2. Component analysis: examine each changed file
 3. Convention check: verify logging, typing, testing patterns
 4. Boundary check: confirm architectural constraints
 
-## Tools Available
+## Tools available
 - Read, Grep, Glob (read-only analysis)
 - No Write, Edit, or Bash
 ```
@@ -143,7 +143,7 @@ What a trustworthy report has:
 - **Composable** — shaped so another agent or later step can consume it
 
 ```markdown
-## Output Format
+## Output format
 
 ### Strengths
 - [List what's working well]
