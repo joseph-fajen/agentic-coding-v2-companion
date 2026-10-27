@@ -3,8 +3,6 @@ title: Archon
 description: The workflow engine that holds the loop and does nothing else
 ---
 
-import { Aside } from '@astrojs/starlight/components';
-
 :::tip[TL;DR — What is Archon?]
 Archon is a **workflow engine** that holds the loop and does nothing else. Use it when your orchestrator skill is doing too many jobs at once — investigating, gating, digesting, talking to you, AND holding the loop. Your existing skills become nodes on a graph; Archon runs the graph.
 :::
@@ -13,9 +11,9 @@ Archon is a **workflow engine** that holds the loop and does nothing else. Use i
 Archon is the **course's illustrative engine** — it's open-source and built by the Dynamous community. The concepts (graph-based workflow, gates, bounded loops) transfer to other engines. Learn the shape here; apply it anywhere.
 :::
 
-<Aside type="note" title="Prerequisites">
+:::note[Prerequisites]
 This doc assumes you've completed Phase 3 and built workflow automation using skills, scripts, or both. If you haven't automated multi-step workflows yet, start with [Headless / SDK / CI](/workflow/headless-sdk-ci/) first.
-</Aside>
+:::
 
 ## The problem it solves
 
