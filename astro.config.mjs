@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { starlightBasePath } from 'starlight-base-path';
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,6 +9,7 @@ export default defineConfig({
 	base: '/agentic-coding-v2-companion',
 	integrations: [
 		starlight({
+			plugins: [starlightBasePath()],
 			title: 'Agentic Coding V2',
 			description: 'Companion site for Cole Medin\'s Agentic Coding Course V2',
 			social: [

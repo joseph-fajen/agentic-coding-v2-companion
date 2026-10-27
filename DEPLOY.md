@@ -10,6 +10,32 @@ Enable GitHub Pages in the repo settings:
 
 That's it. The workflow will handle builds automatically on every push to `main`.
 
+## Requirements
+
+### Node Version
+
+The workflow uses **Node 23**. Astro requires Node >= 22.23.4, and GitHub Actions' Node 22 image (22.23.3) is too old.
+
+### package-lock.json
+
+Must be committed to the repo. The CI workflow uses `npm ci` which requires the lock file.
+
+If your global `.gitignore` excludes `package-lock.json`, override it locally:
+```
+# .gitignore
+!package-lock.json
+```
+
+### OAuth Workflow Scope
+
+Pushing workflow files (`.github/workflows/*.yml`) requires the `workflow` scope on your GitHub OAuth token.
+
+If push fails with "refusing to allow an OAuth App to create or update workflow":
+```bash
+gh auth refresh -s workflow
+git push
+```
+
 ## Deploy
 
 Push your changes:

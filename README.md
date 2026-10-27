@@ -2,7 +2,7 @@
 
 Companion documentation site for [Cole Medin's Agentic Coding Course V2](https://www.skool.com/dynamous).
 
-**Live site:** [agentic-coding-v2.pages.dev](https://agentic-coding-v2.pages.dev) (Cloudflare Pages)
+**Live site:** [joseph-fajen.github.io/agentic-coding-v2-companion](https://joseph-fajen.github.io/agentic-coding-v2-companion/)
 
 ## What This Is
 
@@ -27,7 +27,7 @@ npm run build    # production build to ./dist/
 
 ## Deployment
 
-Auto-deploys to Cloudflare Pages on push to `main`. See [DEPLOY.md](DEPLOY.md) for configuration.
+Auto-deploys to GitHub Pages on push to `main`. See [DEPLOY.md](DEPLOY.md) for configuration.
 
 ## Review Process
 

@@ -12,10 +12,10 @@ The five primitives are the **atoms** of agentic coding — the smallest meaning
 | Primitive | What It Is | Key Insight |
 |-----------|------------|-------------|
 | **Rules** | CLAUDE.md and steering documents | The highest-leverage file — read on every task, so keep it lean and true |
-| **Subagents** | Isolated agents that do work and report back | You never see the work; you only see the report — so author the output |
+| **Subagents** | Isolated agents that do work and report back | Workers in separate contexts; you only see their final summary |
 | **MCP / Tools** | External capability via Model Context Protocol | How the agent reaches *outside* the codebase to operate on real systems |
 | **Skills** | On-demand processes loaded when triggered | Bank a process once; the agent runs it your way every time |
-| **Hooks** | Deterministic guarantees that fire automatically | A rule asks; a hook guarantees — the agent can't talk its way past it |
+| **Hooks** | Guards that fire automatically | A rule asks; a hook guarantees — the agent can't talk its way past it |
 
 ## The Order Matters
 
