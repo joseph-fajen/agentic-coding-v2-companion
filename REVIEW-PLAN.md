@@ -1,8 +1,54 @@
 # Agentic Coding v2 Companion Site: Adversarial Review Plan
 
 **Created:** 2026-10-26
-**Status:** Ready to execute
+**Status:** Complete — 3 review passes executed, all findings addressed
 **Purpose:** Two independent agents review all 22 docs with skeptical, adversarial perspectives
+
+---
+
+## Execution Log
+
+### Pass 1: Primary Approach (Source-of-Truth + Learner Advocate)
+**Date:** 2026-10-26
+**Commit:** `e23b21a`
+
+Ran Approach A with Opus (accuracy) + Sonnet (learnability). Findings:
+- **Accuracy:** 18 GREEN, 4 YELLOW, 0 RED
+- **Learnability:** 12 GREEN, 8 YELLOW, 2 RED
+
+Addressed all YELLOW and RED items. Key fixes: v1-delta terminology, progressive disclosure explanation, navigation improvements.
+
+### Pass 2: Editorial Board (3-Agent)
+**Date:** 2026-10-26
+**Commit:** `4eb6fa0`
+
+Ran Approach D with Accuracy Auditor + Learner Advocate + Structure Critic. Findings:
+- **Accuracy V2:** 20 GREEN, 2 YELLOW, 0 RED
+- **Learnability V2:** 14 GREEN, 6 YELLOW, 2 RED
+- **Structure:** 18 GREEN, 3 YELLOW, 1 RED
+
+Addressed remaining issues. Key fixes: consolidated duplicate steering docs, fixed internal links, added glossary to sidebar.
+
+### Pass 3: Hostile Expert + Impatient Newcomer
+**Date:** 2026-10-26
+**Commit:** `be1fd57`
+
+Ran Approach B with Opus (hostile expert) + Haiku (impatient newcomer). Most adversarial pass. Findings:
+- **Expert:** 18 GREEN, 6 YELLOW, 2 RED
+- **Newcomer:** 8 GREEN, 10 YELLOW, 4 RED
+
+Addressed all issues. Key fixes:
+- Updated video counts after July 2026 course restructure
+- Added TL;DR / Quick Start sections to dense docs
+- Moved key content earlier (Four Destinations, Why Subagents)
+- Added Archon disclaimer (illustrative, not industry standard)
+- Converted primitives/steering-* to redirect stubs
+
+### Final State
+- **17 docs modified** across 3 passes
+- **All RED items resolved**
+- **Most YELLOW items resolved** (some deferred as stylistic preference)
+- Site ready for announcement
 
 ---
 

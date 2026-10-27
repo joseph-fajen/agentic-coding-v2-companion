@@ -1,49 +1,43 @@
-# Starlight Starter Kit: Basics
+# Agentic Coding V2 Companion Site
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Companion documentation site for [Cole Medin's Agentic Coding Course V2](https://www.skool.com/dynamous).
 
+**Live site:** [agentic-coding-v2.pages.dev](https://agentic-coding-v2.pages.dev) (Cloudflare Pages)
+
+## What This Is
+
+A reference guide that complements the video course. Not a replacement — a companion you come back to.
+
+**Content:**
+- **The Five Primitives** — Rules, Subagents, MCP/Tools, Skills, Hooks
+- **The Four Phases** — Use → Understand → Evolve → Scale
+- **Steering Documents** — direction.md and engineering.md patterns
+- **Workflow Primitives** — Headless, SDK, CI, Archon
+- **V1→V2 Delta** — Migration guide for V1 graduates
+
+## Development
+
+Built with [Astro Starlight](https://starlight.astro.build/).
+
+```bash
+npm install
+npm run dev      # localhost:4321
+npm run build    # production build to ./dist/
 ```
-npm create astro@latest -- --template starlight
-```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Deployment
 
-## 🚀 Project Structure
+Auto-deploys to Cloudflare Pages on push to `main`. See [DEPLOY.md](DEPLOY.md) for configuration.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## Review Process
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+The site went through 3 adversarial review passes using parallel AI agents:
+1. **Source-of-Truth + Learner Advocate** — accuracy + learnability
+2. **Editorial Board (3 agents)** — accuracy + learnability + structure
+3. **Hostile Expert + Impatient Newcomer** — deep errors + surface scannability
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+See [REVIEW-PLAN.md](REVIEW-PLAN.md) for the full methodology and execution log.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## Status
 
-Static assets, like favicons, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+**Complete.** All 22 docs written, reviewed, and polished. Ready for community use.
