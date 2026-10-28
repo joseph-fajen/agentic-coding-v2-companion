@@ -5,6 +5,8 @@ description: What happens to each V1 artifact, and the steps to update your V1 s
 
 This checklist updates a V1 setup to V2. **Steps 1–3 are the high-value changes, so do them first.** Steps 4–6 can follow in any order as time allows.
 
+Not sure it's worth it? Read [Why V2](/v1-delta/why-v2/) first. Migrating a team? See [Running this as a team](/workflow/teams/).
+
 You can migrate one piece at a time. Commands in `.claude/commands/` keep working in Claude Code, so you and your teammates can keep using V1 commands while you convert them.
 
 ## What happens to your V1 artifacts
@@ -86,6 +88,7 @@ Create two files in `.claude/references/`:
 
 - [ ] In your planning skill, add an instruction to read `.claude/references/direction.md` before settling scope
 - [ ] In your implement and review skills, add an instruction to read `.claude/references/engineering.md` before writing or judging code
+- [ ] Want certainty instead? A SessionStart hook can load a doc at the start of every session. It costs tokens on every session but never misses.
 - [ ] Check that it works: run a planning or review task and ask the agent which clauses it applied. If it can't name any, the doc didn't load.
 
 **Result:** scope and quality judgments come from your docs, not the agent's defaults. See [Steering documents](/steering/overview/).

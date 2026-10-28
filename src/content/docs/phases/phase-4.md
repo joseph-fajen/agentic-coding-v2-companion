@@ -32,6 +32,8 @@ Phase 4 is the **advanced and optional** stage — a set of deep-dive acts for s
 
 The mechanism from Phase 3 (conventions doc → skills read it → regex guards it → rubric grades it) scales to teams. What's specific to the team lives in the doc; anyone who clones the repo inherits the standards.
 
+For the practical version (where the layer lives, ownership, onboarding, review and where agents run), see [Running this as a team](/workflow/teams/).
+
 ### Act: orchestration deep dive
 
 **Advanced patterns for running complex workflows.** When to deepen the orchestrator vs when to hand the loop to Archon.

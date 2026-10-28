@@ -16,6 +16,7 @@ The pages in this section, by when you'll need them:
 - **Several independent tickets at once:** [Parallel worktrees](/workflow/parallel-worktrees/) (Phase 1)
 - **Running workflows without you:** [Headless / SDK / CI](/workflow/headless-sdk-ci/) (Phase 3)
 - **A workflow engine:** [Archon](/workflow/archon/), once headless runs are working
+- **Working with teammates:** [Running this as a team](/workflow/teams/)
 :::
 
 ## The core insight

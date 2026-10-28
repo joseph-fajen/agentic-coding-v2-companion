@@ -27,6 +27,7 @@ V2 is a **restructuring**, not an incremental update. The course moves from a li
 
 This section maps your V1 knowledge to V2:
 
+- **[Why V2: the case and the costs](/v1-delta/why-v2/)**: why the switch is worth it, and what it costs you
 - **[What changed](/v1-delta/what-changed/)** — New concepts, structural reorganization, and the Five Primitives
 - **[What still applies](/v1-delta/what-still-applies/)** — Core concepts that remain central (PIV loop, validation pyramid)
 - **[Migration checklist](/v1-delta/migration-checklist/)** — Concrete steps to update your V1 system to V2 patterns

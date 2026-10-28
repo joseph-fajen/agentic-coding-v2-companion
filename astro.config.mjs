@@ -56,12 +56,14 @@ export default defineConfig({
 						{ label: 'Parallel worktrees', slug: 'workflow/parallel-worktrees' },
 						{ label: 'Headless / SDK / CI', slug: 'workflow/headless-sdk-ci' },
 						{ label: 'Archon', slug: 'workflow/archon' },
+						{ label: 'Running this as a team', slug: 'workflow/teams' },
 					],
 				},
 				{
 					label: 'Coming from V1?',
 					items: [
 						{ label: 'Overview', slug: 'v1-delta/overview' },
+						{ label: 'Why V2', slug: 'v1-delta/why-v2' },
 						{ label: 'What changed', slug: 'v1-delta/what-changed' },
 						{ label: 'What still applies', slug: 'v1-delta/what-still-applies' },
 						{ label: 'Migration checklist', slug: 'v1-delta/migration-checklist' },
