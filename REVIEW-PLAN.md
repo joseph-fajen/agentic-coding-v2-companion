@@ -111,7 +111,9 @@ Shared themes: conflicting start/migration orders, cost of adoption missing, no 
 6. New `v1-delta/why-v2.md` and `workflow/teams.md`
 7. Glossary: Basics section, workflow terms (PRD, epic, ticket, worktree, etc.), skill-pack table, corrected file conventions
 
-**Still open:** 44% adherence citation in `primitives/rules.md` (link vs caveat mismatch); readiness labels only where the course states maturity; remaining YELLOW items in both findings files.
+**Fixed after merge:** the 44% citation in `primitives/rules.md` linked an unrelated paper (L-Eval). It now cites Harada et al., *Curse of Instructions* (the course's source), plus the EMNLP 2025 follow-up.
+
+**Still open:** readiness labels only where the course states maturity; remaining YELLOW items in both findings files.
 
 ---
 

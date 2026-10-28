@@ -61,7 +61,7 @@ Rules state *what* and *why*, not step-by-step *how*. The agent figures out the 
 
 ### Concise beats comprehensive
 
-Every rule competes for attention. Research shows adherence drops as instructions pile up. Keep the always-on content lean.
+Every rule competes for attention. Research shows adherence drops as instructions pile up ([Harada et al., 2025](https://arxiv.org/abs/2509.21051); see [Rules](/primitives/rules/#the-core-insight) for the numbers). Keep the always-on content lean.
 
 **The cut test:** Would the agent do this anyway without you saying it? If yes, cut it.
 
