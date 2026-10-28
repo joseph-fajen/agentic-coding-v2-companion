@@ -1,8 +1,8 @@
 # Agentic Coding v2 Companion Site: Adversarial Review Plan
 
 **Created:** 2026-10-26
-**Updated:** 2026-10-27
-**Status:** Complete — all content gaps filled, site ready for use
+**Updated:** 2026-10-28
+**Status:** Pass 5 (audience personas) complete and live. See "Current State" and "Next Steps" below.
 **Purpose:** Two independent agents review all docs with skeptical, adversarial perspectives
 
 ---
@@ -83,14 +83,9 @@ Compared docs site structure against full course curriculum (3 phases, 39 lesson
 - [x] Fill in stub pages with course material
 - [x] Remove draft banners when complete
 
-### Current State
-- **25 docs total** — all complete
-- **0 draft pages** — all content gaps filled
-- Site ready for use
-
 ### Pass 5: Audience Personas (ISV + Small Business Owner)
 **Date:** 2026-10-28
-**Status:** Review complete; all 7 recommended fixes applied (branch `docs/persona-review-fixes`)
+**Status:** Complete. All 7 recommended fixes merged and deployed (PR #1).
 
 Run Alternative F with Opus (ISV practitioner, v1 alum) + Sonnet (small business owner, non-developer). Each reviewer works through five persona-specific tasks before sweeping the site. Success bar for the small business owner: the site gives them a clear path (where to start, honest prerequisites, what to skip), not that every page is readable by a non-developer.
 
@@ -111,9 +106,41 @@ Shared themes: conflicting start/migration orders, cost of adoption missing, no 
 6. New `v1-delta/why-v2.md` and `workflow/teams.md`
 7. Glossary: Basics section, workflow terms (PRD, epic, ticket, worktree, etc.), skill-pack table, corrected file conventions
 
-**Fixed after merge:** the 44% citation in `primitives/rules.md` linked an unrelated paper (L-Eval). It now cites Harada et al., *Curse of Instructions* (the course's source), plus the EMNLP 2025 follow-up.
+**Follow-up fixes (also merged and deployed):**
+- PR #2: the 44% citation in `primitives/rules.md` linked an unrelated paper (L-Eval, arXiv 2307.11088). It now cites Harada et al., *Curse of Instructions* (OpenReview R6q67CDBCH, the course's own source in V13) plus the EMNLP 2025 follow-up (arXiv 2509.21051). The 44%/15% figures match the course script and a secondhand summary; the primary paper wasn't read because OpenReview blocks automated access.
+- PR #3: the home page used Starlight's `splash` template, which hides the sidebar. It now uses the default doc template, so the sidebar shows from the first page.
 
-**Still open:** readiness labels only where the course states maturity; remaining YELLOW items in both findings files.
+**Sources used for new content:** course repo `~/git/agentic-coding-course` (v2): video scripts, `docs/cost-and-models-guide.md`, `docs/prereqs-install-guide.md`, `docs/team-standards-deep-dive.md`, `phase_4/act_teams/act_outline.md`, `.claude/skills/*`, `.claude/references/conventions.md`. Claude Code skills docs (code.claude.com/docs/en/skills) for command/skill compatibility.
+
+---
+
+### Current State (2026-10-28)
+
+- **34 pages built**, all live at https://joseph-fajen.github.io/agentic-coding-v2-companion/
+- **New since Pass 4:** `start-here.md`, `costs.md`, `v1-delta/why-v2.md`, `workflow/teams.md`
+- **Conventions added:** "Is this for you?" callout (documented in CLAUDE.md)
+- **Review artifacts (gitignored, local only):** `REVIEW-FINDINGS-ISV.md`, `REVIEW-FINDINGS-SMB.md`, plus earlier `REVIEW-FINDINGS-*.md`
+- **Local only, uncommitted:** `.claude/launch.json` (dev server on 4321, production preview on 4322, for the desktop app's browser pane)
+
+### Next Steps to Consider
+
+Roughly in order of value:
+
+1. **Verify facts that couldn't be checked automatically**
+   - The 44%/15% figures against the *Curse of Instructions* paper on OpenReview (open it in a browser)
+   - Plan prices on `costs.md` (from the course cost guide, last verified 2026-07-11). The course install guide says ~$200/mo, which contradicts the cost guide's $100/mo default.
+   - Course pricing/membership: `start-here.md` links to the Dynamous page without stating a price
+2. **Review editorial content written in this pass:** "When to bring in a developer" on `start-here.md` is general advice, not from the course
+3. **Work through remaining YELLOW findings** in `REVIEW-FINDINGS-ISV.md` and `REVIEW-FINDINGS-SMB.md`. Notable ones not yet addressed:
+   - `parallel-worktrees.md`: a "what breaks in real projects" list (shared databases, gitignoring the worktrees folder, disk usage, failed integration merges)
+   - `headless-sdk-ci.md`: name the SDK packages, link official docs, label the Python sample as pseudocode
+   - `steering/engineering.md` vs `steering/overview.md`: they disagree on where commands live
+   - Phase 3 / subagents pages present Archon as the default destination; say "a workflow engine (the course uses Archon)"
+   - Sidebar "Steering (advanced rules)" links to redirect stubs (`primitives/steering-*`) instead of the real `steering/*` pages
+   - A non-developer example (spreadsheet, form) on Rules, MCP/tools and Phase 1
+   - Phase 1 still relies on videos for hands-on steps; a short "Phase 1 without the videos" outline would help readers without the course
+4. **Readiness labels:** only the headless page has a "How settled" line, since the course states maturity only there and for Archon. Add more only if the course gives a basis.
+5. **Re-run Pass 5** (Alternative F kickoff prompt below) after the next batch of fixes, to measure whether task completion improved (baseline: ISV 2/5, small business owner 0/5)
 
 ---
 
@@ -127,12 +154,14 @@ Run as parallel Task agents with fresh context. Each produces a findings report.
 
 ---
 
-## Site Structure (25 docs)
+## Site Structure (33 docs)
 
 ```
 src/content/docs/
-├── index.mdx                    # Home
+├── index.mdx                    # Home ("Where to start" with four reader paths)
+├── start-here.md                # For non-developers (Pass 5)
 ├── glossary.md                  # Terminology reference
+├── costs.md                     # Plans, billing, token drivers, upkeep (Pass 5)
 ├── primitives/
 │   ├── overview.md
 │   ├── rules.md
@@ -140,9 +169,9 @@ src/content/docs/
 │   ├── mcp-tools.md
 │   ├── skills.md
 │   ├── hooks.md
-│   ├── steering-overview.md
-│   ├── steering-direction.md
-│   └── steering-engineering.md
+│   ├── steering-overview.md     # redirect stub → steering/
+│   ├── steering-direction.md    # redirect stub
+│   └── steering-engineering.md  # redirect stub
 ├── phases/
 │   ├── overview.md
 │   ├── phase-1.md
@@ -155,13 +184,15 @@ src/content/docs/
 │   ├── epic-to-tickets.md       # from V06-V08
 │   ├── parallel-worktrees.md    # from V10
 │   ├── headless-sdk-ci.md
-│   └── archon.md
+│   ├── archon.md
+│   └── teams.md                 # Running this as a team (Pass 5)
 ├── steering/
 │   ├── overview.md
 │   ├── direction.md
 │   └── engineering.md
 └── v1-delta/
     ├── overview.md
+    ├── why-v2.md                # The case and the costs (Pass 5)
     ├── what-changed.md
     ├── what-still-applies.md
     └── migration-checklist.md

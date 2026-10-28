@@ -2,6 +2,30 @@
 
 Astro Starlight documentation site deployed to GitHub Pages.
 
+## Current Status (updated 2026-10-28)
+
+Five review passes are done and live. The latest, Pass 5, tested the site against two audience personas: an ISV practitioner who took V1, and a small business owner with no developer background. It added `start-here.md`, `costs.md`, `v1-delta/why-v2.md` and `workflow/teams.md`, and rebuilt the home page, migration checklist and glossary.
+
+**To pick up where things left off, read the "Current State" and "Next Steps to Consider" sections in [REVIEW-PLAN.md](REVIEW-PLAN.md).**
+
+## Audiences
+
+The site serves readers through separate paths rather than making every page work for everyone:
+- **Course students:** use it alongside the videos
+- **Practitioners / ISVs** (often V1 alumni): want rationale, tradeoffs, costs, migration and team guidance
+- **Non-developers** (e.g. small business owners): need a clear on-ramp (`start-here.md`), honest prerequisites and what to skip
+
+The home page's "Where to start" section routes each reader. Keep it the single source of starting advice.
+
+## Sourcing
+
+Facts on the site come from the course repo at `~/git/agentic-coding-course` (v2 branch):
+- **Video scripts:** `phase_*/V*/script.md`
+- **Guides:** `docs/cost-and-models-guide.md`, `docs/prereqs-install-guide.md`, `docs/team-standards-deep-dive.md`
+- **The course skill pack:** `.claude/skills/`
+
+Don't invent numbers (time estimates, prices) or maturity claims the course doesn't make. Named skills on the site are from the course pack, not built into Claude Code; the glossary's "Skills referenced on this site" table lists them.
+
 ## Quick Start
 
 ```bash
@@ -90,9 +114,15 @@ Each page should have a "See Also" section linking to related content. Use absol
 
 **Note:** Dev server shows `http://localhost:4321/` in terminal output, but you must navigate to the full base path URL.
 
+**Sidebar changes** in `astro.config.mjs` need a dev server restart to show up (`npx astro dev stop`, then `npm run dev`). To check the real production layout, run `npm run build` then `npx astro preview --port 4322`.
+
+**Home page template:** `index.mdx` deliberately uses the default doc template, not `splash`. Splash hides the sidebar, so first-time visitors couldn't see the navigation.
+
 ## Deployment
 
 See [DEPLOY.md](DEPLOY.md) for GitHub Pages deployment instructions.
+
+Every push to `main` deploys. Make changes on a branch and open a PR; merging publishes.
 
 Key requirements:
 - Node 23 (Astro requires >= 22.23.4)
@@ -103,6 +133,6 @@ Key requirements:
 
 The site uses adversarial AI review with parallel agents. See [REVIEW-PLAN.md](REVIEW-PLAN.md) for methodology.
 
-Untracked review artifacts (in `.gitignore`):
-- `REVIEW-FINDINGS-*.md`
-- `REVIEW-PLAN.md`
+- `REVIEW-PLAN.md` is tracked in git. It holds the methodology, every pass's results, current state and next steps.
+- `REVIEW-FINDINGS-*.md` files are gitignored, local-only reviewer reports. The latest are `REVIEW-FINDINGS-ISV.md` and `REVIEW-FINDINGS-SMB.md`.
+- Alternative F in REVIEW-PLAN.md has a ready-to-paste kickoff prompt for re-running the persona review.
