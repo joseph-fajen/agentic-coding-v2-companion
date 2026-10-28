@@ -90,7 +90,7 @@ Compared docs site structure against full course curriculum (3 phases, 39 lesson
 
 ### Pass 5: Audience Personas (ISV + Small Business Owner)
 **Date:** 2026-10-28
-**Status:** Review complete; fixes not yet started
+**Status:** Review complete; all 7 recommended fixes applied (branch `docs/persona-review-fixes`)
 
 Run Alternative F with Opus (ISV practitioner, v1 alum) + Sonnet (small business owner, non-developer). Each reviewer works through five persona-specific tasks before sweeping the site. Success bar for the small business owner: the site gives them a clear path (where to start, honest prerequisites, what to skip), not that every page is readable by a non-developer.
 
@@ -101,6 +101,17 @@ Findings:
 - **Small business owner:** 0/5 tasks fully completed; 10 GREEN, 9 YELLOW, 6 RED
 
 Shared themes: conflicting start/migration orders, cost of adoption missing, no skip/readiness signals on landing pages, named terms and skills without definitions or sources.
+
+**Fixes applied:**
+1. Home page: one "Where to start" section with four reader paths
+2. New `costs.md`; reconciled worktrees vs Phase 3 cost wording
+3. "Is this for you?" routing callout on 9 landing/workflow pages (pattern in CLAUDE.md)
+4. Migration checklist rebuilt: V1 artifact table, one order, workflow-change section, steering docs wired into skills
+5. New `start-here.md` for non-developers
+6. New `v1-delta/why-v2.md` and `workflow/teams.md`
+7. Glossary: Basics section, workflow terms (PRD, epic, ticket, worktree, etc.), skill-pack table, corrected file conventions
+
+**Still open:** 44% adherence citation in `primitives/rules.md` (link vs caveat mismatch); readiness labels only where the course states maturity; remaining YELLOW items in both findings files.
 
 ---
 

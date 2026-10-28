@@ -13,7 +13,31 @@ Quick reference for terminology used in the V2 course and this companion site.
 4. **Layer 1 / Layer 2** — durable vs task-specific context
 
 Everything else builds on these.
+
+**Not a developer?** Read [Basics](#basics) first, then see [Start here if you're not a developer](/start-here/).
 :::
+
+## Basics
+
+Everyday developer terms the rest of the site assumes.
+
+| Term | In plain English |
+|------|------------------|
+| **Terminal** | The text window where you type commands. Terminal on Mac, PowerShell on Windows. |
+| **CLI** (command-line interface) | A program you run by typing commands in the terminal. Claude Code is one. |
+| **Repo** (repository) | A project folder whose history is tracked by git |
+| **Git** | Software that saves snapshots of your project so you can go back to any earlier version |
+| **Commit** | One saved snapshot, with a message describing what changed |
+| **Branch** | A separate line of work, so changes in progress don't touch the working version |
+| **PR** (pull request) | A proposed change from a branch, reviewed before it's merged into the main version |
+| **GitHub** | A website that hosts git repos and handles pull requests |
+| **Markdown** | Plain text with light formatting, like `# Heading` and `**bold**`. Rules, skills and steering docs are all markdown files (`.md`). |
+| **YAML frontmatter** | A short block of `key: value` settings between `---` lines at the top of a markdown file. Skills use it for their name and description. |
+| **Token** | The unit AI models read and bill by, roughly three-quarters of a word |
+| **Context window** | How much text the agent can hold in mind at once. Everything loaded, from rules to files to chat, uses it up. |
+| **CI** (continuous integration) | Checks that run automatically on a server whenever code is pushed, such as tests and linting |
+| **`.env` file** | A file holding passwords and API keys, kept out of git so secrets never get shared |
+
 
 ## Core concepts
 
@@ -74,7 +98,7 @@ Don't use subagents to prime your main agent — they have fresh context by desi
 
 ### Rules
 
-Durable context the agent reads on every task. Your `CLAUDE.md` or `AGENTS.md` file. Contains:
+Durable context the agent reads on every task. Your `CLAUDE.md` or `AGENTS.md` file: a plain markdown file at the root of your project, which you write and keep in git. Contains:
 - Codebase map
 - Ground rules (conventions)
 - Runnable commands
@@ -124,6 +148,48 @@ See: [engineering.md](/steering/engineering/)
 
 ## Workflow concepts
 
+### PRD (product requirements document)
+
+The strategic doc for a new project: what you're building, for whom, and why. In agentic coding it's short, the minimum context the agent needs to make good decisions, not a 50-page spec. Its scope feeds `direction.md`.
+
+See: [Greenfield planning](/workflow/greenfield-planning/)
+
+### Greenfield / brownfield
+
+**Greenfield** is a brand-new project with no code yet, where your Layer 1 comes straight from a PRD. **Brownfield** is adding to software that already exists.
+
+### Epic
+
+A chunk of work too big for one loop, such as a new feature. In V2 an epic is treated as a hypothesis: research it, ground it in the codebase, then slice it into tickets.
+
+See: [Epic to tickets](/workflow/epic-to-tickets/)
+
+### Ticket
+
+One piece of work sized for a single PIV loop: about 10 subtasks and 500–1500 lines of change. Each ticket is planned just before it's built.
+
+### Worktree
+
+A separate working copy of your repo on its own branch, sharing one git history. Lets you run several PIV loops in parallel without them colliding.
+
+See: [Parallel worktrees](/workflow/parallel-worktrees/)
+
+### Headless
+
+Running the agent without you in the window, from a script (`claude -p`), a program (the SDK) or CI.
+
+See: [Headless / SDK / CI](/workflow/headless-sdk-ci/)
+
+### Slash command
+
+A skill or command you run by typing `/name` in Claude Code, such as `/piv-validate`. Older V1-style commands in `.claude/commands/` still work.
+
+### Workflow engine (Archon)
+
+A tool that holds a multi-step workflow (the steps, gates and retry loops) so your skills don't have to. The course uses **Archon**, an open-source engine from the Dynamous community, as its example. Archon describes workflows as a **DAG** (directed acyclic graph): steps connected in an order that never loops back on itself.
+
+See: [Archon](/workflow/archon/)
+
 ### Check → trust → automate
 
 The Phase 3 discipline: you can't trust what you haven't checked, and you shouldn't automate what you don't trust. Run steps manually first, gain confidence, then compose into workflows.
@@ -152,12 +218,35 @@ Custom checkers and helpers are the power move.
 |------|---------|
 | `CLAUDE.md` | Claude Code's native rules file |
 | `AGENTS.md` | Cross-tool standard rules file |
+| `.claude/rules/` | Path-scoped rules that load when the agent works on matching files |
 | `.claude/skills/` | Skill packages |
 | `.claude/agents/` | Subagent definitions |
-| `.claude/hooks/` | Hook scripts |
-| `.claude/references/` | On-demand reference docs |
-| `settings.json` | Hook configuration |
+| `.claude/hooks/` | Hook scripts *(course convention)* |
+| `.claude/references/` | Steering docs and on-demand reference docs *(course convention)* |
+| `.claude/settings.json` | Hook configuration and permissions, shared with the team in git |
+| `.claude/settings.local.json` | Your personal settings, gitignored |
 | `.mcp.json` | MCP server configuration |
+
+Claude Code reads the entries not marked as course conventions on its own. The `hooks/` and `references/` folders are where the course keeps things: hooks are wired by path in `settings.json`, and skills point to references.
+
+## Skills referenced on this site
+
+Every named skill on this site comes from the **course's skill pack**, the `.claude/skills/` folder in the course repo. None are built into Claude Code. Use them as they are, or as starting points for your own.
+
+| Skill | What it does |
+|-------|--------------|
+| `plan-create-prd` | Interviews you and writes a PRD or an epic |
+| `plan-architecture` | Works through the architecture decisions for an epic |
+| `piv-slice-epic` | Slices an epic into PIV-sized tickets with a dependency graph |
+| `piv-validate` | Runs the project's full test, type-check and lint suite |
+| `rules-create-global` | Sets up a lean CLAUDE.md for your project |
+| `rules-check-drift` | Checks your rules file against recent code changes |
+| `hooks-create` | Writes a hook from a plain-English description |
+| `skills-create` | Creates new skills and adapts existing ones |
+| `ai-layer-review` | Reviews changes to your AI layer the way you'd review code |
+| `worktree-create` | Sets up git worktrees for parallel work, with dependencies installed |
+| `worktree-merge` | Merges parallel branches through one integration branch, validating after each |
+| `ast-grep` | Helps write structural code-search rules |
 
 ## See also
 
