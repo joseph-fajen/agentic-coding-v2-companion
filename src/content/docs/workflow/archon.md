@@ -11,8 +11,9 @@ Archon is a **workflow engine** that holds the loop and does nothing else. Use i
 Archon is the **course's illustrative engine** — it's open-source and built by the Dynamous community. The concepts (graph-based workflow, gates, bounded loops) transfer to other engines. Learn the shape here; apply it anywhere.
 :::
 
-:::note[Prerequisites]
-This doc assumes you've completed Phase 3 and built workflow automation using skills, scripts, or both. If you haven't automated multi-step workflows yet, start with [Headless / SDK / CI](/workflow/headless-sdk-ci/) first.
+:::note[Is this for you?]
+- **Read this when** you've built workflow automation with skills, scripts or both, and your orchestrator skill is doing too many jobs at once.
+- **Skip for now if** you haven't automated multi-step workflows yet. Start with [Headless / SDK / CI](/workflow/headless-sdk-ci/).
 :::
 
 ## The problem it solves

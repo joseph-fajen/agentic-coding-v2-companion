@@ -62,6 +62,20 @@ The overview table at `/primitives/overview/` uses this format:
 
 **Guideline:** "Key Insight" should answer "what is this and why would I care?" — not usage tactics. Save tactics for the deep-dive pages.
 
+### "Is this for you?" Callout
+
+Landing, overview and workflow pages open with one routing callout (after the TL;DR, if the page has one), so each reader knows whether to read now or skip:
+
+```markdown
+:::note[Is this for you?]
+- **Read this when** {the situation where this page pays off}.
+- **Skip for now if** {who can safely skip it, and where they should go instead}.
+- **How settled:** {only if the course itself says something about maturity}
+:::
+```
+
+Keep it to these lines. Don't invent maturity claims the course doesn't make.
+
 ### Cross-Linking
 
 Each page should have a "See Also" section linking to related content. Use absolute paths — the plugin handles the base path.

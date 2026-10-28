@@ -17,6 +17,7 @@ export default defineConfig({
 				{ icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@ColeMedin' },
 			],
 			sidebar: [
+				{ label: 'Start here (not a developer?)', slug: 'start-here' },
 				{
 					label: 'The five primitives',
 					items: [
@@ -70,6 +71,7 @@ export default defineConfig({
 					label: 'Reference',
 					items: [
 						{ label: 'Glossary', slug: 'glossary' },
+						{ label: 'What it costs', slug: 'costs' },
 					],
 				},
 			],

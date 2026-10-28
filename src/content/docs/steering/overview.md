@@ -7,6 +7,11 @@ Your rules file handles the operational layer — the map, the commands, the gro
 
 That's what steering documents do. They're reference docs your rules file points to, loaded when the agent needs to make judgment calls about scope or quality.
 
+:::note[Is this for you?]
+- **Read this when** your rules file is filling up with scope and quality detail, or you've explained the same scope boundary to the agent three times.
+- **Skip for now if** you're on your first project. A lean rules file is enough to start.
+:::
+
 **How they connect to your rules file:**
 ```markdown
 # In CLAUDE.md

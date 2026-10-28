@@ -88,6 +88,20 @@ Compared docs site structure against full course curriculum (3 phases, 39 lesson
 - **0 draft pages** — all content gaps filled
 - Site ready for use
 
+### Pass 5: Audience Personas (ISV + Small Business Owner)
+**Date:** 2026-10-28
+**Status:** Review complete; fixes not yet started
+
+Run Alternative F with Opus (ISV practitioner, v1 alum) + Sonnet (small business owner, non-developer). Each reviewer works through five persona-specific tasks before sweeping the site. Success bar for the small business owner: the site gives them a clear path (where to start, honest prerequisites, what to skip), not that every page is readable by a non-developer.
+
+**Outputs:** `REVIEW-FINDINGS-ISV.md`, `REVIEW-FINDINGS-SMB.md`
+
+Findings:
+- **ISV:** 2/5 tasks completed; 10 GREEN, 18 YELLOW, 8 RED
+- **Small business owner:** 0/5 tasks fully completed; 10 GREEN, 9 YELLOW, 6 RED
+
+Shared themes: conflicting start/migration orders, cost of adoption missing, no skip/readiness signals on landing pages, named terms and skills without definitions or sources.
+
 ---
 
 ## Overview
@@ -501,6 +515,147 @@ archon run adversarial-docs "Review all docs in src/content/docs/ against v2 cou
 
 ---
 
+## Alternative F: Audience Personas (ISV Practitioner + Small Business Owner)
+
+**Tradeoff:** Earlier passes judged content quality in the abstract. This pass tests the site against the two real audiences it serves. Each reviewer arrives with a job to do and reports where the site helps or fails them. The two audiences pull in opposite directions: one wants depth and rationale, the other wants a plain on-ramp. Where both complain about the same page, the problem is clear. Where they disagree, the fix is usually routing (send each reader down their own path), not compromise.
+
+**Success bar:** The site serves both readers through **separate paths**, not by making every page work for everyone.
+- Reviewer A judges whether the depth, rationale and migration guidance hold up.
+- Reviewer B judges whether the site gives a non-developer **a clear path**: where to start, honest prerequisites, what to skip, and whether this is realistic for them. Reviewer B does **not** fail a deep technical page just for being technical, as long as the site tells them they can skip it.
+
+### Shared Rules (both reviewers)
+
+1. **Work through your tasks first, then sweep.** Attempt each task by navigating the site as your persona would: start at the home page or a likely landing page and follow links and the sidebar. Record the path you took. After the tasks, skim the remaining docs for anything your persona would trip on.
+2. **Stay in character.** Only use knowledge your persona would have. Don't fill gaps from your own background.
+3. **Every finding needs a quote and a fix.** Quote the exact text (or name the missing thing), say why it fails your persona, and propose a specific change. No generic advice like "add more examples" or "could be clearer".
+4. **Name the give-up points.** For each task, say whether you completed it, and if not, the exact page and sentence where you'd close the tab and go back to the videos, ChatGPT or a contractor.
+5. **Separate wording fixes from structural ones.** Mark each finding as `wording` (fix in place) or `structure` (needs a new page, a new path, or reorganizing).
+
+### Reviewer A: ISV Practitioner (v1 Alum)
+
+**Persona:** A senior developer or technical founder at a small independent software vendor (ISV) shipping commercial software. They took Cole Medin's v1 course, shipped real work with its patterns (a big CLAUDE.md, custom commands, a PRD-driven workflow), and use Claude Code every day. They're serious about agentic coding and are looking for a solid framework to standardize on across a small team. They're not hostile, but they're skeptical of course material that tells them *what* to do without *why*. Time is money: they'll read deeply when it pays off and skip anything padded.
+
+**Core question:** "Why is this better than what I already do, and what will switching cost me?"
+
+**Tasks:**
+1. **Migration plan.** Using `v1-delta/` and anything it links to, write a concrete migration plan for an existing v1-style repo: what to keep, what to change, what to delete, and in what order. Note every step where you had to guess.
+2. **The pitch.** Write a three-sentence explanation for a skeptical cofounder of why steering docs + skills + the other primitives beat one large CLAUDE.md. If the site doesn't give you the reasoning, say so.
+3. **Production readiness.** Decide whether parallel worktrees and headless/SDK/CI workflows are ready for a team to rely on or still experimental. Find the failure modes and limits the site mentions, and the ones it should mention.
+4. **Cost of adoption.** Find what each practice costs: setup time, ongoing upkeep, token or API spend, extra tools (Archon), and the learning curve for teammates.
+5. **Framework vs. preference.** Find places where Cole's personal preferences are presented as standard practice, or where the site doesn't separate the core framework from optional tooling.
+
+**What to flag:**
+- Claims with no reasoning behind them ("do X" with no "because Y")
+- Missing tradeoffs, failure modes or "when not to use this"
+- Gaps or ambiguity in the v1 → v2 migration path
+- Missing team or production concerns (onboarding teammates, consistency across repos, CI, review)
+- Padding, repetition or motivational filler that wastes an expert's time
+- Places where the site undersells: a useful insight that's buried or not explained
+
+**Model:** Opus. It needs deep reasoning and comparison against real-world practice.
+
+**Output:** `REVIEW-FINDINGS-ISV.md`
+
+### Reviewer B: Small Business Owner (Non-Developer)
+
+**Persona:** Owns and runs a small business, such as a services firm or a shop with 5–20 employees. No developer background: they've never used git or a terminal beyond copying a command from a tutorial, and words like "CI", "PRD" or "repo" are fuzzy to them. They're genuinely interested in agentic coding and want to build practical tools for their business: an intake form, an inventory tracker, internal automations. They found Cole Medin on YouTube and like his approach, but they won't watch a 9-hour course. They came to this site hoping for clear guidance on how to start. They're smart and motivated, but their time is limited and they get discouraged when a page assumes knowledge they don't have.
+
+**Core question:** "Can I use this to build something for my business, and where do I start?"
+
+**Tasks:**
+1. **First steps.** Starting from the home page, work out what to do first, second and third. Write down the order you'd follow. If the site doesn't give you one, say so.
+2. **What applies to me.** For a simple internal app (e.g., a customer intake form that saves to a spreadsheet), find which phases, primitives and workflows you need and which you can safely skip.
+3. **Minimum setup.** Find the minimum tools, accounts and skills needed to build a first small project. Note every term or tool mentioned without an explanation or link.
+4. **Is this for me?** Decide whether this approach is realistic for you, or whether you should hire a developer. Does the site say honestly who it's for and what you need to know first?
+5. **Find help.** Pick two terms you didn't understand along the way and try to find them in the glossary or elsewhere on the site. Report whether the explanation worked for you.
+
+**What to flag:**
+- No clear "start here" path for a non-developer
+- Missing or dishonest prerequisites (assumes git, terminal, coding knowledge without saying so)
+- Jargon on **path-critical pages** (home, overviews, anything Reviewer B must read to get started) that isn't explained or linked to the glossary
+- No guidance on what's safe to skip
+- Missing reassurance or orientation ("you don't need this yet", "this part is for teams")
+- Glossary entries that define a term using other undefined jargon
+
+**What not to flag:** Deep technical pages (e.g., `headless-sdk-ci.md`, `parallel-worktrees.md`) for being technical, **unless** the site points you there without warning or doesn't tell you that you can skip them.
+
+**Model:** Sonnet. Strong enough to role-play a non-developer's reasoning consistently and to judge the on-ramp as a whole.
+
+**Output:** `REVIEW-FINDINGS-SMB.md`
+
+### Output Format (both reviewers)
+
+```markdown
+# {ISV | Small Business Owner} Review Findings
+
+## Summary
+- Tasks completed: X/5
+- Docs reviewed: X
+- GREEN: X | YELLOW: X | RED: X
+- One-paragraph verdict: would this persona adopt/use the site? Why or why not?
+
+## Task Walkthroughs
+
+### Task N: {name}
+**Path taken:** home → page → page
+**Outcome:** Completed | Partial | Gave up
+**Give-up point (if any):** {page + quoted sentence}
+**What I needed and didn't find:** {specific}
+
+## Critical Findings (RED)
+Blocks the persona from completing a task or leads them to a wrong decision.
+
+### [doc-path.md]
+**Quote:** "{exact text}" (or "Missing: {what}")
+**Why it fails this persona:** {explanation}
+**Type:** wording | structure
+**Suggested fix:** {specific change}
+
+## Minor Findings (YELLOW)
+Slows the persona down or erodes trust, but they can push through.
+
+### [doc-path.md]
+(same fields)
+
+## Structural Recommendations
+Paths, pages or reorganizations that would serve this persona better (e.g., a "Start here if you're not a developer" page, a "Why v2" rationale page).
+
+## Clean Docs (GREEN)
+- [docs that work well for this persona, with a one-line note on why]
+```
+
+### Kickoff Prompt (for fresh session)
+
+```
+I want to run the Alternative F audience-persona review of my Agentic Coding v2 companion site.
+
+Read the review plan at ~/git/agentic-coding-v2-companion/REVIEW-PLAN.md, especially "Alternative F".
+
+Then launch TWO parallel Task agents with fresh context. Give each one the full Alternative F text for its reviewer, plus the Shared Rules and Output Format:
+
+1. **Reviewer A: ISV Practitioner (v1 Alum)** (Opus model)
+   - Reviews all docs in src/content/docs/ (start the dev server or read the source files)
+   - Writes findings to REVIEW-FINDINGS-ISV.md in the companion site repo
+
+2. **Reviewer B: Small Business Owner** (Sonnet model)
+   - Reviews all docs in src/content/docs/, judging the on-ramp against the Option 1 success bar
+   - Writes findings to REVIEW-FINDINGS-SMB.md in the companion site repo
+
+When both are done, synthesize:
+- Problems both personas flagged (fix these first)
+- Places where they want opposite things (resolve by routing each reader down their own path, not compromise)
+- Structural recommendations ranked by impact
+```
+
+### Synthesis Guidance
+
+- **Both flag it:** Fix first. It's a problem for every reader.
+- **They conflict:** Prefer routing. Keep the depth for Reviewer A and add a pointer, summary or skip note for Reviewer B, rather than diluting the page.
+- **Only A flags it:** Fix in place. Rationale and tradeoffs rarely hurt Reviewer B if they sit in their own section.
+- **Only B flags it:** Fix if the page is on B's path. Otherwise, make sure the site tells B they can skip it.
+
+---
+
 ## Choosing an Approach
 
 | Approach | Best When | Agents | Models |
@@ -510,6 +665,7 @@ archon run adversarial-docs "Review all docs in src/content/docs/ against v2 cou
 | **C: Multi-Provider** | Want model diversity; have API access to GPT-4o | 2 | Claude + GPT-4o |
 | **D: Editorial Board** | Want structure review too; willing to orchestrate 3 agents | 3 | Opus + 2×Sonnet |
 | **E: Archon Workflow** | Want automation; have Archon configured | 1 (looped) | Sonnet |
+| **F: Audience Personas** | Want to test the site against its real audiences (ISV practitioner + non-developer business owner) | 2 | Opus + Sonnet |
 
 **Recommended sequence:**
 1. Run primary approach (A) first

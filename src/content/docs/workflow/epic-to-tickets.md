@@ -7,6 +7,11 @@ description: Research, ground, and slice work before you build
 An epic is a bet. Before you build it: **research** it against reality (confirm, reshape, or veto), **ground** it in your codebase (architecture decisions), then **slice** it into PIV-sized tickets. Each ticket runs one loop, produces one PR.
 :::
 
+:::note[Is this for you?]
+- **Read this when** you're adding a feature to existing code and it's too big for one loop.
+- **Skip for now if** you're starting a new project with no code yet (see [Greenfield planning](/workflow/greenfield-planning/)), or the change fits in a single ticket. Then just run one loop.
+:::
+
 ## Overview
 
 An epic is a chunk of work too big for one R-PIV loop. The workflow here is: **research it, ground it in the codebase, slice it into tickets** — then run PIV on each ticket.

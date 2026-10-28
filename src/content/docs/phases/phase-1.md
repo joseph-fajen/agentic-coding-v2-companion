@@ -29,7 +29,7 @@ Using AI to code is table stakes. The edge is running a *system*: you own the pl
 |---|-------|------------------------|
 | **V1** | Course vision + The system gap | The gap is a *systems* gap — name your honest baseline |
 | **V2** | The whole loop | The entire system on one diagram |
-| **V2.5** | Coding agent basics *(optional)* | The mechanical cockpit for first-time agent users |
+| **V2.5** | Coding agent basics *(optional; start here if you've never used a coding agent)* | How to launch the agent, chat with it, approve changes and connect a tool. Skip it if you've used one before. New to all of this? See [Start here](/start-here/). |
 | **V3** | Setting up the AI layer foundation | Install and customize the AI Layer on your own project |
 | **V4** | Layer 1 vs Layer 2 + the two arcs | Stable context vs per-feature plan; the three starting points |
 | **V5** | Setting up your global rules | Derive your global rules from your codebase (or greenfield decisions) |

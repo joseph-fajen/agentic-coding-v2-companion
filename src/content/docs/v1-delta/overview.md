@@ -5,6 +5,11 @@ description: What changed between V1 and V2 of the Agentic coding course
 
 If you completed the V1 course, you already know the fundamentals. V2 doesn't replace what you learned — it reorganizes it, names things you were doing implicitly, and adds depth in areas V1 only sketched.
 
+:::note[Is this for you?]
+- **Read this when** you took the V1 course and have a V1-style setup to update.
+- **Skip for now if** you didn't take V1. Pick a starting point on the [home page](/#where-to-start) instead.
+:::
+
 ## The big picture
 
 V2 is a **restructuring**, not an incremental update. The course moves from a linear 12-module sequence to a **4-phase pedagogical arc** (Use → Understand → Evolve → Scale) and introduces the **Five Primitives Framework** as the organizing principle.
@@ -28,10 +33,12 @@ This section maps your V1 knowledge to V2:
 
 ## Time investment
 
-If you're short on time, focus on:
+If you're short on time, do the first three steps of the [migration checklist](/v1-delta/migration-checklist/):
 
-1. **Steering documents** (direction.md, engineering.md) — entirely new
-2. **Hooks** — new primitive with powerful guarantees
-3. **Workflow automation** (Phase 3 content) — headless, SDK, CI patterns
+1. **Cut and split your rules file**: a lean CLAUDE.md, with everything else loading only when needed
+2. **Add hooks** for your non-negotiables: the one entirely new primitive
+3. **Add steering docs** (direction.md, engineering.md) and wire them into your skills
 
-Everything else refines or renames what you already know.
+Then read [your workflow changed too](/v1-delta/migration-checklist/#your-workflow-changed-too). V2 replaces the PRD → plan → execute flow with epics sliced into tickets and planned just-in-time. Everything else refines or renames what you already know.
+
+For plans, billing and what each practice asks of you to keep up, see [What it costs](/costs/).

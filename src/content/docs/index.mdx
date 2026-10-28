@@ -5,8 +5,8 @@ template: splash
 hero:
   tagline: Build the system that builds the code
   actions:
-    - text: Start with the primitives
-      link: /primitives/overview/
+    - text: Find your starting point
+      link: '#where-to-start'
       icon: right-arrow
     - text: Coming from V1?
       link: /v1-delta/overview/
@@ -19,11 +19,35 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 A **companion guide** to [Cole Medin's Agentic Coding Course V2](https://discover.circle.so/products/dynamous-ai-mastery). Not a replacement for the videos — a reference you come back to.
 
-The course teaches you to build an **AI Layer** (your harness) around your coding agent. This site gives you deep dives on the pieces that layer is made of.
+The course teaches you to build an **AI Layer** (your harness) around your coding agent. In plain terms: you write plain-text instruction files that tell an AI coding assistant like Claude Code how your project works, and it does the building. This site gives you deep dives on the pieces that layer is made of.
 
-**Two ways to use this site:**
-- **Lookup mode:** Use alongside the videos. When Cole introduces a primitive, come here for the details. Jump around by topic using the sidebar.
-- **Learning path:** If you're exploring without the course, start with [the five primitives](/primitives/overview/) and follow the links forward.
+## Where to start
+
+Pick the line that sounds most like you. Each one gives you a short reading order.
+
+### I'm taking the V2 course
+
+Use this site alongside the videos. When Cole introduces a primitive, come here for the details, and use the sidebar to jump around by topic. The [four phases](/phases/overview/) page maps each video block to the pages here.
+
+### I already build with coding agents
+
+You're exploring the framework without the course, and you want to know what it is and why it works.
+
+1. [The five primitives](/primitives/overview/): what the system is made of, and in what order to add each piece
+2. [The four phases](/phases/overview/): how the course builds the system up, from first use to scale
+3. [Workflow primitives](/workflow/overview/): how to let the system run with less supervision
+
+### I took the V1 course
+
+1. [V1 → V2 overview](/v1-delta/overview/): the big picture of what changed and how long migrating takes
+2. [What changed](/v1-delta/what-changed/): the details, mapped to what you already know
+3. [Migration checklist](/v1-delta/migration-checklist/): the steps to update your V1 setup
+
+### I'm new to coding agents, or I'm not a developer
+
+Go to **[Start here if you're not a developer](/start-here/)**. It covers whether this is realistic for you, what you need to install and pay for, a first project step by step, and what to skip.
+
+Hit a term you don't know? Check the [glossary](/glossary/). Wondering what you'll pay? See [What it costs](/costs/).
 
 ## What you'll find
 
@@ -56,12 +80,3 @@ Three ideas run through everything here:
 2. **It's all just markdown.** Rules, skills, agent files — they're all markdown with some YAML. What's different is how they load and what tools they can access. Composing your system is writing, not wiring.
 
 3. **Build the thing that builds the thing.** Don't just use the primitives. Teach your agent to build them *your* way, so every new skill, every new hook comes out shaped the way you'd shape it.
-
-## Where to start
-
-| You are... | Start here |
-|------------|------------|
-| New to agentic coding | [Phase 1](/phases/phase-1/) — the mental models and your first system |
-| Taking the V2 course | [The five primitives](/primitives/overview/) — deep dives on each primitive |
-| Coming from V1 | [What changed](/v1-delta/what-changed/) — map your knowledge to V2 |
-| Looking for specifics | Use the sidebar — it's organized by topic |
