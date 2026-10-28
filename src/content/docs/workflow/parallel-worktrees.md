@@ -7,6 +7,11 @@ description: Run independent tickets in parallel using git worktrees
 A worktree is an isolated copy of your repo on its own branch, sharing one git history. Two loops in two worktrees can't collide. This isn't more work per token — it's **throughput, not cost**: same total spend, faster delivery. The ceiling is you: scale parallel loops as far as you can still stay in the loop (3–5 for most people).
 :::
 
+:::note[Is this for you?]
+- **Read this when** you have two or more tickets that touch different files, and a single loop reliably finishes without you rescuing it.
+- **Skip for now if** you're still running your first tickets or working one ticket at a time.
+:::
+
 ## Overview
 
 When you've sliced an epic into independent tickets, you can run them in parallel. **Git worktrees** let you have multiple working directories from the same repo — each with its own branch, its own agent session, its own PIV loop.
@@ -110,6 +115,13 @@ Be clear about what this is and isn't:
 - It's the *same* work and the *same* spend, just finished in less calendar time
 
 **Throughput, not cost.** Same wallet, faster delivery.
+
+That holds per ticket. Your total bill can still rise, for two reasons:
+
+- **You'll run more work.** Once loops finish faster, it's tempting to start more of them. That's more tickets, not more cost per ticket, but the bill grows all the same.
+- **Each worktree has its own overhead.** A fresh checkout means a fresh session to prime, dependencies to install, and, once you add CI, its own pipeline run.
+
+This is why [Phase 3](/phases/phase-3/) treats cost discipline as something that runs underneath every step up in automation. See [What it costs](/costs/) for billing and the controls.
 
 ## The human is the bottleneck
 

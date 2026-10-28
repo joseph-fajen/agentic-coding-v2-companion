@@ -7,6 +7,11 @@ description: PRD and architecture before you write code
 Greenfield means no codebase yet. Your PRD becomes your Layer 1 directly — the strategic doc scopes the work, architecture decisions seed your rules, and the agent builds from that foundation. Same R-PIV loop as brownfield, different on-ramp.
 :::
 
+:::note[Is this for you?]
+- **Read this when** you're starting a new project with no code yet.
+- **Skip for now if** you're adding to software that already exists. Use [Epic to tickets](/workflow/epic-to-tickets/) instead.
+:::
+
 ## Overview
 
 When you're starting fresh — no codebase, no constraints — the temptation is to just start prompting. But **the agent can only be as good as your plan.** Greenfield planning is how you give the agent something worth building.

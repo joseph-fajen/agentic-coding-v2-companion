@@ -114,6 +114,12 @@ Two specialized rules files that live in `.claude/references/`:
 - Loaded by implement, review, and fix skills
 - Same file read by CI review workflows
 
+### From PRD-driven to epic-driven work
+
+V1 ran **PRD → plan → execute**. In V2, new work on an existing codebase starts as an **epic treated as a hypothesis**. You research it, ground it in architecture decisions, slice it into PIV-sized tickets, and plan each ticket just before you build it. The PRD remains the starting point for brand-new projects, and its scope moves into `direction.md`.
+
+See [Epic to tickets](/workflow/epic-to-tickets/), [Greenfield planning](/workflow/greenfield-planning/), and what to do with your V1 PRD in the [migration checklist](/v1-delta/migration-checklist/#what-happens-to-your-v1-artifacts).
+
 ### The harness concept
 
 V2 adopts the framing: **Agent = Model + Harness**

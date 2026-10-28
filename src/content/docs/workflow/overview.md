@@ -5,6 +5,20 @@ description: Check your system, trust the parts that work, and automate what you
 
 Writing code is no longer the hard part. So the engineers who matter are the ones who keep improving the **system** that writes it. That's what Phase 3 of the course is about — and the order that makes it work: **check it, trust it, automate it.**
 
+:::note[Is this for you?]
+- **Read this when** you've shipped a few tickets through the loop and want the agent to need less of you.
+- **Skip for now if** you're still on your first project. Phase 1 comes first.
+
+The pages in this section, by when you'll need them:
+
+- **Starting a new project:** [Greenfield planning](/workflow/greenfield-planning/) (Phase 1)
+- **Adding a feature to existing code:** [Epic to tickets](/workflow/epic-to-tickets/) (Phase 1)
+- **Several independent tickets at once:** [Parallel worktrees](/workflow/parallel-worktrees/) (Phase 1)
+- **Running workflows without you:** [Headless / SDK / CI](/workflow/headless-sdk-ci/) (Phase 3)
+- **A workflow engine:** [Archon](/workflow/archon/), once headless runs are working
+- **Working with teammates:** [Running this as a team](/workflow/teams/)
+:::
+
 ## The core insight
 
 > **You can't trust what you haven't checked. And you should never automate what you don't trust. So we do them in that order.**

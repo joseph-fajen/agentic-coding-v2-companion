@@ -50,7 +50,7 @@ The reliable system from Act 1, run wider. A ladder of *how* you run it:
 **AI-in-CI** (running workflows in CI pipelines) moved to Phase 4 as of July 2026. Phase 3 covers the foundations; Phase 4 extends to team-scale and CI automation.
 :::
 
-**Cost discipline runs underneath the whole act.** Every rung (parallel, headless, autonomous) multiplies tokens; unmanaged, it bites. The controls: per-run/per-agent budgets + caps, model routing (cheap model for mechanical steps, capable for the hard ones), prompt caching. Cost discipline is what makes autonomy affordable.
+**Cost discipline runs underneath the whole act.** Each rung (parallel, headless, autonomous) lets you run more work with less of you watching, so total token spend climbs even when a single run costs the same. (Parallel worktrees, for example, cost the same per ticket: [throughput, not cost](/workflow/parallel-worktrees/#throughput-not-cost).) Unmanaged, it bites. The controls: per-run/per-agent budgets + caps, model routing (cheap model for mechanical steps, capable for the hard ones), prompt caching. Cost discipline is what makes autonomy affordable. See [What it costs](/costs/) for billing and where each control goes.
 
 ## The human/agent division
 

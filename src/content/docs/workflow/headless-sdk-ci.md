@@ -7,8 +7,10 @@ Every time you run a skill, look at what it gave you, and hand that to the next 
 
 This section is about replacing that last part. Not the steps. Not the hand-off. Just you.
 
-:::note[Not there yet?]
-If you haven't automated multi-step workflows yet, start smaller: build one end-to-end loop by hand first. Run a skill → check the output → run the next skill → verify. Once you've done that a few times and trust the steps, come back here to automate the "pressing go" part. See [Phase 3](/phases/phase-3/) for the learning path.
+:::note[Is this for you?]
+- **Read this when** you've run a multi-step workflow by hand several times and trust each step. This page automates the "pressing go" part.
+- **Skip for now if** you haven't done that yet. Build one end-to-end loop by hand first: run a skill → check the output → run the next skill → verify. See [Phase 3](/phases/phase-3/) for the learning path.
+- **How settled:** workflows are the one part of the toolkit that hasn't settled on a single shape yet, so the course teaches several ways to build them. For what each way bills, see [What it costs](/costs/#who-pays-for-each-way-of-running-it).
 :::
 
 ## The core insight

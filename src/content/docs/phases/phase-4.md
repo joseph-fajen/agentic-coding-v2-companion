@@ -5,6 +5,11 @@ description: Advanced and optional — deep dives for teams, orchestration, and 
 
 Phase 4 is the **advanced and optional** stage — a set of deep-dive acts for specific contexts. The core course (Phases 1–3) is complete on its own; Phase 4 extends it for teams, advanced orchestration, and production-scale patterns.
 
+:::note[Is this for you?]
+- **Read this when** you work on a team, need advanced orchestration, or run agents at production scale.
+- **Skip for now if** you're working solo through Phases 1–3. The core course is complete without it.
+:::
+
 **Act-based and non-ending.** Phase 4 is organized as independent acts, 1–5 videos each, deliberately extensible. New acts get appended as the field evolves — the phase doesn't build to a finale; it accumulates.
 
 ## The shape principle
@@ -26,6 +31,8 @@ Phase 4 is the **advanced and optional** stage — a set of deep-dive acts for s
 | **Ownership and adoption** | How teams evolve their shared layer over time |
 
 The mechanism from Phase 3 (conventions doc → skills read it → regex guards it → rubric grades it) scales to teams. What's specific to the team lives in the doc; anyone who clones the repo inherits the standards.
+
+For the practical version (where the layer lives, ownership, onboarding, review and where agents run), see [Running this as a team](/workflow/teams/).
 
 ### Act: orchestration deep dive
 

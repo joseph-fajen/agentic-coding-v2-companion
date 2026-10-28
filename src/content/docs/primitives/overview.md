@@ -7,6 +7,11 @@ The five primitives are the **atoms** of agentic coding — the smallest meaning
 
 > **What's a harness?** It's everything you wrap around a coding agent to make it work *your* way: your rules, your specialized workers, your tools, your processes, and your guarantees. Also called your **AI Layer**. The formula is simple: **Agent = Model + Harness.** The model is the easy part. The hard part is building the harness that makes the model useful on *your* codebase.
 
+:::note[Is this for you?]
+- **Read this when** you want to know what your system is made of. Most other pages build on it.
+- **You can wait on** the later primitives. You don't need all five at once: get Rules right first, then add the others in order as you need them. See [the order matters](#the-order-matters).
+:::
+
 ## The primitives at a glance
 
 | Primitive | What it is | Key insight |
