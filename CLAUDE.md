@@ -17,12 +17,20 @@ The site serves readers through separate paths rather than making every page wor
 
 The home page's "Where to start" section routes each reader. Keep it the single source of starting advice.
 
+## Content Roadmap
+
+See [CONTENT-ROADMAP.md](./CONTENT-ROADMAP.md) for prioritized additions based on gap analysis against the course knowledge base. Pick items from the highest unchecked tier and use the KB as source material.
+
 ## Sourcing
 
-Facts on the site come from the course repo at `~/git/agentic-coding-course` (v2 branch):
-- **Video scripts:** `phase_*/V*/script.md`
-- **Guides:** `docs/cost-and-models-guide.md`, `docs/prereqs-install-guide.md`, `docs/team-standards-deep-dive.md`
-- **The course skill pack:** `.claude/skills/`
+Facts on the site come from the course repo at `~/git/agentic-coding-course`:
+- **Knowledge base (main branch):** `knowledge-base/concepts/`, `knowledge-base/entities/` — synthesized, cross-linked wiki with video citations
+- **Diagrams (main branch):** `diagrams/` — 33 Excalidraw PNGs covering all major concepts (see CONTENT-ROADMAP.md for inventory)
+- **Video scripts (v2 branch):** `phase_*/V*/script.md`
+- **Guides (v2 branch):** `docs/cost-and-models-guide.md`, `docs/prereqs-install-guide.md`, `docs/team-standards-deep-dive.md`
+- **The course skill pack (v2 branch):** `.claude/skills/`
+
+Fetch both branches: `git fetch origin main v2`
 
 Don't invent numbers (time estimates, prices) or maturity claims the course doesn't make. Named skills on the site are from the course pack, not built into Claude Code; the glossary's "Skills referenced on this site" table lists them.
 
