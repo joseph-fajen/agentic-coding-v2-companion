@@ -137,6 +137,24 @@ Key requirements:
 - `package-lock.json` committed (CI uses `npm ci`)
 - GitHub OAuth needs `workflow` scope to push workflow files
 
+## AI-Readiness Testing (Comparison Setup)
+
+The site has a baseline and AI-friendly version for comparison testing with Lensy and AFDocs.
+
+**Baseline (no AI features):**
+- Tag: `baseline-no-ai-features`
+- Current main branch — no llms.txt, no robots.txt, no special AI accommodations
+- AFDocs score: 11 passed, 6 failed, 11 skipped
+
+**AI-Friendly version:**
+- Branch: `ai-agent-friendly`
+- Adds: starlight-llms-txt plugin (generates llms.txt, llms-full.txt, llms-small.txt)
+- Adds: robots.txt with explicit AI bot allowances
+
+**Strategy:** Continue developing content on `main`. When ready for proper comparison testing, create a fresh baseline tag and reapply AI features.
+
+**Full context:** See `~/git/obsidian-second-brain/memory/daily/2026-10-30-rakesh-lensy-research.md`
+
 ## Review Process
 
 The site uses adversarial AI review with parallel agents. See [REVIEW-PLAN.md](REVIEW-PLAN.md) for methodology.
