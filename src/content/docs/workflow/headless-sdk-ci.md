@@ -106,6 +106,12 @@ The checks output goes straight into the next prompt — a variable, never touch
 
 The SDK is the same harness that powers Claude Code, as a library. Unlike a raw API call, you don't rebuild anything you own — **your `.claude/` layer comes with it.**
 
+**Packages:**
+- TypeScript/JavaScript: [`@anthropic-ai/claude-agent-sdk`](https://www.npmjs.com/package/@anthropic-ai/claude-agent-sdk)
+- Python: [`claude-agent-sdk`](https://pypi.org/project/claude-agent-sdk/)
+
+**Docs:** [Claude Agent SDK documentation](https://code.claude.com/docs/en/agent-sdk/)
+
 ### What it is
 
 The SDK runs the same loop you've been using: **gather context → take action → verify work → repeat.** That's the loop you've *been* for two phases. The SDK just hands it to you as something your code can call.
@@ -117,6 +123,7 @@ The differentiator: **in-process control**.
 A shell script reads the agent's output **after it's done**. A program gets asked **while it's happening.**
 
 ```python
+# Pseudocode — shows the pattern, not the exact API
 def can_use_tool(tool_call):
     if tool_call.name == "Edit" and "migrations/" in tool_call.path:
         return PermissionResultDeny("Cannot edit migration files")

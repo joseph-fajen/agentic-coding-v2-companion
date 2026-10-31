@@ -38,9 +38,9 @@ export default defineConfig({
 						{
 							label: 'Steering (advanced rules)',
 							items: [
-								{ label: 'Overview', slug: 'primitives/steering-overview' },
-								{ label: 'direction.md', slug: 'primitives/steering-direction' },
-								{ label: 'engineering.md', slug: 'primitives/steering-engineering' },
+								{ label: 'Overview', slug: 'steering/overview' },
+								{ label: 'direction.md', slug: 'steering/direction' },
+								{ label: 'engineering.md', slug: 'steering/engineering' },
 							],
 						},
 					],

@@ -152,6 +152,26 @@ Because the bottleneck isn't the machine — it's you. Every one of these loops 
 
 **The independence rule:** When two slices keep touching the same files, they're not independent — merge them or sequence them. File-level overlap is the cheapest dependency check there is.
 
+## What breaks in real projects
+
+Worktrees isolate your *files*, not your *environment*. A few things the course warns about, and a few more that bite in practice:
+
+**Shared local services:**
+- A local database (Postgres, SQLite file, Redis) is one instance. Two worktrees running migrations at the same time will collide.
+- Same for any service that listens on a fixed port. The `/worktree-create` skill assigns different ports per worktree, but anything you spin up by hand won't know.
+
+**Gitignore the worktrees folder:**
+- If you create worktrees inside the repo (e.g., `repo/worktrees/ticket-a`), add `worktrees/` to `.gitignore`. Otherwise git sees them as untracked files and your status gets noisy.
+
+**Disk usage adds up:**
+- Each worktree is a full working directory (minus the `.git` objects). Dependencies get installed per worktree. If you don't clean up stale worktrees, disk fills up faster than you'd expect.
+
+**When integration merges fail:**
+- The `/worktree-merge` skill creates an integration branch, merges each feature, and runs the suite. If the suite fails on the second merge, you have a half-merged integration branch. The skill stops and reports; you debug. It won't push a broken branch, but the cleanup is manual.
+
+**Environment re-init:**
+- A fresh worktree has no `node_modules`, no `.venv`, no `.env`. The skill copies gitignored config files (like `.env`) via `.worktreeinclude`, but dependencies must reinstall. Budget that time.
+
 ## Key takeaways
 
 - **A worktree is just an isolated copy** of your repo on its own branch, sharing one git history

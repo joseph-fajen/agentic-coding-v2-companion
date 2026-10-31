@@ -47,7 +47,7 @@ The move: **extract steering into reference documents**.
 
 | In the Rules File | In Steering Docs |
 |-------------------|------------------|
-| Operational: map, commands, ground rules | Intentional: vision, boundaries, standards |
+| Operational: map, runnable commands, ground rules | Intentional: vision, boundaries, standards |
 | Short, scannable, always-loaded | Detailed, reference-able, loaded on demand |
 | Changes when code changes | Changes when decisions change |
 

@@ -26,7 +26,7 @@ Meeting with Rakesh Pasupuleti (creator of Lensy, an AI documentation auditor) t
 |-----|-------|------|--------|
 | **Day 1-2** | Tier 1: Two Loops + System Gap | Add foundational concepts from KB. Most referenced, currently missing. | Done |
 | **Day 3** | Tier 1: Vibe Coding | The anti-pattern that frames everything. Quick win. | Done |
-| **Day 4** | Polish: YELLOW fixes | Parallel worktrees "what breaks" list, headless-sdk-ci SDK names, sidebar redirect stubs | |
+| **Day 4** | Polish: YELLOW fixes | Parallel worktrees "what breaks" list, headless-sdk-ci SDK names, sidebar redirect stubs | Done |
 | **Day 5** | Fact verification | Browser: verify 44%/15% citation, cost figures, course pricing | |
 | **Day 6** | AI-friendly rebuild | Fresh baseline tag, reapply AI features, run AFDocs comparison | |
 | **Day 7** | Buffer / prep | Final polish, Rakesh talking points, run Lensy manually | |
@@ -63,10 +63,10 @@ Meeting with Rakesh Pasupuleti (creator of Lensy, an AI documentation auditor) t
 
 Priority items from Pass 5 findings:
 
-- [ ] `parallel-worktrees.md`: Add "what breaks in real projects" list (shared databases, gitignoring worktrees folder, disk usage, failed integration merges)
-- [ ] `headless-sdk-ci.md`: Name the SDK packages, link official docs, label Python sample as pseudocode
-- [ ] Fix sidebar: "Steering (advanced rules)" links to redirect stubs instead of real `steering/*` pages
-- [ ] Reconcile `steering/engineering.md` vs `steering/overview.md` on where commands live
+- [x] `parallel-worktrees.md`: Add "what breaks in real projects" list (shared databases, gitignoring worktrees folder, disk usage, failed integration merges)
+- [x] `headless-sdk-ci.md`: Name the SDK packages, link official docs, label Python sample as pseudocode
+- [x] Fix sidebar: "Steering (advanced rules)" links to redirect stubs instead of real `steering/*` pages
+- [x] Reconcile `steering/engineering.md` vs `steering/overview.md` on where commands live
 
 ---
 

@@ -220,12 +220,14 @@ Then evolve it: every time you correct the agent's code style, check if it shoul
 
 | Rules file | engineering.md |
 |------------|----------------|
-| Operational: map, commands, workflow | Quality: conventions, review, taste |
+| Operational: map, runnable commands, workflow | Quality: conventions, review, taste |
 | Always-on, every task | On-demand, when writing/reviewing code |
 | Changes when code changes | Changes when standards change |
 | "Here's how to navigate" | "Here's how to judge" |
 
 Both shape agent behavior, but they serve different purposes. The rules file is operational. Engineering.md is evaluative.
+
+**Clarification on "commands":** Runnable commands (skills like `/commit`, `/pr`) belong in your rules file — they're operational. But *how to run* lint, test, and format in your specific stack belongs in engineering.md — that's quality infrastructure the agent needs when writing or reviewing code.
 
 ## Key takeaways
 
