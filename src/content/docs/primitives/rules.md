@@ -7,7 +7,7 @@ Your rules file is the highest-leverage file in your entire harness. It's the on
 
 ## The core insight
 
-**Every rule you add is a tax on the rules you already have.** Research shows that as you pile on simultaneous instructions, the share the model actually follows drops — in one study, given ten instructions at once, Claude 3.5 Sonnet followed all ten only about 44% of the time, and GPT-4o about 15% ([Harada et al., *Curse of Instructions*](https://openreview.net/forum?id=R6q67CDBCH)). The numbers vary by model, but the trend holds: a follow-up study across ten models found performance [consistently degrades as the number of instructions increases](https://arxiv.org/abs/2509.21051). Lean isn't tidiness; it's how many of your rules actually get followed.
+**Every rule you add is a tax on the rules you already have.** As you pile on simultaneous instructions, the share the model actually follows drops. Lean isn't tidiness; it's how many of your rules actually get followed.
 
 ## Quick decision: where does this line belong?
 

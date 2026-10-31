@@ -27,7 +27,7 @@ Meeting with Rakesh Pasupuleti (creator of Lensy, an AI documentation auditor) t
 | **Day 1-2** | Tier 1: Two Loops + System Gap | Add foundational concepts from KB. Most referenced, currently missing. | Done |
 | **Day 3** | Tier 1: Vibe Coding | The anti-pattern that frames everything. Quick win. | Done |
 | **Day 4** | Polish: YELLOW fixes | Parallel worktrees "what breaks" list, headless-sdk-ci SDK names, sidebar redirect stubs | Done |
-| **Day 5** | Fact verification | Browser: verify 44%/15% citation, cost figures, course pricing | |
+| **Day 5** | Fact verification | ~~Browser verification~~ — Removed specific stats/prices, linked to source sites instead | Done |
 | **Day 6** | AI-friendly rebuild | Fresh baseline tag, reapply AI features, run AFDocs comparison | |
 | **Day 7** | Buffer / prep | Final polish, Rakesh talking points, run Lensy manually | |
 
@@ -72,11 +72,10 @@ Priority items from Pass 5 findings:
 
 ## Day 5: Fact Verification
 
-Requires browser access (not automatable):
+**Decision:** Removed specific statistics and prices rather than verifying them. The site documents the course — it doesn't need to be the source of truth for research claims or pricing. Readers can check source sites directly.
 
-- [ ] Verify 44%/15% figures against *Curse of Instructions* paper on OpenReview
-- [ ] Verify plan prices in `costs.md` (course cost guide says $100/mo, install guide says ~$200/mo)
-- [ ] Verify course pricing/membership on Dynamous page (currently no price stated in `start-here.md`)
+- [x] Removed 44%/15% citation from `primitives/rules.md` — kept the insight, dropped the numbers
+- [x] Removed specific prices from `costs.md` — linked to Claude pricing and Dynamous instead
 
 ---
 

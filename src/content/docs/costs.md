@@ -17,15 +17,15 @@ The course teaches two principles that rarely change:
 1. **For sustained agentic work, a flat-rate subscription beats per-token API billing.** Agent loops re-send the conversation every turn, so per-token cost grows fast with long, iterative work. A subscription gives you predictable cost. Subscriptions are usage-capped, not unlimited, but for steady loop work the flat plan is the safer default.
 2. **Fewest iterations means lowest spend.** The question isn't "which model is cheapest per token" but "which model gets a correct result in the fewest loops." A cheaper model that needs twice the attempts isn't cheaper.
 
-Plans the course recommends, as of July 2026:
+Plans the course recommends:
 
-| Plan | Price | When it fits |
-|------|-------|--------------|
-| **Claude Max (5×)** | $100/mo | The course default. Comfortable for steady day-to-day work. |
-| **Claude Max (20×)** | $200/mo | Heavy or parallel work: several worktrees, subagent fan-outs. |
-| **API billing** | Per token | Light use, CI jobs, and products that serve other people. Scales with every token. |
+| Plan | When it fits |
+|------|--------------|
+| **Claude Max (5×)** | The course default. Comfortable for steady day-to-day work. |
+| **Claude Max (20×)** | Heavy or parallel work: several worktrees, subagent fan-outs. |
+| **API billing** | Light use, CI jobs, and products that serve other people. Scales with every token. |
 
-Prices change. Check [Claude pricing](https://claude.com/pricing) for current plans.
+For current pricing, see [Claude pricing](https://claude.com/pricing) or the [Dynamous course page](https://dynamous.ai/).
 
 ## Who pays for each way of running it
 
