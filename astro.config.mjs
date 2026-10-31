@@ -19,6 +19,13 @@ export default defineConfig({
 			sidebar: [
 				{ label: 'Start here (not a developer?)', slug: 'start-here' },
 				{
+					label: 'Core concepts',
+					items: [
+						{ label: 'The System Gap', slug: 'concepts/system-gap' },
+						{ label: 'The Two Loops', slug: 'concepts/two-loops' },
+					],
+				},
+				{
 					label: 'The five primitives',
 					items: [
 						{ label: 'Overview', slug: 'primitives/overview' },

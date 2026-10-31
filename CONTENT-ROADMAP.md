@@ -58,12 +58,12 @@ These concepts are referenced throughout the course and docs. Adding them fills 
 
 ### Mental Models
 
-- [ ] **The Two Loops** — Inner loop (ships work) vs outer loop (improves system)
+- [x] **The Two Loops** — Inner loop (ships work) vs outer loop (improves system)
   - KB: `concepts/the-two-loops.md`
   - Why: Referenced everywhere, core framework for understanding when to fix code vs fix the system
   - Suggested location: New page `concepts/two-loops.md` or add to glossary with depth
 
-- [ ] **The System Gap** — Why most developers plateau at "faster coding"
+- [x] **The System Gap** — Why most developers plateau at "faster coding"
   - KB: `concepts/the-system-gap.md`
   - Why: Sets up the entire course thesis; explains what we're solving
   - Suggested location: Could enhance `start-here.md` or standalone `concepts/system-gap.md`
@@ -284,7 +284,8 @@ These could be valuable but may not warrant dedicated pages.
 
 Items move here when done:
 
-- [x] *(none yet)*
+- [x] **The Two Loops** — `concepts/two-loops.md` + glossary entries
+- [x] **The System Gap** — `concepts/system-gap.md` + glossary entries
 
 ---
 

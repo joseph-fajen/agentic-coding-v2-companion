@@ -2,11 +2,13 @@
 
 Astro Starlight documentation site deployed to GitHub Pages.
 
-## Current Status (updated 2026-10-28)
+## Current Status (updated 2026-10-30)
+
+**Active sprint:** See [PLAN.md](PLAN.md) — 7-day sprint for Rakesh Pasupuleti meeting (deadline 2026-11-06). Covers Tier 1 content additions, YELLOW fixes, fact verification, and AI-readiness comparison rebuild.
 
 Five review passes are done and live. The latest, Pass 5, tested the site against two audience personas: an ISV practitioner who took V1, and a small business owner with no developer background. It added `start-here.md`, `costs.md`, `v1-delta/why-v2.md` and `workflow/teams.md`, and rebuilt the home page, migration checklist and glossary.
 
-**To pick up where things left off, read the "Current State" and "Next Steps to Consider" sections in [REVIEW-PLAN.md](REVIEW-PLAN.md).**
+**For review methodology and findings:** See [REVIEW-PLAN.md](REVIEW-PLAN.md).
 
 ## Audiences
 

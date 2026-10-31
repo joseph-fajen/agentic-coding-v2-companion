@@ -41,6 +41,25 @@ Everyday developer terms the rest of the site assumes.
 
 ## Core concepts
 
+### The System Gap
+
+The distance between *having* an AI coding assistant and *reliably getting good results* from one. The model isn't the bottleneck — the system around it is. AI amplifies whatever system you have: no system means amplified chaos; a real system means amplified discipline. Closing the gap requires building an [AI layer](#harness-ai-layer) and working in [two loops](#the-two-loops).
+
+See: [The System Gap](/concepts/system-gap/)
+
+### The Two Loops
+
+The shape of all AI coding once a system surrounds it:
+
+| Loop | Purpose | Ends with |
+|------|---------|-----------|
+| **Inner loop** | Ship work (R-PIV) | A merged PR |
+| **Outer loop** | Improve the system | A better harness |
+
+Most time is spent in the inner loop. Step to the outer loop when mistakes recur or automation opportunities appear.
+
+See: [The Two Loops](/concepts/two-loops/)
+
 ### Harness (AI layer)
 
 Everything you wrap around a coding agent to make it work your way: your rules, specialized workers, tools, processes, and guarantees. The formula is **Agent = Model + Harness**. The model is the easy part; the hard part is building the harness that makes the model useful on your codebase.
@@ -74,6 +93,8 @@ Extended workflow: **Research → Plan → Implement → Validate**. Use R-PIV w
 | **Outer loop** | Improves the system | Fix rules, skills, hooks when the inner loop fails |
 
 The inner loop ends with a merged PR. The outer loop ends with a better harness.
+
+See: [The Two Loops](/concepts/two-loops/)
 
 ### Progressive disclosure
 
