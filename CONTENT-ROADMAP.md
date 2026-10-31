@@ -68,7 +68,7 @@ These concepts are referenced throughout the course and docs. Adding them fills 
   - Why: Sets up the entire course thesis; explains what we're solving
   - Suggested location: Could enhance `start-here.md` or standalone `concepts/system-gap.md`
 
-- [ ] **Vibe Coding** — The anti-pattern to avoid
+- [x] **Vibe Coding** — The anti-pattern to avoid
   - KB: `concepts/vibe-coding.md`
   - Why: Defines what we're NOT doing; gives readers a negative example
   - Suggested location: `concepts/vibe-coding.md` or fold into system-gap page
@@ -286,6 +286,7 @@ Items move here when done:
 
 - [x] **The Two Loops** — `concepts/two-loops.md` + glossary entries
 - [x] **The System Gap** — `concepts/system-gap.md` + glossary entries
+- [x] **Vibe Coding** — `concepts/vibe-coding.md` + glossary entry
 
 ---
 

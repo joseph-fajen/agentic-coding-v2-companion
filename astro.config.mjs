@@ -23,6 +23,7 @@ export default defineConfig({
 					items: [
 						{ label: 'The System Gap', slug: 'concepts/system-gap' },
 						{ label: 'The Two Loops', slug: 'concepts/two-loops' },
+						{ label: 'Vibe Coding', slug: 'concepts/vibe-coding' },
 					],
 				},
 				{

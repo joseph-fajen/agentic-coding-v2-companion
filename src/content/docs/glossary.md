@@ -60,6 +60,12 @@ Most time is spent in the inner loop. Step to the outer loop when mistakes recur
 
 See: [The Two Loops](/concepts/two-loops/)
 
+### Vibe Coding
+
+The anti-pattern of prompting loosely and shipping agent output without owning planning or validation. "Send a prompt and hope for the best." It's what the [System Gap](#the-system-gap) looks like in practice. The fix isn't to type more code yourself — it's to own the planning and validation that sandwich the coding. Delegate 100% of the typing; own 100% of the intent and the check.
+
+See: [Vibe Coding](/concepts/vibe-coding/)
+
 ### Harness (AI layer)
 
 Everything you wrap around a coding agent to make it work your way: your rules, specialized workers, tools, processes, and guarantees. The formula is **Agent = Model + Harness**. The model is the easy part; the hard part is building the harness that makes the model useful on your codebase.

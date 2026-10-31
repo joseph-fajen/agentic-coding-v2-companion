@@ -25,7 +25,7 @@ Meeting with Rakesh Pasupuleti (creator of Lensy, an AI documentation auditor) t
 | Day | Focus | Work | Status |
 |-----|-------|------|--------|
 | **Day 1-2** | Tier 1: Two Loops + System Gap | Add foundational concepts from KB. Most referenced, currently missing. | Done |
-| **Day 3** | Tier 1: Vibe Coding | The anti-pattern that frames everything. Quick win. | |
+| **Day 3** | Tier 1: Vibe Coding | The anti-pattern that frames everything. Quick win. | Done |
 | **Day 4** | Polish: YELLOW fixes | Parallel worktrees "what breaks" list, headless-sdk-ci SDK names, sidebar redirect stubs | |
 | **Day 5** | Fact verification | Browser: verify 44%/15% citation, cost figures, course pricing | |
 | **Day 6** | AI-friendly rebuild | Fresh baseline tag, reapply AI features, run AFDocs comparison | |
@@ -53,9 +53,9 @@ Meeting with Rakesh Pasupuleti (creator of Lensy, an AI documentation auditor) t
 **Source:** `~/git/agentic-coding-course/knowledge-base/concepts/vibe-coding.md`
 
 **Deliverables:**
-- [ ] New page: `src/content/docs/concepts/vibe-coding.md` (or fold into system-gap)
-- [ ] Glossary entry
-- [ ] Update CONTENT-ROADMAP.md
+- [x] New page: `src/content/docs/concepts/vibe-coding.md`
+- [x] Glossary entry
+- [x] Update CONTENT-ROADMAP.md
 
 ---
 
