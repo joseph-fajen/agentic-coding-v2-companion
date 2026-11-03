@@ -23,4 +23,6 @@ pnpm-debug.log*
 
 # Review working artifacts
 REVIEW-FINDINGS-*.md
-REVIEW-PLAN.md
+
+# Local Claude desktop launch config
+.claude/launch.json
