@@ -1,5 +1,7 @@
 # 7-Day Sprint Plan: Rakesh Meeting Prep
 
+> **Historical (2026-11-03).** Days 1–5 are done. Days 6–7 are replaced by Stages 3–4 of [WAY-FORWARD.md](WAY-FORWARD.md), the active plan.
+
 **Created:** 2026-10-30
 **Deadline:** 2026-11-06 (Rakesh Pasupuleti meeting)
 **Purpose:** Content development + AI-readiness comparison testing

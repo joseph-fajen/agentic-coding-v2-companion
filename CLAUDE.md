@@ -2,9 +2,11 @@
 
 Astro Starlight documentation site deployed to GitHub Pages.
 
-## Current Status (updated 2026-10-30)
+## Current Status (updated 2026-11-03)
 
-**Active sprint:** See [PLAN.md](PLAN.md) — 7-day sprint for Rakesh Pasupuleti meeting (deadline 2026-11-06). Covers Tier 1 content additions, YELLOW fixes, fact verification, and AI-readiness comparison rebuild.
+**Active plan:** See [WAY-FORWARD.md](WAY-FORWARD.md), a two-week, stage-by-stage plan. Each session does the next unchecked stage, ticks it, and adds a Progress log line. Read its Session rules first. Goals and the three-snapshot experiment are in [PROJECT-BRIEF.md](PROJECT-BRIEF.md); the react.dev standard is in [GAP-ANALYSIS-REACT-DEV.md](GAP-ANALYSIS-REACT-DEV.md).
+
+[PLAN.md](PLAN.md) (the 7-day Rakesh sprint) is historical. Its Days 1–5 are done; Days 6–7 are replaced by WAY-FORWARD Stages 3–4.
 
 Five review passes are done and live. The latest, Pass 5, tested the site against two audience personas: an ISV practitioner who took V1, and a small business owner with no developer background. It added `start-here.md`, `costs.md`, `v1-delta/why-v2.md` and `workflow/teams.md`, and rebuilt the home page, migration checklist and glossary.
 

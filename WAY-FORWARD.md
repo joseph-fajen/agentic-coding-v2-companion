@@ -78,7 +78,7 @@ A day usually holds 2–3 stages. If a stage runs long, split it: log what's fin
 ## Days 1–2: Baseline (measure before changing anything)
 
 ### Stage 0. Land the planning docs on `main`
-- [ ] Done
+- [x] Done
 
 **Do:**
 - Commit this file on `docs/gap-analysis-react-dev`, merge it into `main`, and push. These are root-level docs only.
@@ -367,4 +367,5 @@ of lessons × gate results.
 
 One line per session: `YYYY-MM-DD · Stage N · commit · note for the next session`
 
-- 2026-11-03 · Plan created, then revised to two weeks · (uncommitted) · Next: Stage 0.
+- 2026-11-03 · Plan created, then revised to two weeks · 02025ba · Next: Stage 0.
+- 2026-11-03 · Stage 0 · see `git log -1` on main · Planning docs fast-forwarded onto `main` (no `src/` changes); CLAUDE.md points here; PLAN.md marked historical. Next: Stage 1 (reader test, in a fresh session).
