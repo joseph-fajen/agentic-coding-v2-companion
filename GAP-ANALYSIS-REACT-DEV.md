@@ -1,7 +1,7 @@
 # Gap Analysis: Companion Site vs react.dev/learn
 
 **Date:** 2026-11-03
-**Status:** Research and analysis only. No site changes made.
+**Status:** Research and analysis only. No site changes made. Updated 2026-11-03 after the framing discussion: section 2 is resolved, section 6 is corrected, and section 6a and 6b are new. See [PROJECT-BRIEF.md](PROJECT-BRIEF.md) for goals, plan and "done" criteria.
 **Standard:** [react.dev/learn](https://react.dev/learn), the tutorial and learning-path standard for developer docs.
 **Subject:** Agentic Coding V2 Companion (36 source files, 33 live pages, ~37k words) at commit `4fab178`.
 
@@ -43,22 +43,22 @@ The largest gaps, in order of impact:
 
 ---
 
-## 2. A framing decision to make first
+## 2. Framing decision (resolved)
 
-react.dev/learn is the full course. This site is *a companion to* someone else's course. That difference shapes how literally the standard can apply, so three questions need answers before any restructuring:
+react.dev/learn is the full course. This site is *a companion to* someone else's course. The question was whether that role caps how far the standard can apply.
 
-| Decision | Option A (closest to react.dev) | Option B (keep companion role) |
-|---|---|---|
-| **Standalone?** | The site teaches the method end to end. The videos become optional enrichment, linked from each lesson. | The site stays a companion. Lessons assume the reader watches the matching video. |
-| **Primary audience** | One: developers who use or want to use coding agents. Non-developers get an inline on-ramp, not a separate track. | Keep the four personas and their routing. |
-| **Practice medium** | A canonical practice project that the reader builds up across the whole path, like Tic-Tac-Toe in react.dev. | Exercises applied to "your own project", with self-check criteria. |
+**Decision:** the site stays a stated companion to Cole's video course and doesn't compete for its audience. Cole welcomed the V1 companion site, which is the precedent. The quality bar goes up anyway, because being a companion is a *role*, not a *ceiling*.
 
-**My read:** Option A is the only way to meet the standard rather than imitate it. It also addresses the Pass 5 finding that "Phase 1 still relies on videos for hands-on steps." Before committing, though, check two things:
+How the role maps onto react.dev's structure:
 
-- that a standalone path doesn't compete with the paid course in a way that matters to Cole/Dynamous
-- what the course's own sourcing rules allow (CLAUDE.md: "don't invent numbers… the course doesn't make")
+| react.dev | This site |
+|---|---|
+| **Learn**: a self-paced course | **Learn**: the *written* learning layer that pairs with the videos. Every lesson links to its matching video. A reader who prefers reading can follow the path from start to finish, and a video watcher can drop in at any lesson. |
+| **Reference**: API lookup | **Reference**: course map (video → lesson), course skill catalog, glossary, costs |
 
-A middle path also works. Make the site standalone for the **core loop** (setup → rules → first PIV ticket → first system fix), and stay a companion for the advanced material.
+**Still open (see section 8):**
+- primary audience: one developer path with inline non-developer notes, or keep a separate track
+- the practice medium: a shared practice project, or "your own repo"
 
 ---
 
@@ -125,7 +125,7 @@ These came up during the inventory. Most are quick fixes that don't depend on th
 
 ## 6. Target structure (a sketch, for discussion)
 
-This is one way the site could look if it adopted the react.dev model (Option A). It's a starting point, not a decision. Existing pages map onto it, and little content is lost.
+This is one way the site could look under the react.dev model, keeping the companion role. It's a starting point, not a decision. Existing pages map onto it, and little content is lost. *Corrected 2026-11-03:* chapter 5 now covers all of Phase 4, not just teams, and AI-in-CI sits in chapter 5, following the course's July 2026 move.
 
 ```
 GET STARTED
@@ -143,10 +143,14 @@ LEARN
 ├── 2. The primitives (fundamentals)    chapter overview + one lesson each, in a justified order
 │     Rules · Skills · Subagents · MCP / tools · Hooks · Steering documents
 │     (split oversized pages: e.g. Skills → "Your first skill" + "Composing skills")
-├── 3. Evolving the system (advanced)   fix the system not the code · check, trust, automate
-├── 4. Running without you (advanced)   parallel worktrees · headless · SDK · CI · workflow engines (Archon)
-│     (split headless-sdk-ci into 3 lessons)
-└── 5. Working as a team (advanced)     teams + Phase 4 material
+├── 3. Evolving the system (advanced)   Phase 3 Act 1
+│     System evolution (the outer loop) · Making your ship step yours · The issue-fixer ·
+│     Automating your whole loop
+├── 4. Running without you (advanced)   Phase 3 Act 2
+│     Parallel worktrees · Headless · SDK · Workflow engines (Archon) · Cost discipline
+│     (split headless-sdk-ci into separate lessons)
+└── 5. Going further (advanced)         Phase 4 acts, open-ended
+      Teams · Orchestration deep dive · AI-native codebases · AI in CI · (future acts)
 
 REFERENCE
 ├── Course map           ← phase pages become a video → lesson index (keeps the companion role)
@@ -167,7 +171,45 @@ GUIDES
 5. **Challenges**: 2–3 tasks on the practice project, each with a hint and a solution (Starlight `<details>` works for both)
 6. Prev/next set explicitly to follow the path
 
-The "Is this for you?" callout would mostly go away. The path sets the order, and inline level notes cover readers at different levels.
+The "Is this for you?" callout would mostly go away. The path sets the order, and inline level notes cover readers at different levels. Each lesson also gets a **video link** to its matching course video, which keeps the companion role visible.
+
+---
+
+## 6a. Course coverage by chapter
+
+The goal is the **full scope of the V2 course**. Mapping the chapters to the course shows that the fundamentals mostly exist, while much of the advanced material appears only as rows in syllabus tables. Covering everything means new writing as well as restructuring.
+
+| Chapter | Course source | Existing pages | Missing: syllabus rows only, or roadmap items |
+|---|---|---|---|
+| **1. The loop** | Phase 1 (V1–V11) | phase-1, greenfield-planning, epic-to-tickets, parallel-worktrees (V10) | Research beat, one-pass-ready plan, self-correction and gates, strategic doc, architecture decisions (roadmap Tiers 1–2) |
+| **2. The primitives** | Phase 2 (V12–V23) | rules, subagents, mcp-tools, skills, hooks, steering ×3 | Guidance vs guarantee, context hygiene and isolation, skill chaining, on-demand context (roadmap Tier 2) |
+| **3. Evolving the system** | Phase 3 Act 1 | **None.** The topics appear only as table rows in `phase-3.md` | All 4 lessons: system evolution (`/insights`), ship-step conventions (doc + regex + judge rubric), issue-fixer, automating the whole loop |
+| **4. Running without you** | Phase 3 Act 2 | parallel-worktrees, headless-sdk-ci, archon, costs | Mostly covered. Needs splitting, not new content |
+| **5. Going further** | Phase 4 acts | teams | Orchestration (run files and resume, merge queues, agent teams, spikes) and AI-native codebases appear only as table rows in `phase-4.md` |
+
+**Rough size:** 35–45 lessons plus 5 chapter overviews, up from 33 pages today. About a third is new writing, mostly chapters 3 and 5. This is an estimate, not a measurement.
+
+**Coverage vs depth:**
+- *Coverage* means every course topic has a lesson in the template: Intro, You will learn, body, Recap, video link.
+- *Depth* adds the practice half: Try it blocks with expected results, and challenges with hints and solutions.
+
+This mirrors the two halves of react.dev's lesson template. Coverage comes first across all chapters. Depth goes to chapters 1–2 first, then 3–5.
+
+**Growth:** Phase 4 is "act-based, non-ending." The chapter-overview-plus-template structure lets a new lesson go in whenever Cole ships an act, the way react.dev added its React Compiler section without breaking its structure.
+
+---
+
+## 6b. Where this site deliberately diverges from react.dev
+
+Naming these makes the difference between meeting the standard and imitating it.
+
+| react.dev | This site | Why |
+|---|---|---|
+| Written by React's owners | Documents someone else's course | Sourcing rules ("don't invent what the course doesn't say") take the place of authorial authority |
+| ~400 sandboxes and 91 challenges, built by a funded team | 2–3 challenges per lesson, Try it blocks in the reader's repo | The principles stay at full standard, but the volume is sized for one author. Agentic coding can't run in a browser sandbox. |
+| No glossary | A slimmed glossary is kept | Course students jump in from videos at random points rather than reading in order |
+| Warm, encouraging voice | A sharper, opinionated voice, softened in Get Started | The voice is a signature asset |
+| Self-contained course | Every lesson links to its video | The companion role is stated, not hidden |
 
 ---
 
@@ -202,12 +244,12 @@ The "Is this for you?" callout would mostly go away. The path sets the order, an
 
 ## 8. Open questions for Joe
 
-1. **Standalone or companion?** (Section 2.) This determines whether criteria 1, 2, 8 and 9 can be met at all.
-2. **Is a standalone path acceptable to Cole/Dynamous?** The site would teach the method without the paid videos.
+1. ~~**Standalone or companion?**~~ **Resolved:** a stated companion with a raised bar (section 2).
+2. ~~**Is a standalone path acceptable to Cole/Dynamous?**~~ **Resolved:** not pursuing a standalone path. Cole welcomed the V1 companion site.
 3. **Practice project:** use the course's demo app (the AI Tutor), a new minimal project, or "your own repo"? react.dev's Tutorial works because everyone builds the same thing.
 4. **Non-developer audience:** keep a separate track, or fold its needs into inline notes on one developer path?
 5. **Voice:** keep the confrontational edge for practitioner pages and soften it for Get Started, or use one register throughout?
-6. **Timing:** start after the Nov 6 meeting? Should this analysis be part of that conversation, since Lensy audits docs quality?
+6. **Timing:** start after the Nov 6 meeting? Should this analysis be part of that conversation, since Lensy audits docs quality? (A proposed sequence is in PROJECT-BRIEF.md.)
 
 ---
 
