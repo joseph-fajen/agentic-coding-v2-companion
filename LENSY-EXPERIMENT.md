@@ -67,14 +67,14 @@ cd ~/git/agentic-coding-v2-companion-eval
 ## Steps
 
 ### Step 0. Set up tracking
-- [ ] Done
+- [x] Done
 
-- [ ] `git init` the eval folder (`~/git/agentic-coding-v2-companion-eval`) and commit the existing `results/` (Stage 1 calls for this repo anyway)
+- [x] `git init` the eval folder (`~/git/agentic-coding-v2-companion-eval`) and commit the existing `results/` (Stage 1 calls for this repo anyway)
 - [x] Check that `@perseverance-ai/lensy@0.3.0` can be installed by its exact version. Confirmed 2026-11-21: 0.3.0 is both `latest` and `next`
-- [ ] Write `scripts/measure.sh` as described in Protocol
-- [ ] Create `experiments/lensy-incremental/LOG.md` using the template at the bottom of this doc
-- [ ] Run `measure.sh step0-baseline` against the live site and confirm it matches the Nov 21 numbers (59 / 80)
-- [ ] Commit in the eval repo
+- [x] Write `scripts/measure.sh` as described in Protocol
+- [x] Create `experiments/lensy-incremental/LOG.md` using the template at the bottom of this doc
+- [x] Run `measure.sh step0-baseline` against the live site and confirm it matches the Nov 21 numbers (59 / 80)
+- [x] Commit in the eval repo
 
 **Done when:** the baseline run is logged, it matches the Nov 21 numbers, and the eval repo has its first commit.
 
