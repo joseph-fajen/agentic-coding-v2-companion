@@ -3,12 +3,30 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { starlightBasePath } from 'starlight-base-path';
 import starlightLlmsTxt from 'starlight-llms-txt';
+import sitemap from '@astrojs/sitemap';
+import { execFileSync } from 'node:child_process';
+import { existsSync } from 'node:fs';
+
+const site = 'https://joseph-fajen.github.io';
+const base = '/agentic-coding-v2-companion';
+
+// Per-page <lastmod> from each page's last git commit (the same date Starlight's
+// "Last updated" shows). Needs full history in CI: deploy.yml checks out with fetch-depth: 0.
+function gitLastmod(url) {
+	const slug = new URL(url).pathname.slice(base.length).replace(/^\/|\/$/g, '') || 'index';
+	const file = ['.md', '.mdx'].map((ext) => `src/content/docs/${slug}${ext}`).find((f) => existsSync(f));
+	if (!file) return undefined;
+	const date = execFileSync('git', ['log', '-1', '--format=%cI', '--', file], { encoding: 'utf8' }).trim();
+	return date || undefined;
+}
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://joseph-fajen.github.io',
-	base: '/agentic-coding-v2-companion',
+	site,
+	base,
 	integrations: [
+		// Replaces Starlight's built-in sitemap (it skips its own when this is present).
+		sitemap({ serialize: (item) => ({ ...item, lastmod: gitLastmod(item.url) }) }),
 		starlight({
 			plugins: [starlightBasePath(), starlightLlmsTxt()],
 			lastUpdated: true,
