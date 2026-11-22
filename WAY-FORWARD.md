@@ -53,6 +53,7 @@ A day usually holds 2–3 stages. If a stage runs long, split it: log what's fin
 | D3 | Agent drafting runs through **gauntlet-mini**, bounded at 2 cycles per lesson, only after the Stage 10 pilot passes | Final |
 | D4 | The reader test and the held-out questions live **outside this repo** | Final |
 | D5 | Branches: `main` is live. B ships to `main`. C is built on a `restructure` branch and goes live in one cutover (Stage 20). | Confirm in Stage 5 |
+| D6 | **Build B one change at a time, with a Lensy run after each.** B also gets freshness dates (`lastUpdated`, sitemap `lastmod`), which weren't in the original Stage 3. See [LENSY-EXPERIMENT.md](LENSY-EXPERIMENT.md). | Final (2026-11-21) |
 
 ---
 
@@ -109,6 +110,8 @@ A day usually holds 2–3 stages. If a stage runs long, split it: log what's fin
 
 ### Stage 3. Build snapshot B (A + agent tooling) on `main`
 - [ ] Done
+
+> **In progress through [LENSY-EXPERIMENT.md](LENSY-EXPERIMENT.md)** (D6): `llms.txt`, the `llms.txt` pointer and freshness dates first, one change at a time. robots.txt and the `.md` endpoints come after.
 
 **Read:** `git diff main...ai-agent-friendly` and `astro.config.mjs`.
 **Do:**
