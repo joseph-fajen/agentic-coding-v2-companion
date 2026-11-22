@@ -1,0 +1,12 @@
+---
+// Overrides Starlight's SkipLink (the first element in <body>) to add a
+// visually hidden pointer to llms.txt for AI agents. It's hidden from screen
+// readers and the keyboard too, so people never meet it. See LENSY-EXPERIMENT.md Step 2.
+import Default from '@astrojs/starlight/components/SkipLink.astro';
+const llmsTxt = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/llms.txt`;
+---
+
+<Default />
+<div class="sr-only" aria-hidden="true">
+	For AI agents: a documentation index is at <a href={llmsTxt} tabindex="-1">{llmsTxt}</a>.
+</div>

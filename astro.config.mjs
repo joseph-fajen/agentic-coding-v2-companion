@@ -11,6 +11,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			plugins: [starlightBasePath(), starlightLlmsTxt()],
+			components: { SkipLink: './src/components/SkipLink.astro' },
 			title: 'Agentic Coding V2',
 			description: 'Companion site for Cole Medin\'s Agentic Coding Course V2',
 			social: [
